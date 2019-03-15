@@ -121,6 +121,95 @@ namespace Test { namespace Int {
       }
     };
 
+    /// Generate load, cardinality, and bin assignments
+    class LoadCardBinAssignment : public Assignment {
+    protected:
+      /// Number of bins
+      int n_bins;
+      /// Number of items
+      int n_items;
+      /// Domain for load variables
+      Gecode::IntSet d_load;
+      /// Domain for cars variables
+      Gecode::IntSet d_card;
+      /// Domain for bin variables
+      Gecode::IntSet d_bin;
+      /// Load to generate (unless -1)
+      int load;
+      /// Iterator for each variable
+      Gecode::IntSetValues* dsv;
+    public:
+      /// Initialize assignments for load, card, and bin variables
+      LoadCardBinAssignment(int m, const Gecode::IntSet& d_m,
+                            int n, const Gecode::IntSet& d_n,
+                            int l)
+        : Assignment(m+m+n,d_m),
+          n_bins(m), n_items(n), d_load(d_m), d_card(0,n), d_bin(d_n), load(l),
+          dsv(new Gecode::IntSetValues[static_cast<unsigned int>(m+m+n)]) {
+        for (int i=n_bins; i--; ) {
+          dsv[       i].init(d_load);
+          dsv[n_bins+i].init(d_card);
+        }
+        for (int i=n_items; i--; )
+          dsv[2*n_bins+i].init(d_bin);
+      }
+      /// Test whether all assignments have been iterated
+      virtual bool operator()(void) const {
+        return dsv[0]();
+      }
+      /// Move to next assignment
+      virtual void operator++(void) {
+        // Try to generate next bin assignment
+        {
+          int i = n_items-1;
+          while (i >= 0) {
+            ++dsv[2*n_bins+i];
+            if (dsv[2*n_bins+i]())
+              return;
+            dsv[2*n_bins+(i--)].init(d_bin);
+          }
+        }
+        // Try to generate next cardinality assignment
+        {
+          int i = n_bins-1;
+          while (i >= 0) {
+            ++dsv[n_bins+i];
+            if (dsv[n_bins+i]())
+              return;
+            dsv[n_bins+(i--)].init(d_card);
+          }
+        }
+        // Try to generate next load assignment
+        {
+        retry:
+          int i = n_bins-1;
+          while (true) {
+            ++dsv[i];
+            if (dsv[i]() || (i == 0)) {
+              if (dsv[i]() && (load >= 0)) {
+                int l = 0;
+                for (int k=0;k<n_bins; k++)
+                  l += dsv[k].val();
+                if (load != l)
+                  goto retry;
+              }
+              return;
+            }
+            dsv[i--].init(d_load);
+          }
+        }
+      }
+      /// Return value for variable \a i
+      virtual int operator[](int i) const {
+        assert((i>=0) && (i<2*n_bins+n_items));
+        return dsv[i].val();
+      }
+      /// Destructor
+      virtual ~LoadCardBinAssignment(void) {
+        delete [] dsv;
+      }
+    };
+
     /// %Test with different bin loads and items
     class BPT : public Test {
     protected:
@@ -190,6 +279,85 @@ namespace Test { namespace Int {
         for (int i=s.size(); i--; )
           b[i]=x[m+i];
         binpacking(home, l, b, s);
+      }
+    };
+
+    /// %Test with different bin loads and items
+    class CBPT : public Test {
+    protected:
+      /// Number of bins
+      int m;
+      /// Item sizes
+      Gecode::IntArgs s;
+      /// Whether to generate only valid loads
+      bool valid;
+      /// Total item sizes
+      int t;
+      /// Array of sufficient size for computing item loads
+      mutable int il[8];
+      /// Array of sufficient size for computing item cardinalities
+      mutable int ic[8];
+      /// Compute total size
+      static int total(const Gecode::IntArgs& s) {
+        int t = 0;
+        for (int i=s.size(); i--; )
+          t += s[i];
+        return t;
+      }
+    public:
+      /// Create and register test for \a m bins and item sizes \a s
+      CBPT(int m0, const Gecode::IntArgs& s0, bool v=true)
+        : Test("BinPacking::Card::"+str(m0)+"::"+str(s0)+"::"+(v ? "+" : "-"),
+               2*m0+s0.size(), 0, 100),
+          m(m0), s(s0), valid(v), t(total(s)) {
+        testsearch = false;
+      }
+      /// Create assignment
+      virtual Assignment* assignment(void) const {
+        // Compute plausible bin sizes
+        int a = t / m;
+        return new LoadCardBinAssignment(m,Gecode::IntSet(a-1,a+2),
+                                         s.size(),Gecode::IntSet(0,m-1),
+                                         valid ? t : -1);
+      }
+      /// %Test whether \a x is solution
+      virtual bool solution(const Assignment& x) const {
+        // Loads are from 0 to m-1, after that are cardinalities and then items
+        // Check whether loads sum up to total size
+        int l=0;
+        for (int j=m; j--; )
+          l += x[j];
+        if (l != t)
+          return false;
+        // Check whether items are at possible bins
+        for (int j=m; j--; )
+          if ((x[2*m+j] < 0) || (x[2*m+j] >= m))
+            return false;
+        // Compute whether items add up
+        for (int j=m; j--; )
+          il[j] = ic[j] = 0;
+        for (int i=s.size(); i--; ) {
+          ic[x[2*m+i]]++;
+          il[x[2*m+i]] += s[i];
+        }
+        for (int j=m; j--; )
+          if ((ic[j] != x[m+j]) || (il[j] != x[j]))
+            return false;
+        return true;
+      }
+      /// Post constraint on \a x
+      virtual void post(Gecode::Space& home, Gecode::IntVarArray& x) {
+        using namespace Gecode;
+        IntVarArgs l(m);
+        IntVarArgs c(m);
+        IntVarArgs b(s.size());
+        for (int j=m; j--; ) {
+          l[j]=x[j];
+          c[j]=x[m+j];
+        }
+        for (int i=s.size(); i--; )
+          b[i]=x[2*m+i];
+        binpacking(home, l, c, b, s);
       }
     };
 
@@ -317,7 +485,6 @@ namespace Test { namespace Int {
         using namespace Gecode;
 
         {
-          IntArgs s0({0,0,0,0});
           IntArgs s1({2,1,1});
           IntArgs s2({1,2,3,4});
           IntArgs s3({4,3,2,1});
@@ -325,11 +492,10 @@ namespace Test { namespace Int {
           IntArgs s5({1,1,1,1});
           IntArgs s6({1,1,2,2});
           IntArgs s7({1,3,3,4});
-          IntArgs s8({1,3,3,0,4,0});
+          IntArgs s8({1,3,3,1,4,1});
           IntArgs s9({1,2,4,8,16,32});
 
           for (int m=1; m<4; m++) {
-            (void) new BPT(m, s0);
             (void) new BPT(m, s1);
             (void) new BPT(m, s2);
             (void) new BPT(m, s3);
@@ -340,6 +506,14 @@ namespace Test { namespace Int {
             (void) new BPT(m, s8);
             (void) new BPT(m, s9);
             (void) new BPT(m, s1, false);
+
+            (void) new CBPT(m, s1);
+            (void) new CBPT(m, s3);
+            (void) new CBPT(m, s4);
+          }
+          for (int m=1; m<3; m++) {
+            (void) new CBPT(m, s8);
+            (void) new CBPT(m, s9);
           }
         }
 
@@ -366,7 +540,7 @@ namespace Test { namespace Int {
         }
 
         {
-          IntArgs c1({0,2,4,6});
+          IntArgs c1({1,2,4,6});
           IntArgs c2({1,2,3,4,5,6,7,8});
           IntArgs c3({1,3,7,10,15,22,27,97});
           IntArgs c41({1,2,3,4,5,6,7,14});

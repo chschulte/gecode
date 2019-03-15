@@ -2961,6 +2961,39 @@ namespace Gecode {
              const IntVarArgs& l,
              const IntVarArgs& b, const IntArgs& s,
              IntPropLevel ipl=IPL_DEF);
+  /** \brief Post propagator for bin packing with cardinalities
+   *
+   * The variables in \a l are the loads for each bin, the
+   * variables in \a c are the capacities for each bin, and the
+   * variables in \a b define for each item into which bin it is packed.
+   * The integer values \a s define the size of the items.
+   *
+   * It is propagated that for each \f$j\f$ with \f$0\leq j<|l|\f$ the
+   * constraints \f$l_j=\sum_{0\leq i<|b|\wedge b_i=j}s_i\f$ and
+   * \f$c_j=\left|\{0\leq i<|b|\wedge b_i=j\}\right|$\f holds and that
+   * for each \f$i\f$ with \f$0\leq i<|b|\f$ the constraint
+   * \f$0\leq b_i<|l|\f$ holds.
+   *
+   * The propagation follows: Shaw. A Constraint for Bin Packing.
+   * CP 2004 as well as Derval, Régin, Schaus. Improved Filtering for
+   * the Bin-Packing with Cardinality Constraints. Constraints 2018.
+   *
+   * Throws the following exceptions:
+   *  - Of type Int::ArgumentSizeMismatch if \a l and \a c are not of
+   *    the same size.
+   *  - Of type Int::ArgumentSizeMismatch if \a b and \a s are not of
+   *    the same size.
+   *  - Of type Int::ArgumentSame if \a l, \a c, or \a b share unassigned 
+   *    variables.
+   *  - Of type Int::OutOfLimits if \a s contains a negative number.
+   *
+   * \ingroup TaskModelIntBinPacking
+   */
+  GECODE_INT_EXPORT void
+  binpacking(Home home,
+             const IntVarArgs& l, const IntVarArgs& c,
+             const IntVarArgs& b, const IntArgs& s,
+             IntPropLevel ipl=IPL_DEF);
   /* \brief Post propagator for multi-dimensional bin packing
    *
    * In the following \a n refers to the number of items and \a m

@@ -48,18 +48,76 @@ namespace Gecode {
     if (b.size() != s.size())
       throw ArgumentSizeMismatch("Int::binpacking");
     for (int i=0; i<s.size(); i++)
-      Limits::nonnegative(s[i],"Int::binpacking");
+      Limits::positive(s[i],"Int::binpacking");
     GECODE_POST;
 
-    ViewArray<OffsetView> lv(home,l.size());
-    for (int i=0; i<l.size(); i++)
+    // Number of items
+    int n = b.size();
+    // Number of bins
+    int m = l.size();
+
+    ViewArray<OffsetView> lv(home,m);
+    for (int i=0; i<m; i++)
       lv[i] = OffsetView(l[i],0);
 
-    ViewArray<BinPacking::Item> bs(home,b.size());
-    for (int i=0; i<bs.size(); i++)
+    ViewArray<BinPacking::Item> bs(home,n);
+    for (int i=0; i<n; i++)
       bs[i] = BinPacking::Item(b[i],s[i]);
 
     GECODE_ES_FAIL(Int::BinPacking::Pack::post(home,lv,bs));
+  }
+
+  void
+  binpacking(Home home,
+             const IntVarArgs& l, const IntVarArgs& c,
+             const IntVarArgs& b, const IntArgs& s,
+             IntPropLevel ipl) {
+    using namespace Int;
+    if (same(l,c) || same(l,b) || same(c,b))
+      throw ArgumentSame("Int::binpacking");
+    if ((l.size() != c.size()) || (b.size() != s.size()))
+      throw ArgumentSizeMismatch("Int::binpacking");
+    for (int i=0; i<s.size(); i++)
+      Limits::positive(s[i],"Int::binpacking");
+    GECODE_POST;
+
+    if (0) {
+    // Number of items
+    int n = b.size();
+    // Number of bins
+    int m = l.size();
+
+    ViewArray<OffsetView> lv(home,m);
+    for (int i=0; i<m; i++)
+      lv[i] = OffsetView(l[i],0);
+
+    ViewArray<BinPacking::Item> bs(home,n);
+    for (int i=0; i<n; i++)
+      bs[i] = BinPacking::Item(b[i],s[i]);
+
+    GECODE_ES_FAIL(Int::BinPacking::Pack::post(home,lv,bs));
+  }
+
+    {
+    // Number of items
+    int n = b.size();
+    // Number of bins
+    int m = l.size();
+
+    ViewArray<OffsetView> lv(home,m), cv(home,m);
+    for (int j=0; j<m; j++) {
+      lv[j] = OffsetView(l[j],0);
+      cv[j] = OffsetView(c[j],0);
+    }
+
+    ViewArray<BinPacking::Item> bs(home,n);
+    for (int i=0; i<n; i++)
+      bs[i] = BinPacking::Item(b[i],s[i]);
+    
+    GECODE_ES_FAIL(Int::BinPacking::CardPack::post(home,lv,cv,bs));
+    }
+
+    count(home, b, c, ipl);
   }
 
   IntSet

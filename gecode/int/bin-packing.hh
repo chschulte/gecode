@@ -82,6 +82,14 @@ namespace Gecode { namespace Int { namespace BinPacking {
   /// Order, also for sorting according to size
   bool operator <(const Item& i, const Item& j);
 
+  /**
+   * \brief Print item \a x
+   * \relates Gecode::Int::BinPacking::Item
+   */
+  template<class Char, class Traits>
+  std::basic_ostream<Char,Traits>&
+  operator <<(std::basic_ostream<Char,Traits>& os, const Item& x);
+
 
   /// Size sets
   class SizeSet {
@@ -127,6 +135,25 @@ namespace Gecode { namespace Int { namespace BinPacking {
     int operator [](int i) const;
   };
 
+  /// Record tell information
+  class TellCache {
+  protected:
+    /// Values (sorted) to be pruned from view
+    int* _nq;
+    /// Number of values to be pruned
+    int _n_nq;
+    /// Value to which view should be assigned
+    int _eq;
+  public:
+    /// Initialize cache for at most \a m values
+    TellCache(Region& region, int m);
+    /// Record that view must be different from \a j
+    void nq(int j);
+    /// Record that view must be equal to \a j, return false if not possible
+    void eq(int j);
+    /// Perform tell to view \a x and reset cache
+    ExecStatus tell(Space& home, IntView x);
+  };
 
   /**
    * \brief Bin-packing propagator
@@ -144,23 +171,27 @@ namespace Gecode { namespace Int { namespace BinPacking {
     ViewArray<OffsetView> l;
     /// Items with bin and size
     ViewArray<Item> bs;
-    /// Total size of all items
+    /// Total size of all unpacked items
     int t;
     /// Constructor for posting
-    Pack(Home home, ViewArray<OffsetView>& l, ViewArray<Item>& bs);
+    Pack(Home home, ViewArray<OffsetView>& l, ViewArray<Item>& bs, int t);
     /// Constructor for cloning \a p
     Pack(Space& home, Pack& p);
-  public:
-    /// Post propagator for loads \a l and items \a bs
-    GECODE_INT_EXPORT
-    static ExecStatus post(Home home,
-                           ViewArray<OffsetView>& l, ViewArray<Item>& bs);
     /// Detect non-existence of sums in \a a .. \a b
     template<class SizeSet>
     bool nosum(const SizeSet& s, int a, int b, int& ap, int& bp);
     /// Detect non-existence of sums in \a a .. \a b
     template<class SizeSet>
     bool nosum(const SizeSet& s, int a, int b);
+    /// Perform expensive part of propagation
+    ExecStatus expensive(Space& home, Region& r);
+    /// Propagate load
+    ExecStatus load(Space& home, int* ps);
+  public:
+    /// Post propagator for loads \a l and items \a bs
+    GECODE_INT_EXPORT
+    static ExecStatus post(Home home,
+                           ViewArray<OffsetView>& l, ViewArray<Item>& bs);
     /// Perform propagation
     GECODE_INT_EXPORT
     virtual ExecStatus propagate(Space& home, const ModEventDelta& med);
@@ -175,6 +206,48 @@ namespace Gecode { namespace Int { namespace BinPacking {
     virtual Actor* copy(Space& home);
     /// Destructor
     virtual size_t dispose(Space& home);
+  };
+
+  /**
+   * \brief Bin-packing propagator
+   *
+   * The algorithm is taken from:
+   *   Paul Shaw. A Constraint for Bin Packing. CP 2004.
+   * and just the simple pruning rules from
+   *   Derval, Régin, Schaus. Improved Filtering for the Bin-Packing
+   *   with Cardinality Constraints. Constraints 2018.
+   *
+   * Requires \code #include <gecode/int/bin-packing.hh> \endcode
+   *
+   * \ingroup FuncIntProp
+   */
+  class CardPack : public Pack {
+  protected:
+    /// View for capacity of a bin
+    ViewArray<OffsetView> c;
+    /// Constructor for posting
+    CardPack(Home home, ViewArray<OffsetView>& l, ViewArray<OffsetView>& c,
+             ViewArray<Item>& bs, int t);
+    /// Constructor for cloning \a p
+    CardPack(Space& home, CardPack& p);
+  public:
+    /// Post propagator for loads \a l, cardinality \a c, and items \a bs
+    GECODE_INT_EXPORT
+    static ExecStatus post(Home home,
+                           ViewArray<OffsetView>& l, ViewArray<OffsetView>& c,
+                           ViewArray<Item>& b);
+    /// Perform propagation
+    GECODE_INT_EXPORT
+    virtual ExecStatus propagate(Space& home, const ModEventDelta& med);
+    /// Schedule function
+    GECODE_INT_EXPORT
+    virtual void reschedule(Space& home);
+    /// Copy propagator during cloning
+    GECODE_INT_EXPORT
+    virtual Actor* copy(Space& home);
+    /// Destructor
+    virtual size_t dispose(Space& home);
+    void print(const char* s);
   };
 
 
