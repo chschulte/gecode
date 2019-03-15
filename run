@@ -49,7 +49,7 @@ export BENCH="\
 for tbf in 0.0 0.1 0.25; do
   for h in afc action chb; do
     for b in $BENCH; do
-       ./examples/job-shop.exe -branching $h -tbf $tbf $b \
+       ./examples/job-shop.exe $CMD -branching $h -tbf $tbf $b \
 	| tee $DIR/$b-$h-$tbf.log 
     done
   done
