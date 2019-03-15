@@ -1,0 +1,39 @@
+	Probing...
+		ft10 [makespan: 1251]
+		ft10 [makespan: 1122]
+		ft10 [makespan: 1117]
+		ft10 [makespan: 1089]
+		ft10 [makespan: 1041]
+			nodes:      73402
+			failures:   30019
+			peak depth: 616
+			runtime:    1.364 (1364.000 ms)
+
+	Adjusting...
+		Bounds: [655,1041]
+		Bounds: [848,1041]
+		ft10 [makespan: 943]
+		Bounds: [848,943]
+		Bounds: [895,943]
+		ft10 [makespan: 918]
+		Bounds: [895,918]
+		Bounds: [906,918]
+		ft10 [makespan: 912]
+		Bounds: [906,912]
+			nodes:      1841613
+			failures:   920213
+			restarts:   37
+			no-goods:   474
+			peak depth: 95
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      789290
+			failures:   394522
+			restarts:   12
+			no-goods:   139
+			peak depth: 86
+			runtime:    52.830 (52830.000 ms)
+
+	Found best solution and proved optimality.
