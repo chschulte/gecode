@@ -102,6 +102,9 @@ namespace Gecode { namespace Int { namespace Precede {
     static ExecStatus post(Home home, ViewArray<View>& x, int s, int t);
   };
 
+  /// Configure with which variable domain size which decomposition is used
+  static const unsigned int limit = 4096U;
+
 }}}
 
 #include <gecode/int/precede/single.hpp>

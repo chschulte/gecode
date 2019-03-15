@@ -1431,6 +1431,16 @@ namespace Gecode {
   GECODE_INT_EXPORT void
   precede(Home home, const IntVarArgs& x, int s, int t,
           IntPropLevel=IPL_DEF);
+  /** \brief Post propagator that succesive values from \f$l$\f to \f$l+|x|-1$ precede each other in \a x
+   *
+   * This constraint enforces that \f$x_0\neq t\f$ and
+   * \f$x_j=t \to \bigvee_{0\leq i<j} x_i=s\f$ for \f$0\leq j<|x|\f$.
+   * The propagator is domain consistent.
+   * \ingroup TaskModelIntPrecede
+   */
+  GECODE_INT_EXPORT void
+  precede(Home home, const IntVarArgs& x, int l,
+          IntPropLevel=IPL_DEF);
   /** \brief Post propagator that successive values in \a c precede each other in \a x
    *
    * This constraint enforces that \f$x_0\neq c_k\f$ for \f$0<k<|c|\f$ and
