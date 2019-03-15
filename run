@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-export THREADS=1
-export TIME_PROBE=30
-export TIME_ADJUST=30
-export TIME_SOLVE=60
+export THREADS=8
+export TIME_PROBE=60
+export TIME_ADJUST=120
+export TIME_SOLVE=120
 
 export CMD="\
 -threads $THREADS \
@@ -46,8 +46,8 @@ export BENCH="\
   tai-20-20-6 tai-20-20-7 tai-20-20-8 tai-20-20-9"
 
 
-for h in afc action chb; do
-  for tbf in 0.0 0.1 0.25; do
+for tbf in 0.0 0.1 0.25; do
+  for h in afc action chb; do
     for b in $BENCH; do
        ./examples/job-shop.exe -branching $h -tbf $tbf $b \
 	| tee $DIR/$b-$h-$tbf.log 
