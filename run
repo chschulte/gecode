@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-export THREADS=8
+export THREADS=1
 export TIME_PROBE=60
 export TIME_ADJUST=120
 export TIME_SOLVE=120
@@ -11,9 +11,9 @@ export CMD="\
 -time-adjust $(($TIME_ADJUST * 1000)) \
 -time-solve $(($TIME_SOLVE * 1000)) "
 
-export DIR="$HOSTNAME-$THREADS-$TIME_PROBE-$TIME_ADJUST-$TIME_SOLVE"
+export DIR="logs/$HOSTNAME-$THREADS-$TIME_PROBE-$TIME_ADJUST-$TIME_SOLVE"
 
-mkdir -p logs/$DIR
+mkdir -p $DIR
 
 export BENCH="\
   abz5 abz6 abz7 abz8 \
