@@ -1,0 +1,28 @@
+	Probing...
+		la04 [makespan: 887]
+		la04 [makespan: 735]
+		la04 [makespan: 691]
+		la04 [makespan: 646]
+		la04 [makespan: 635]
+		la04 [makespan: 614]
+			nodes:      7719
+			failures:   1
+			peak depth: 346
+			runtime:    0.785 (785.000 ms)
+
+	Adjusting...
+		Bounds: [537,614]
+		Bounds: [575,614]
+		la04 [makespan: 593]
+		Bounds: [575,593]
+		Bounds: [584,593]
+		Bounds: [588,593]
+		la04 [makespan: 589]
+			nodes:      575
+			failures:   130
+			restarts:   0
+			no-goods:   0
+			peak depth: 45
+			runtime:    0.031 (31.000 ms)
+
+	Found best solution and proved optimality.

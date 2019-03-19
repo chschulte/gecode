@@ -1,0 +1,42 @@
+	Probing...
+		abz5 [makespan: 1505]
+		abz5 [makespan: 1452]
+		abz5 [makespan: 1347]
+		abz5 [makespan: 1326]
+			nodes:      29485
+			failures:   5
+			peak depth: 714
+			runtime:    1.137 (1137.000 ms)
+
+	Adjusting...
+		Bounds: [868,1326]
+		Bounds: [1097,1326]
+		Bounds: [1211,1326]
+		abz5 [makespan: 1265]
+		Bounds: [1211,1265]
+		abz5 [makespan: 1237]
+		Bounds: [1211,1237]
+		abz5 [makespan: 1223]
+		Bounds: [1211,1223]
+		abz5 [makespan: 1217]
+		Bounds: [1211,1217]
+		abz5 [makespan: 1213]
+		Bounds: [1211,1213]
+			nodes:      2869662
+			failures:   1433291
+			restarts:   1335
+			no-goods:   0
+			peak depth: 110
+			runtime:    2:00.005 (120005.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		abz5 [makespan: 1212]
+			nodes:      2094575
+			failures:   1046724
+			restarts:   703
+			no-goods:   0
+			peak depth: 88
+			runtime:    1:29.846 (89846.000 ms)
+
+	Found best solution and proved optimality.

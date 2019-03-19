@@ -1,0 +1,36 @@
+	Probing...
+		tai-20-15-7 [makespan: 2028]
+		tai-20-15-7 [makespan: 1786]
+		tai-20-15-7 [makespan: 1748]
+		tai-20-15-7 [makespan: 1708]
+		tai-20-15-7 [makespan: 1707]
+		tai-20-15-7 [makespan: 1690]
+		tai-20-15-7 [makespan: 1679]
+			nodes:      724239
+			failures:   241045
+			peak depth: 1832
+			runtime:    36.312 (36312.000 ms)
+
+	Adjusting...
+		Bounds: [1153,1679]
+			nodes:      1911282
+			failures:   954199
+			restarts:   675
+			no-goods:   1
+			peak depth: 194
+			runtime:    2:00.029 (120029.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		tai-20-15-7 [makespan: 1678]
+		tai-20-15-7 [makespan: 1677]
+		tai-20-15-7 [makespan: 1676]
+			nodes:      2707905
+			failures:   1351898
+			restarts:   694
+			no-goods:   28
+			peak depth: 248
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solution at most 31.26% away from optimum.

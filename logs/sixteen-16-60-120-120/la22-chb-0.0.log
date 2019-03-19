@@ -1,0 +1,38 @@
+	Probing...
+		la22 [makespan: 1289]
+		la22 [makespan: 1102]
+			nodes:      83746
+			failures:   217
+			peak depth: 934
+			runtime:    3.224 (3224.000 ms)
+
+	Adjusting...
+		Bounds: [830,1102]
+		la22 [makespan: 965]
+		Bounds: [830,965]
+		Bounds: [897,965]
+			nodes:      3566345
+			failures:   1780825
+			restarts:   1787
+			no-goods:   3
+			peak depth: 133
+			runtime:    2:00.026 (120026.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la22 [makespan: 964]
+		la22 [makespan: 962]
+		la22 [makespan: 961]
+		la22 [makespan: 959]
+		la22 [makespan: 958]
+		la22 [makespan: 957]
+		la22 [makespan: 956]
+			nodes:      4001882
+			failures:   1998520
+			restarts:   2306
+			no-goods:   14
+			peak depth: 137
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 6.28% away from optimum.

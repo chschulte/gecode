@@ -1,0 +1,35 @@
+	Probing...
+		la07 [makespan: 1093]
+		la07 [makespan: 942]
+		la07 [makespan: 941]
+		la07 [makespan: 926]
+			nodes:      24256
+			failures:   10
+			peak depth: 496
+			runtime:    1.128 (1128.000 ms)
+
+	Adjusting...
+		Bounds: [869,926]
+		la07 [makespan: 896]
+		Bounds: [869,896]
+		la07 [makespan: 881]
+		Bounds: [869,881]
+		la07 [makespan: 873]
+		Bounds: [869,873]
+		la07 [makespan: 869]
+			nodes:      6057
+			failures:   2499
+			restarts:   0
+			no-goods:   0
+			peak depth: 117
+			runtime:    0.281 (281.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
+			restarts:   0
+			no-goods:   0
+			peak depth: 0
+			runtime:    0.001 (1.000 ms)
+
+	Found best solution and proved optimality.

@@ -1,0 +1,31 @@
+	Probing...
+		swv04 [makespan: 1991]
+		swv04 [makespan: 1890]
+		swv04 [makespan: 1837]
+		swv04 [makespan: 1797]
+		swv04 [makespan: 1741]
+			nodes:      762976
+			failures:   321542
+			peak depth: 1149
+			runtime:    24.020 (24020.000 ms)
+
+	Adjusting...
+		Bounds: [1161,1741]
+			nodes:      2486400
+			failures:   1239943
+			restarts:   1043
+			no-goods:   1
+			peak depth: 329
+			runtime:    2:00.014 (120014.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      3190481
+			failures:   1590793
+			restarts:   1075
+			no-goods:   3
+			peak depth: 358
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 33.37% away from optimum.

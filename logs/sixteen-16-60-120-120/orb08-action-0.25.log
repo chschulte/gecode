@@ -1,0 +1,45 @@
+	Probing...
+		orb08 [makespan: 1169]
+		orb08 [makespan: 1075]
+		orb08 [makespan: 1066]
+		orb08 [makespan: 1023]
+			nodes:      554123
+			failures:   261442
+			peak depth: 593
+			runtime:    22.441 (22441.000 ms)
+
+	Adjusting...
+		Bounds: [585,1023]
+		Bounds: [804,1023]
+		orb08 [makespan: 912]
+		Bounds: [804,912]
+		Bounds: [858,912]
+			nodes:      3923395
+			failures:   1960343
+			restarts:   2031
+			no-goods:   0
+			peak depth: 130
+			runtime:    2:00.006 (120006.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		orb08 [makespan: 911]
+		orb08 [makespan: 910]
+		orb08 [makespan: 908]
+		orb08 [makespan: 906]
+		orb08 [makespan: 905]
+		orb08 [makespan: 904]
+		orb08 [makespan: 903]
+		orb08 [makespan: 902]
+		orb08 [makespan: 901]
+		orb08 [makespan: 900]
+		orb08 [makespan: 899]
+			nodes:      4025467
+			failures:   2011136
+			restarts:   1403
+			no-goods:   3
+			peak depth: 126
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 4.67% away from optimum.

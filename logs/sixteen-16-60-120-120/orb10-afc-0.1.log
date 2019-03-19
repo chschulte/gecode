@@ -1,0 +1,41 @@
+	Probing...
+		orb10 [makespan: 1139]
+		orb10 [makespan: 1086]
+		orb10 [makespan: 1052]
+		orb10 [makespan: 1044]
+			nodes:      29063
+			failures:   16
+			peak depth: 612
+			runtime:    1.242 (1242.000 ms)
+
+	Adjusting...
+		Bounds: [681,1044]
+		Bounds: [862,1044]
+		orb10 [makespan: 952]
+		Bounds: [862,952]
+		Bounds: [907,952]
+		Bounds: [929,952]
+			nodes:      2646342
+			failures:   1322176
+			restarts:   1281
+			no-goods:   0
+			peak depth: 93
+			runtime:    2:00.004 (120004.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		orb10 [makespan: 951]
+		orb10 [makespan: 950]
+		orb10 [makespan: 944]
+		orb10 [makespan: 942]
+		orb10 [makespan: 941]
+		orb10 [makespan: 940]
+			nodes:      2679738
+			failures:   1338811
+			restarts:   1261
+			no-goods:   0
+			peak depth: 114
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 1.28% away from optimum.

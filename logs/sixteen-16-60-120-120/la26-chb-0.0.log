@@ -1,0 +1,32 @@
+	Probing...
+		la26 [makespan: 1650]
+		la26 [makespan: 1445]
+		la26 [makespan: 1395]
+			nodes:      136658
+			failures:   1652
+			peak depth: 1253
+			runtime:    6.554 (6554.000 ms)
+
+	Adjusting...
+		Bounds: [1218,1395]
+		la26 [makespan: 1306]
+		Bounds: [1218,1306]
+			nodes:      2635475
+			failures:   1315509
+			restarts:   1735
+			no-goods:   22
+			peak depth: 317
+			runtime:    2:00.015 (120015.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la26 [makespan: 1305]
+			nodes:      3016922
+			failures:   1506362
+			restarts:   1055
+			no-goods:   0
+			peak depth: 186
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solution at most 6.74% away from optimum.

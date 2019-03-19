@@ -1,0 +1,31 @@
+	Probing...
+		la34 [makespan: 2367]
+		la34 [makespan: 1992]
+		la34 [makespan: 1949]
+		la34 [makespan: 1920]
+		la34 [makespan: 1903]
+			nodes:      488452
+			failures:   127639
+			peak depth: 1790
+			runtime:    18.980 (18980.000 ms)
+
+	Adjusting...
+		Bounds: [1721,1903]
+			nodes:      1723803
+			failures:   859113
+			restarts:   539
+			no-goods:   7
+			peak depth: 342
+			runtime:    2:00.046 (120046.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      2013879
+			failures:   1003950
+			restarts:   658
+			no-goods:   18
+			peak depth: 333
+			runtime:    2:00.004 (120004.000 ms)
+				stopped due to time-out...
+
+	Solution at most 9.62% away from optimum.

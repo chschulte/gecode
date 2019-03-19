@@ -1,0 +1,30 @@
+	Probing...
+		la01 [makespan: 902]
+		la01 [makespan: 693]
+		la01 [makespan: 683]
+			nodes:      8955
+			failures:   14
+			peak depth: 355
+			runtime:    0.785 (785.000 ms)
+
+	Adjusting...
+		Bounds: [666,683]
+		la01 [makespan: 669]
+		Bounds: [666,669]
+		la01 [makespan: 666]
+			nodes:      119
+			failures:   4
+			restarts:   0
+			no-goods:   0
+			peak depth: 58
+			runtime:    0.030 (30.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
+			restarts:   0
+			no-goods:   0
+			peak depth: 0
+			runtime:    0.001 (1.000 ms)
+
+	Found best solution and proved optimality.

@@ -1,0 +1,33 @@
+	Probing...
+		abz7 [makespan: 898]
+		abz7 [makespan: 834]
+		abz7 [makespan: 827]
+		abz7 [makespan: 821]
+		abz7 [makespan: 783]
+			nodes:      218804
+			failures:   3585
+			peak depth: 1642
+			runtime:    15.127 (15127.000 ms)
+
+	Adjusting...
+		Bounds: [556,783]
+			nodes:      1854142
+			failures:   925911
+			restarts:   1051
+			no-goods:   10
+			peak depth: 163
+			runtime:    2:00.027 (120027.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		abz7 [makespan: 782]
+		abz7 [makespan: 781]
+			nodes:      2568994
+			failures:   1282340
+			restarts:   780
+			no-goods:   6
+			peak depth: 254
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solution at most 28.94% away from optimum.

@@ -1,0 +1,35 @@
+	Probing...
+		la40 [makespan: 1645]
+		la40 [makespan: 1522]
+		la40 [makespan: 1489]
+		la40 [makespan: 1403]
+			nodes:      418042
+			failures:   124571
+			peak depth: 1377
+			runtime:    20.691 (20691.000 ms)
+
+	Adjusting...
+		Bounds: [1027,1403]
+			nodes:      2493126
+			failures:   1245245
+			restarts:   717
+			no-goods:   5
+			peak depth: 145
+			runtime:    2:00.024 (120024.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la40 [makespan: 1402]
+		la40 [makespan: 1400]
+		la40 [makespan: 1399]
+		la40 [makespan: 1398]
+		la40 [makespan: 1397]
+			nodes:      3123418
+			failures:   1559786
+			restarts:   950
+			no-goods:   3
+			peak depth: 199
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solution at most 26.56% away from optimum.

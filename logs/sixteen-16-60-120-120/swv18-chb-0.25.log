@@ -1,0 +1,31 @@
+	Probing...
+		swv18 [makespan: 3084]
+		swv18 [makespan: 3026]
+		swv18 [makespan: 2911]
+		swv18 [makespan: 2874]
+		swv18 [makespan: 2861]
+			nodes:      1636241
+			failures:   650305
+			peak depth: 2855
+			runtime:    57.747 (57747.000 ms)
+
+	Adjusting...
+		Bounds: [2852,2861]
+			nodes:      253453
+			failures:   122232
+			restarts:   421
+			no-goods:   0
+			peak depth: 708
+			runtime:    2:00.180 (120180.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      313479
+			failures:   153383
+			restarts:   1040
+			no-goods:   0
+			peak depth: 753
+			runtime:    2:00.018 (120018.000 ms)
+				stopped due to time-out...
+
+	Solution at most 0.35% away from optimum.

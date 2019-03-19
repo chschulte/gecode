@@ -1,0 +1,31 @@
+	Probing...
+		swv08 [makespan: 2541]
+		swv08 [makespan: 2497]
+		swv08 [makespan: 2297]
+		swv08 [makespan: 2260]
+		swv08 [makespan: 2225]
+			nodes:      793248
+			failures:   282256
+			peak depth: 1700
+			runtime:    36.170 (36170.000 ms)
+
+	Adjusting...
+		Bounds: [1330,2225]
+			nodes:      1543056
+			failures:   769525
+			restarts:   909
+			no-goods:   4
+			peak depth: 254
+			runtime:    2:00.025 (120025.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      2597837
+			failures:   1295047
+			restarts:   1045
+			no-goods:   4
+			peak depth: 401
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solution at most 40.27% away from optimum.

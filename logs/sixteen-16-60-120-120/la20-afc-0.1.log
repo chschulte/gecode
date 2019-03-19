@@ -1,0 +1,32 @@
+	Probing...
+		la20 [makespan: 1234]
+		la20 [makespan: 1055]
+		la20 [makespan: 1038]
+		la20 [makespan: 1010]
+		la20 [makespan: 1000]
+		la20 [makespan: 942]
+		la20 [makespan: 932]
+			nodes:      247436
+			failures:   109900
+			peak depth: 674
+			runtime:    9.279 (9279.000 ms)
+
+	Adjusting...
+		Bounds: [759,932]
+		Bounds: [845,932]
+		la20 [makespan: 888]
+		Bounds: [845,888]
+		Bounds: [866,888]
+		la20 [makespan: 875]
+		Bounds: [866,875]
+		Bounds: [870,875]
+		Bounds: [872,875]
+		Bounds: [873,875]
+			nodes:      7698
+			failures:   3756
+			restarts:   0
+			no-goods:   0
+			peak depth: 85
+			runtime:    0.443 (443.000 ms)
+
+	Found best solution and proved optimality.

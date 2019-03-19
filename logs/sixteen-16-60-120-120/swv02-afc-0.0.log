@@ -1,0 +1,30 @@
+	Probing...
+		swv02 [makespan: 1933]
+		swv02 [makespan: 1818]
+		swv02 [makespan: 1772]
+		swv02 [makespan: 1766]
+			nodes:      550847
+			failures:   219819
+			peak depth: 1194
+			runtime:    14.508 (14508.000 ms)
+
+	Adjusting...
+		Bounds: [1259,1766]
+			nodes:      3383271
+			failures:   1688662
+			restarts:   975
+			no-goods:   2
+			peak depth: 228
+			runtime:    2:00.022 (120022.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      4065203
+			failures:   2028361
+			restarts:   1089
+			no-goods:   6
+			peak depth: 293
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 28.77% away from optimum.

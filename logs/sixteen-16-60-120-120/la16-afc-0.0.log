@@ -1,0 +1,27 @@
+	Probing...
+		la16 [makespan: 1169]
+		la16 [makespan: 1146]
+		la16 [makespan: 982]
+			nodes:      31487
+			failures:   5
+			peak depth: 689
+			runtime:    1.247 (1247.000 ms)
+
+	Adjusting...
+		Bounds: [732,982]
+		Bounds: [857,982]
+		Bounds: [919,982]
+		la16 [makespan: 947]
+		Bounds: [919,947]
+		Bounds: [933,947]
+		la16 [makespan: 940]
+		Bounds: [933,940]
+		la16 [makespan: 934]
+			nodes:      1172015
+			failures:   585531
+			restarts:   591
+			no-goods:   0
+			peak depth: 103
+			runtime:    41.390 (41390.000 ms)
+
+	Found best solution and proved optimality.

@@ -1,0 +1,27 @@
+	Probing...
+		la17 [makespan: 1034]
+		la17 [makespan: 831]
+			nodes:      33724
+			failures:   11
+			peak depth: 640
+			runtime:    1.395 (1395.000 ms)
+
+	Adjusting...
+		Bounds: [683,831]
+		la17 [makespan: 757]
+		Bounds: [683,757]
+		Bounds: [720,757]
+		Bounds: [738,757]
+		Bounds: [747,757]
+		la17 [makespan: 752]
+		Bounds: [747,752]
+		la17 [makespan: 749]
+		Bounds: [747,749]
+			nodes:      2973
+			failures:   1279
+			restarts:   0
+			no-goods:   0
+			peak depth: 86
+			runtime:    0.265 (265.000 ms)
+
+	Found best solution and proved optimality.

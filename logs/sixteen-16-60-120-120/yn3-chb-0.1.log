@@ -1,0 +1,35 @@
+	Probing...
+		yn3 [makespan: 1204]
+		yn3 [makespan: 1134]
+		yn3 [makespan: 1103]
+		yn3 [makespan: 1090]
+		yn3 [makespan: 1084]
+		yn3 [makespan: 1051]
+			nodes:      264440
+			failures:   3657
+			peak depth: 2116
+			runtime:    24.603 (24603.000 ms)
+
+	Adjusting...
+		Bounds: [680,1051]
+			nodes:      1660602
+			failures:   828743
+			restarts:   557
+			no-goods:   3
+			peak depth: 152
+			runtime:    2:00.018 (120018.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		yn3 [makespan: 1050]
+		yn3 [makespan: 1049]
+		yn3 [makespan: 1048]
+			nodes:      1687564
+			failures:   841646
+			restarts:   1835
+			no-goods:   6
+			peak depth: 300
+			runtime:    2:00.003 (120003.000 ms)
+				stopped due to time-out...
+
+	Solution at most 35.21% away from optimum.

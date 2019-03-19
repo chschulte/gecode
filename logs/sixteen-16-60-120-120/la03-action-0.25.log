@@ -1,0 +1,29 @@
+	Probing...
+		la03 [makespan: 763]
+		la03 [makespan: 734]
+		la03 [makespan: 700]
+		la03 [makespan: 684]
+		la03 [makespan: 680]
+			nodes:      7827
+			failures:   22
+			peak depth: 348
+			runtime:    0.778 (778.000 ms)
+
+	Adjusting...
+		Bounds: [588,680]
+		la03 [makespan: 633]
+		Bounds: [588,633]
+		Bounds: [610,633]
+		la03 [makespan: 619]
+		Bounds: [610,619]
+		Bounds: [614,619]
+		Bounds: [616,619]
+		Bounds: [617,619]
+			nodes:      616
+			failures:   151
+			restarts:   0
+			no-goods:   0
+			peak depth: 52
+			runtime:    0.047 (47.000 ms)
+
+	Found best solution and proved optimality.

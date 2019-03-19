@@ -1,0 +1,25 @@
+	Probing...
+		la12 [makespan: 1247]
+		la12 [makespan: 1112]
+		la12 [makespan: 1054]
+		la12 [makespan: 1051]
+			nodes:      295101
+			failures:   123427
+			peak depth: 591
+			runtime:    10.119 (10119.000 ms)
+
+	Adjusting...
+		Bounds: [1039,1051]
+		la12 [makespan: 1045]
+		Bounds: [1039,1045]
+		la12 [makespan: 1042]
+		Bounds: [1039,1042]
+		la12 [makespan: 1040]
+			nodes:      481602
+			failures:   239014
+			restarts:   581
+			no-goods:   4
+			peak depth: 239
+			runtime:    10.486 (10486.000 ms)
+
+	Found best solution and proved optimality.
