@@ -1,0 +1,30 @@
+	Probing...
+		swv19 [makespan: 3480]
+		swv19 [makespan: 3204]
+		swv19 [makespan: 2978]
+		swv19 [makespan: 2956]
+			nodes:      561821
+			failures:   250090
+			peak depth: 2860
+			runtime:    46.824 (46824.000 ms)
+
+	Adjusting...
+		Bounds: [2843,2956]
+			nodes:      208478
+			failures:   102819
+			restarts:   7
+			no-goods:   0
+			peak depth: 504
+			runtime:    2:00.023 (120023.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      219344
+			failures:   107643
+			restarts:   7
+			no-goods:   0
+			peak depth: 650
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 3.86% away from optimum.

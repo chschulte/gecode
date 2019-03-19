@@ -1,0 +1,37 @@
+	Probing...
+		la13 [makespan: 1326]
+		la13 [makespan: 1320]
+		la13 [makespan: 1318]
+		la13 [makespan: 1226]
+		la13 [makespan: 1166]
+			nodes:      94462
+			failures:   40014
+			peak depth: 638
+			runtime:    2.191 (2191.000 ms)
+
+	Adjusting...
+		Bounds: [1150,1166]
+		la13 [makespan: 1158]
+		Bounds: [1150,1158]
+		la13 [makespan: 1154]
+		Bounds: [1150,1154]
+			nodes:      1434775
+			failures:   715848
+			restarts:   28
+			no-goods:   557
+			peak depth: 322
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la13 [makespan: 1153]
+		la13 [makespan: 1151]
+		la13 [makespan: 1150]
+			nodes:      977742
+			failures:   488140
+			restarts:   13
+			no-goods:   317
+			peak depth: 192
+			runtime:    1:22.331 (82331.000 ms)
+
+	Found best solution and proved optimality.

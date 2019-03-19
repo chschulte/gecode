@@ -1,0 +1,25 @@
+	Probing...
+		la08 [makespan: 1059]
+		la08 [makespan: 891]
+			nodes:      11402
+			failures:   9
+			peak depth: 509
+			runtime:    0.242 (242.000 ms)
+
+	Adjusting...
+		Bounds: [863,891]
+		la08 [makespan: 877]
+		Bounds: [863,877]
+		la08 [makespan: 870]
+		Bounds: [863,870]
+		la08 [makespan: 866]
+		Bounds: [863,866]
+		la08 [makespan: 864]
+			nodes:      38981
+			failures:   19220
+			restarts:   3
+			no-goods:   61
+			peak depth: 118
+			runtime:    2.260 (2260.000 ms)
+
+	Found best solution and proved optimality.

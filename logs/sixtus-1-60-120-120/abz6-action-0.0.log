@@ -1,0 +1,26 @@
+	Probing...
+		abz6 [makespan: 1023]
+		abz6 [makespan: 975]
+			nodes:      15259
+			failures:   5
+			peak depth: 652
+			runtime:    0.223 (223.000 ms)
+
+	Adjusting...
+		Bounds: [752,975]
+		Bounds: [863,975]
+		Bounds: [919,975]
+		abz6 [makespan: 946]
+		Bounds: [919,946]
+		Bounds: [932,946]
+		Bounds: [939,946]
+		Bounds: [942,946]
+		Bounds: [944,946]
+			nodes:      96182
+			failures:   48002
+			restarts:   6
+			no-goods:   110
+			peak depth: 89
+			runtime:    5.902 (5902.000 ms)
+
+	Found best solution and proved optimality.

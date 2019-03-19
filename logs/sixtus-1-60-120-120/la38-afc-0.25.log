@@ -1,0 +1,35 @@
+	Probing...
+		la38 [makespan: 1930]
+		la38 [makespan: 1469]
+		la38 [makespan: 1443]
+		la38 [makespan: 1435]
+			nodes:      52385
+			failures:   10018
+			peak depth: 1405
+			runtime:    1.902 (1902.000 ms)
+
+	Adjusting...
+		Bounds: [960,1435]
+			nodes:      806632
+			failures:   403047
+			restarts:   12
+			no-goods:   289
+			peak depth: 143
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la38 [makespan: 1434]
+		la38 [makespan: 1433]
+		la38 [makespan: 1432]
+		la38 [makespan: 1431]
+		la38 [makespan: 1429]
+			nodes:      1277977
+			failures:   638210
+			restarts:   13
+			no-goods:   373
+			peak depth: 219
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 32.89% away from optimum.

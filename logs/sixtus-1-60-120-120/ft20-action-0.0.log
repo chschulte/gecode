@@ -1,0 +1,34 @@
+	Probing...
+		ft20 [makespan: 1476]
+		ft20 [makespan: 1419]
+		ft20 [makespan: 1412]
+		ft20 [makespan: 1388]
+		ft20 [makespan: 1355]
+			nodes:      53694
+			failures:   20027
+			peak depth: 592
+			runtime:    1.498 (1498.000 ms)
+
+	Adjusting...
+		Bounds: [1119,1355]
+		ft20 [makespan: 1237]
+		Bounds: [1119,1237]
+			nodes:      1333138
+			failures:   665697
+			restarts:   15
+			no-goods:   256
+			peak depth: 231
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		ft20 [makespan: 1236]
+			nodes:      1523982
+			failures:   760813
+			restarts:   14
+			no-goods:   109
+			peak depth: 288
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 9.55% away from optimum.

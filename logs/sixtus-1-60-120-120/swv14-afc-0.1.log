@@ -1,0 +1,29 @@
+	Probing...
+		swv14 [makespan: 3745]
+		swv14 [makespan: 3691]
+		swv14 [makespan: 3656]
+			nodes:      541016
+			failures:   240111
+			peak depth: 2800
+			runtime:    41.857 (41857.000 ms)
+
+	Adjusting...
+		Bounds: [2842,3656]
+			nodes:      149389
+			failures:   70910
+			restarts:   6
+			no-goods:   0
+			peak depth: 1484
+			runtime:    2:00.022 (120022.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      209251
+			failures:   98918
+			restarts:   7
+			no-goods:   0
+			peak depth: 1838
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 22.29% away from optimum.

@@ -1,0 +1,38 @@
+	Probing...
+		la18 [makespan: 1236]
+		la18 [makespan: 1116]
+		la18 [makespan: 938]
+		la18 [makespan: 921]
+			nodes:      34882
+			failures:   10020
+			peak depth: 673
+			runtime:    0.811 (811.000 ms)
+
+	Adjusting...
+		Bounds: [663,921]
+		Bounds: [792,921]
+		la18 [makespan: 855]
+		Bounds: [792,855]
+		Bounds: [823,855]
+		Bounds: [839,855]
+		la18 [makespan: 845]
+		Bounds: [839,845]
+		Bounds: [842,845]
+		Bounds: [843,845]
+			nodes:      2039789
+			failures:   1019246
+			restarts:   52
+			no-goods:   1087
+			peak depth: 103
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      274065
+			failures:   136927
+			restarts:   8
+			no-goods:   189
+			peak depth: 88
+			runtime:    16.055 (16055.000 ms)
+
+	Found best solution and proved optimality.
