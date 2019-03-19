@@ -1,0 +1,33 @@
+	Probing...
+		la30 [makespan: 1862]
+		la30 [makespan: 1567]
+		la30 [makespan: 1531]
+		la30 [makespan: 1492]
+			nodes:      29831
+			failures:   54
+			peak depth: 1284
+			runtime:    1.233 (1233.000 ms)
+
+	Adjusting...
+		Bounds: [1355,1492]
+			nodes:      772222
+			failures:   385659
+			restarts:   12
+			no-goods:   301
+			peak depth: 189
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la30 [makespan: 1491]
+		la30 [makespan: 1490]
+		la30 [makespan: 1489]
+			nodes:      847006
+			failures:   422917
+			restarts:   12
+			no-goods:   287
+			peak depth: 173
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 9.07% away from optimum.

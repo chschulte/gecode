@@ -1,0 +1,32 @@
+	Probing...
+		swv11 [makespan: 3944]
+		swv11 [makespan: 3820]
+		swv11 [makespan: 3775]
+		swv11 [makespan: 3746]
+		swv11 [makespan: 3726]
+		swv11 [makespan: 3679]
+			nodes:      681059
+			failures:   310086
+			peak depth: 2812
+			runtime:    50.761 (50761.000 ms)
+
+	Adjusting...
+		Bounds: [2808,3679]
+			nodes:      271241
+			failures:   131376
+			restarts:   8
+			no-goods:   0
+			peak depth: 1495
+			runtime:    2:00.033 (120033.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      262368
+			failures:   126423
+			restarts:   8
+			no-goods:   0
+			peak depth: 1441
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 23.70% away from optimum.

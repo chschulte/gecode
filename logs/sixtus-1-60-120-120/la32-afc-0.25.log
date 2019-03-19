@@ -1,0 +1,31 @@
+	Probing...
+		la32 [makespan: 2454]
+		la32 [makespan: 2031]
+		la32 [makespan: 2019]
+		la32 [makespan: 2006]
+		la32 [makespan: 1970]
+			nodes:      121591
+			failures:   40040
+			peak depth: 1785
+			runtime:    7.044 (7044.000 ms)
+
+	Adjusting...
+		Bounds: [1850,1970]
+			nodes:      401307
+			failures:   199908
+			restarts:   9
+			no-goods:   62
+			peak depth: 296
+			runtime:    2:00.003 (120003.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      442878
+			failures:   220546
+			restarts:   10
+			no-goods:   40
+			peak depth: 314
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 6.14% away from optimum.

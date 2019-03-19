@@ -1,1 +1,38 @@
 	Probing...
+		abz8 [makespan: 968]
+		abz8 [makespan: 882]
+		abz8 [makespan: 860]
+		abz8 [makespan: 846]
+		abz8 [makespan: 838]
+		abz8 [makespan: 831]
+		abz8 [makespan: 827]
+		abz8 [makespan: 800]
+			nodes:      116377
+			failures:   40046
+			peak depth: 1644
+			runtime:    7.465 (7465.000 ms)
+
+	Adjusting...
+		Bounds: [566,800]
+			nodes:      555828
+			failures:   277649
+			restarts:   10
+			no-goods:   277
+			peak depth: 141
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		abz8 [makespan: 799]
+		abz8 [makespan: 798]
+		abz8 [makespan: 797]
+		abz8 [makespan: 796]
+			nodes:      747987
+			failures:   373092
+			restarts:   12
+			no-goods:   309
+			peak depth: 249
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 29.02% away from optimum.

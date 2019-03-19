@@ -1,0 +1,32 @@
+	Probing...
+		swv10 [makespan: 2456]
+		swv10 [makespan: 2334]
+		swv10 [makespan: 2325]
+		swv10 [makespan: 2258]
+		swv10 [makespan: 2080]
+		swv10 [makespan: 2059]
+			nodes:      196538
+			failures:   80077
+			peak depth: 1702
+			runtime:    11.685 (11685.000 ms)
+
+	Adjusting...
+		Bounds: [1159,2059]
+			nodes:      385103
+			failures:   192278
+			restarts:   9
+			no-goods:   180
+			peak depth: 136
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      534057
+			failures:   266266
+			restarts:   10
+			no-goods:   75
+			peak depth: 209
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 43.76% away from optimum.

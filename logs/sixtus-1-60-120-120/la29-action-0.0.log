@@ -1,0 +1,31 @@
+	Probing...
+		la29 [makespan: 1662]
+		la29 [makespan: 1482]
+		la29 [makespan: 1408]
+		la29 [makespan: 1379]
+			nodes:      49967
+			failures:   10026
+			peak depth: 1291
+			runtime:    1.644 (1644.000 ms)
+
+	Adjusting...
+		Bounds: [1105,1379]
+			nodes:      880411
+			failures:   439807
+			restarts:   12
+			no-goods:   350
+			peak depth: 161
+			runtime:    2:00.002 (120002.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		la29 [makespan: 1378]
+			nodes:      927180
+			failures:   463041
+			restarts:   12
+			no-goods:   280
+			peak depth: 221
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 19.88% away from optimum.

@@ -1,0 +1,27 @@
+	Probing...
+		swv12 [makespan: 3617]
+			nodes:      699592
+			failures:   320104
+			peak depth: 2682
+			runtime:    55.628 (55628.000 ms)
+
+	Adjusting...
+		Bounds: [2829,3617]
+			nodes:      233279
+			failures:   113410
+			restarts:   7
+			no-goods:   0
+			peak depth: 1176
+			runtime:    2:00.058 (120058.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      249044
+			failures:   119345
+			restarts:   8
+			no-goods:   0
+			peak depth: 1583
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 21.81% away from optimum.
