@@ -83,6 +83,14 @@ namespace Gecode { namespace Int {
     /// Test whether \a n is contained in domain
     bool in(long long int n) const { (void) n; return false; }
     //@}
+
+    /// \name Fake offsets
+    //@{
+    /// Set offset to \a n
+    void offset(int n) { (void) n; }
+    /// Return offset
+    int offset(void) const { return 0; }
+    //@}
     
     /// \name Domain update by value
     //@{
@@ -239,12 +247,36 @@ namespace Gecode {
     /// Move assigned view from position \c size()-1 to position \a i (truncate array by one)
     void move_lst(int i) { (void) i; }
     //@}
+
+    /// Test whether all views are assigned
+    bool assigned(void) const { return true; }
+
   private:
     static void* operator new(size_t);
     static void  operator delete(void*,size_t);
   };
 
 }
+
+namespace Gecode { namespace Int {
+
+  /// Test whether a view array \a x is a fake
+  template<class View>
+  bool fake(const ViewArray<View>& x);
+
+  template<class View>
+  forceinline bool
+  fake(const ViewArray<View>&) {
+    return false;
+  }
+
+  template<>
+  forceinline bool
+  fake(const ViewArray<NoIntView>&) {
+    return true;
+  }
+
+}}
 
 #endif
 

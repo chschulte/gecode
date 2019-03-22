@@ -34,6 +34,7 @@
  */
 
 #include <gecode/int/bin-packing.hh>
+#include <gecode/int/no-int-view.hh>
 
 namespace Gecode {
 
@@ -64,7 +65,9 @@ namespace Gecode {
     for (int i=0; i<n; i++)
       bs[i] = BinPacking::Item(b[i],s[i]);
 
-    GECODE_ES_FAIL(Int::BinPacking::Pack::post(home,lv,bs));
+    ViewArray<NoIntView> c;
+
+    GECODE_ES_FAIL(Int::BinPacking::CardPack<NoIntView>::post(home,lv,c,bs));
   }
 
   void
@@ -81,24 +84,6 @@ namespace Gecode {
       Limits::positive(s[i],"Int::binpacking");
     GECODE_POST;
 
-    if (0) {
-    // Number of items
-    int n = b.size();
-    // Number of bins
-    int m = l.size();
-
-    ViewArray<OffsetView> lv(home,m);
-    for (int i=0; i<m; i++)
-      lv[i] = OffsetView(l[i],0);
-
-    ViewArray<BinPacking::Item> bs(home,n);
-    for (int i=0; i<n; i++)
-      bs[i] = BinPacking::Item(b[i],s[i]);
-
-    GECODE_ES_FAIL(Int::BinPacking::Pack::post(home,lv,bs));
-  }
-
-    {
     // Number of items
     int n = b.size();
     // Number of bins
@@ -114,8 +99,7 @@ namespace Gecode {
     for (int i=0; i<n; i++)
       bs[i] = BinPacking::Item(b[i],s[i]);
     
-    GECODE_ES_FAIL(Int::BinPacking::CardPack::post(home,lv,cv,bs));
-    }
+    GECODE_ES_FAIL(Int::BinPacking::CardPack<OffsetView>::post(home,lv,cv,bs));
 
     //    count(home, b, c, ipl);
     linear(home, c, IRT_EQ, b.size());
@@ -169,7 +153,9 @@ namespace Gecode {
       for (int i=0; i<n; i++)
         bv[i] = BinPacking::Item(b[i],s[i*d+k]);
 
-      if (Int::BinPacking::Pack::post(home,lv,bv) == ES_FAILED) {
+      ViewArray<NoIntView> c;
+
+      if (Int::BinPacking::CardPack<NoIntView>::post(home,lv,c,bv) == ES_FAILED) {
         home.fail();
         return IntSet::empty;
       }

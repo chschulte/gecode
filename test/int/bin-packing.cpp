@@ -311,6 +311,7 @@ namespace Test { namespace Int {
                2*m0+s0.size(), 0, 100),
           m(m0), s(s0), valid(v), t(total(s)) {
         testsearch = false;
+        testfix = false;
       }
       /// Create assignment
       virtual Assignment* assignment(void) const {

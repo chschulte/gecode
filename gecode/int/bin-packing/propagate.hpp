@@ -388,17 +388,20 @@ namespace Gecode { namespace Int { namespace BinPacking {
     return ES_OK;
   }
 
+  template<class CardView>
   forceinline void
-  CardPack::eliminate(int i) {
+  CardPack<CardView>::eliminate(int i) {
     assert(bs[i].assigned());
     int j = bs[i].bin().val();
     l[j].offset(l[j].offset() - bs[i].size());
-    c[j].offset(c[j].offset() - 1);
+    if (!fake(c))
+      c[j].offset(c[j].offset() - 1);
     t -= bs[i].size();
   }
 
+  template<class CardView>
   forceinline ExecStatus
-  CardPack::expensive(Space& home, Region& region) {
+  CardPack<CardView>::expensive(Space& home, Region& region) {
     int n = bs.size();
     int m = l.size();
     // Now the invariant holds that no more assigned bins exist!
@@ -582,22 +585,330 @@ namespace Gecode { namespace Int { namespace BinPacking {
    *
    */
 
+  template<class CardView>
   forceinline
-  CardPack::CardPack(Home home,
-                     ViewArray<OffsetView>& l, ViewArray<OffsetView>& c0,
+  CardPack<CardView>::CardPack(Home home,
+                     ViewArray<OffsetView>& l, ViewArray<CardView>& c0,
                      ViewArray<Item>& bs, int t)
     : Pack(home,l,bs,t), c(c0) {
     c.subscribe(home,*this,PC_INT_BND);
   }
 
+  template<class CardView>
   forceinline
-  CardPack::CardPack(Space& home, CardPack& p)
+  CardPack<CardView>::CardPack(Space& home, CardPack& p)
     : Pack(home,p) {
     c.update(home,p.c);
   }
 
+  template<class CardView>
+  void
+  CardPack<CardView>::reschedule(Space& home) {
+    Pack::reschedule(home);
+    c.reschedule(home,*this,PC_INT_BND);
+  }
+
+  template<class CardView>
+  Actor*
+  CardPack<CardView>::copy(Space& home) {
+    return new (home) CardPack(home,*this);
+  }
+
+
+  template<class CardView>
+  void CardPack<CardView>::print(const char* s) {
+    if (trace) {
+      std::cout << s << std::endl
+                << "\t bs = " << bs << std::endl
+                << "\t l = {";
+      for (int i=0; i<l.size(); i++) {
+        int o=l[i].offset();
+        std::cout << l[i] << " (";
+        l[i].offset(0);
+        std::cout << l[i] << ")";
+        l[i].offset(o);
+        if (i+1 != l.size())
+          std::cout << ", ";
+      }
+      std::cout << "}" << std::endl
+                << "\t c = {";
+      for (int i=0; i<c.size(); i++) {
+        int o=c[i].offset();
+        std::cout << c[i] << " (";
+        c[i].offset(0);
+        std::cout << c[i] << ")";
+        c[i].offset(o);
+        if (i+1 != c.size())
+          std::cout << ", ";
+      }
+      std::cout << "}" << std::endl << std::endl;
+    }
+ }
+
+  /*
+   * Propagation proper
+   *
+   */
+  template<class CardView>
+  ExecStatus
+  CardPack<CardView>::propagate(Space& home, const ModEventDelta& med) {
+    print("propagate");
+
+    // Number of items
+    int n = bs.size();
+    // Number of bins
+    int m = l.size();
+
+    Region region;
+
+    {
+      // Possible sizes for bins
+      int* ps = region.alloc<int>(m);
+      // Possible capacity for bins
+      int* pc;
+
+      if (!fake(c)) {
+        pc = region.alloc<int>(m);
+        for (int j=0; j<m; j++)
+          ps[j] = pc[j] = 0;
+      } else {
+        for (int j=0; j<m; j++)
+          ps[j] = 0;
+      }
+
+      if (OffsetView::me(med) == ME_INT_VAL) {
+        // Eliminate assigned items
+        int k=0;
+        for (int i=0; i<n; i++)
+          if (bs[i].assigned()) {
+            eliminate(i);
+          } else {
+            for (ViewValues<IntView> j(bs[i].bin()); j(); ++j) {
+              ps[j.val()] += bs[i].size();
+              if (!fake(c))
+                pc[j.val()] += 1;
+            }
+            bs[k++] = bs[i];
+          }
+        n=k; bs.size(n);
+      } else {
+        for (int i=0; i<n; i++) {
+          assert(!bs[i].assigned());
+          for (ViewValues<IntView> j(bs[i].bin()); j(); ++j) {
+            ps[j.val()] += bs[i].size();
+            if (!fake(c))
+              pc[j.val()] += 1;
+          }
+        }
+      }
+
+      print("After elimination:");
+
+      if (trace) {
+        std::cout << "Possible size and cardinality" << std::endl;
+        for (int j=0; j<m; j++) {
+          std::cout << "\tps[" << j << "] = " << ps[j];
+          if (!fake(c))
+            std::cout << ", pc[" << j << "] = " << pc[j];
+          std::cout << std::endl;
+        }
+      }
+
+      // Constrain load
+      {
+        ExecStatus es = load(home,ps);
+        if (es != ES_OK)
+          return es;
+      }
+
+      print("After load propagation:");
+
+
+      if (!fake(c))
+        for (int j=0; j<m; j++) {
+          GECODE_ME_CHECK(c[j].gq(home,0));
+          GECODE_ME_CHECK(c[j].lq(home,pc[j]));
+        }
+
+      print("After cardinality propagation:");
+
+
+      if (n == 0) {
+        assert(l.assigned() && c.assigned());
+        return home.ES_SUBSUMED(*this);
+      }
+
+      if (!fake(c)) {    
+        int* minsum = region.alloc<int>(n+1);
+        int* maxsum = region.alloc<int>(n+1);
+        
+        minsum[0] = 0;
+        maxsum[0] = 0;
+        for (int i=0; i<n; i++) {
+          minsum[i+1] = minsum[i] + bs[n-i-1].size();
+          maxsum[i+1] = maxsum[i] + bs[i].size();
+        }
+      
+        if (trace) {
+          std::cout << "\tminsum = {";
+          for (int i=0; i<=n; i++) {
+            std::cout << minsum[i];
+            if (i < n) std::cout << ", ";
+          }
+          std::cout << "}" << std::endl;
+          std::cout << "\tmaxsum = {";
+          for (int i=0; i<=n; i++) {
+            std::cout << maxsum[i];
+            if (i < n) std::cout << ", ";
+          }
+          std::cout << "}" << std::endl;
+        }
+      
+        // Propagate load from cardinality
+        for (int j=0; j<m; j++) {
+          GECODE_ME_CHECK(l[j].lq(home,maxsum[c[j].max()]));
+          GECODE_ME_CHECK(l[j].gq(home,minsum[c[j].min()]));
+        }
+        
+        print("After load from cardinality");
+        
+        // Propagate cardinality from load
+        for (int j=0; j<m; j++) {
+          {
+            // Find number of items which are needed at least
+            int k=c[j].min();
+            while ((k < c[j].max()) && (maxsum[k] < l[j].min()))
+              k++;
+            GECODE_ME_CHECK(c[j].gq(home,k));
+          }
+          {
+            // Find number of items which are needed at most
+            int k=c[j].max();
+            while ((k > c[j].min()) && (minsum[k] > l[j].max()))
+              k--;
+            GECODE_ME_CHECK(c[j].lq(home,k));
+          }
+        }
+        
+        print("After cardinality from load");
+
+      
+        if (!fake(c) && 0) {
+          int k = 0;
+          for (int i=0; i<n; i++) {
+            for (int j=0; j<m; j++) {
+              //              assert(!bs[i].assigned());
+              // Item i too large for bin j?
+              if ((c[j].min() > 0) &&
+                  (minsum[c[j].min()-1] + bs[i].size() > l[j].max()))
+                GECODE_ME_CHECK(bs[i].bin().nq(home,j));
+              // Item i too small for bin j?
+              if ((c[j].max() > 0) &&
+                  (maxsum[c[j].max()-1] + bs[i].size() < l[j].min()))
+                GECODE_ME_CHECK(bs[i].bin().nq(home,j));
+            }
+            // Eliminate assigned bin
+            if (bs[i].assigned()) {
+              eliminate(i);
+            } else {
+              bs[k++] = bs[i];
+            }
+          }
+          n=k; bs.size(n);
+        }
+
+        print("After bin from cardinality & load");
+
+      }
+
+      if (false) {
+        TellCache tc(region,m);
+        
+        int k=0;
+        for (int i=0; i<n; i++) {
+          
+          for (ViewValues<IntView> j(bs[i].bin()); j(); ++j) {
+            if (bs[i].size() > l[j.val()].max())
+              tc.nq(j.val());
+            if (ps[j.val()] - bs[i].size() < l[j.val()].min())
+              tc.eq(j.val());
+          }
+          GECODE_ES_CHECK(tc.tell(home,bs[i].bin()));
+          // Eliminate assigned bin
+          if (bs[i].assigned())
+            eliminate(i);
+          else
+            bs[k++] = bs[i];
+        }
+        n=k; bs.size(n);
+      }
+    }
+
+    print("After bin from load");
+
+    // Only if the propagator is at fixpoint here, continue with the more
+    // expensive stage for propagation.
+    if (IntView::me(modeventdelta()) != ME_INT_NONE)
+      return ES_NOFIX;
+
+
+    {
+      ExecStatus es = expensive(home,region);
+      print("After expensive");
+      return (es != ES_OK) ? es : ES_NOFIX;
+    }
+
+                return (n == 0) ? home.ES_SUBSUMED(*this) : ES_NOFIX;
+  }
+
+  template<class CardView>
+  ExecStatus
+  CardPack<CardView>::post(Home home,
+                           ViewArray<OffsetView>& l,
+                           ViewArray<CardView>& c,
+                           ViewArray<Item>& bs) {
+    // Number of items
+    int n = bs.size();
+    // Number of bins
+    int m = l.size();
+
+    if (n == 0) {
+      // No items to be packed
+      for (int i=0; i<m; i++) {
+        GECODE_ME_CHECK(l[i].eq(home,0));
+        GECODE_ME_CHECK(c[i].eq(home,0));
+      }
+      return ES_OK;
+    } else if (m == 0) {
+      // No bins available
+      return ES_FAILED;
+    }
+
+    // Sort according to size
+    Support::quicksort(&bs[0], n);
+
+    // Total size of items
+    int s = 0;
+    // Constrain bins
+    for (int i=0; i<n; i++) {
+      s += bs[i].size();
+      GECODE_ME_CHECK(bs[i].bin().gq(home,0));
+      GECODE_ME_CHECK(bs[i].bin().le(home,m));
+    }
+    // Constrain load & capacity
+    for (int j=0; j<m; j++) {
+      GECODE_ME_CHECK(l[j].gq(home,0));
+      GECODE_ME_CHECK(l[j].lq(home,s));
+      GECODE_ME_CHECK(c[j].gq(home,0));
+      GECODE_ME_CHECK(c[j].lq(home,n));
+    }
+    (void) new (home) CardPack(home,l,c,bs,s);
+    return ES_OK;
+  }
+
+  template<class CardView>
   forceinline size_t
-  CardPack::dispose(Space& home) {
+  CardPack<CardView>::dispose(Space& home) {
     c.cancel(home,*this,PC_INT_BND);
     (void) Pack::dispose(home);
     return sizeof(*this);

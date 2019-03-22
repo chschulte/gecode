@@ -221,12 +221,13 @@ namespace Gecode { namespace Int { namespace BinPacking {
    *
    * \ingroup FuncIntProp
    */
+  template<class CardView>
   class CardPack : public Pack {
   protected:
     /// View for capacity of a bin
-    ViewArray<OffsetView> c;
+    ViewArray<CardView> c;
     /// Constructor for posting
-    CardPack(Home home, ViewArray<OffsetView>& l, ViewArray<OffsetView>& c,
+    CardPack(Home home, ViewArray<OffsetView>& l, ViewArray<CardView>& c,
              ViewArray<Item>& bs, int t);
     /// Constructor for cloning \a p
     CardPack(Space& home, CardPack& p);
@@ -238,18 +239,14 @@ namespace Gecode { namespace Int { namespace BinPacking {
     static const bool trace = false;
   public:
     /// Post propagator for loads \a l, cardinality \a c, and items \a bs
-    GECODE_INT_EXPORT
     static ExecStatus post(Home home,
-                           ViewArray<OffsetView>& l, ViewArray<OffsetView>& c,
+                           ViewArray<OffsetView>& l, ViewArray<CardView>& c,
                            ViewArray<Item>& b);
     /// Perform propagation
-    GECODE_INT_EXPORT
     virtual ExecStatus propagate(Space& home, const ModEventDelta& med);
     /// Schedule function
-    GECODE_INT_EXPORT
     virtual void reschedule(Space& home);
     /// Copy propagator during cloning
-    GECODE_INT_EXPORT
     virtual Actor* copy(Space& home);
     /// Destructor
     virtual size_t dispose(Space& home);
