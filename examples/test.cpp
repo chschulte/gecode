@@ -57,13 +57,7 @@ protected:
 public:
   /// Actual model
   Alpha(const Options& opt)
-    : Script(opt),
-      b(*this,6,0,10), c(*this,2,0,60), l(*this,2,0,100) {
-    IntArgs s({1,3,3,1,4,1});
-    //    rel(*this, c[0] >= 3);
-    //    rel(*this, l[0] >= 5);
-    //  rel(*this, b[0] == 0);
-    binpacking(*this, l, c, b, s);
+    : Script(opt) {
     /*
     dom(*this, l[0], IntSet({8,10}));
     dom(*this, l[1], IntSet({3,5}));
@@ -79,6 +73,7 @@ public:
     status();
     print(std::cout);
     */
+    /*
     dom(*this, l[0], IntSet({5,7}));
     dom(*this, l[1], IntSet(6,8));
     dom(*this, c[0], IntSet(1,3));
@@ -101,6 +96,26 @@ public:
     std::cout << "D" << std::endl;
     print(std::cout);
     std::cout << "AFTER" << std::endl;
+    */
+
+    b = IntVarArray(*this,6,0,10);
+    c = IntVarArray(*this,2,0,60);
+    l = IntVarArray(*this,2,0,100);
+
+    IntArgs s({1,2,4,8,16,32});
+
+    binpacking(*this, l, c, b, s);
+
+    rel(*this, l[0] == 33);
+    rel(*this, l[1] == 30);
+    rel(*this, c[0] == 2);
+    rel(*this, c[1] == 4);
+
+    rel(*this, b[0] == 0);
+    rel(*this, b[2] == 1);
+    rel(*this, b[3] == 1);
+    rel(*this, b[4] == 1);
+    rel(*this, b[5] == 0);
   }
 
   /// Constructor for cloning \a s

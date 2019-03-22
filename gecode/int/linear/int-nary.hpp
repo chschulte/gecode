@@ -31,7 +31,7 @@
  *
  */
 
-#include <gecode/int/linear/int-noview.hpp>
+#include <gecode/int/no-int-view.hh>
 
 namespace Gecode { namespace Int { namespace Linear {
 
@@ -47,10 +47,10 @@ namespace Gecode { namespace Int { namespace Linear {
   isunit(ViewArray<IntView>&, ViewArray<IntView>&) { return true; }
   template<>
   forceinline bool
-  isunit(ViewArray<IntView>&, ViewArray<NoView>&) { return true; }
+  isunit(ViewArray<IntView>&, ViewArray<NoIntView>&) { return true; }
   template<>
   forceinline bool
-  isunit(ViewArray<NoView>&, ViewArray<IntView>&) { return true; }
+  isunit(ViewArray<NoIntView>&, ViewArray<IntView>&) { return true; }
 
   /*
    * Linear propagators
@@ -278,11 +278,11 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val, class P, class N>
   ExecStatus
   Eq<Val,P,N>::post(Home home, ViewArray<P>& x, ViewArray<N>& y, Val c) {
-    ViewArray<NoView> nva;
+    ViewArray<NoIntView> nva;
     if (y.size() == 0) {
-      (void) new (home) Eq<Val,P,NoView>(home,x,nva,c);
+      (void) new (home) Eq<Val,P,NoIntView>(home,x,nva,c);
     } else if (x.size() == 0) {
-      (void) new (home) Eq<Val,N,NoView>(home,y,nva,-c);
+      (void) new (home) Eq<Val,N,NoIntView>(home,y,nva,-c);
     } else {
       (void) new (home) Eq<Val,P,N>(home,x,y,c);
     }
@@ -307,7 +307,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   eqtobin(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 2);
     return new (home) EqBin<Val,IntView,IntView>
       (home,p,x[0],x[1],c);
@@ -315,7 +315,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   eqtobin(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 2);
     return new (home) EqBin<Val,IntView,IntView>
       (home,p,y[0],y[1],-c);
@@ -346,7 +346,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   eqtoter(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 3);
     return new (home) EqTer<Val,IntView,IntView,IntView>
       (home,p,x[0],x[1],x[2],c);
@@ -354,7 +354,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   eqtoter(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 3);
     return new (home) EqTer<Val,IntView,IntView,IntView>
       (home,p,y[0],y[1],y[2],-c);
@@ -410,11 +410,11 @@ namespace Gecode { namespace Int { namespace Linear {
   ExecStatus
   ReEq<Val,P,N,Ctrl,rm>::post(Home home,
                               ViewArray<P>& x, ViewArray<N>& y, Val c, Ctrl b) {
-    ViewArray<NoView> nva;
+    ViewArray<NoIntView> nva;
     if (y.size() == 0) {
-      (void) new (home) ReEq<Val,P,NoView,Ctrl,rm>(home,x,nva,c,b);
+      (void) new (home) ReEq<Val,P,NoIntView,Ctrl,rm>(home,x,nva,c,b);
     } else if (x.size() == 0) {
-      (void) new (home) ReEq<Val,N,NoView,Ctrl,rm>(home,y,nva,-c,b);
+      (void) new (home) ReEq<Val,N,NoIntView,Ctrl,rm>(home,y,nva,-c,b);
     } else {
       (void) new (home) ReEq<Val,P,N,Ctrl,rm>(home,x,y,c,b);
     }
@@ -480,11 +480,11 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val, class P, class N>
   ExecStatus
   Nq<Val,P,N>::post(Home home, ViewArray<P>& x, ViewArray<N>& y, Val c) {
-    ViewArray<NoView> nva;
+    ViewArray<NoIntView> nva;
     if (y.size() == 0) {
-      (void) new (home) Nq<Val,P,NoView>(home,x,nva,c);
+      (void) new (home) Nq<Val,P,NoIntView>(home,x,nva,c);
     } else if (x.size() == 0) {
-      (void) new (home) Nq<Val,N,NoView>(home,y,nva,-c);
+      (void) new (home) Nq<Val,N,NoIntView>(home,y,nva,-c);
     } else {
       (void) new (home) Nq<Val,P,N>(home,x,y,c);
     }
@@ -509,7 +509,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   nqtobin(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 2);
     return new (home) NqBin<Val,IntView,IntView>
       (home,p,x[0],x[1],c);
@@ -517,7 +517,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   nqtobin(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 2);
     return new (home) NqBin<Val,IntView,IntView>
       (home,p,y[0],y[1],-c);
@@ -548,7 +548,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   nqtoter(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 3);
     return new (home) NqTer<Val,IntView,IntView,IntView>
       (home,p,x[0],x[1],x[2],c);
@@ -556,7 +556,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   nqtoter(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 3);
     return new (home) NqTer<Val,IntView,IntView,IntView>
       (home,p,y[0],y[1],y[2],-c);
@@ -629,11 +629,11 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val, class P, class N>
   ExecStatus
   Lq<Val,P,N>::post(Home home, ViewArray<P>& x, ViewArray<N>& y, Val c) {
-    ViewArray<NoView> nva;
+    ViewArray<NoIntView> nva;
     if (y.size() == 0) {
-      (void) new (home) Lq<Val,P,NoView>(home,x,nva,c);
+      (void) new (home) Lq<Val,P,NoIntView>(home,x,nva,c);
     } else if (x.size() == 0) {
-      (void) new (home) Lq<Val,NoView,N>(home,nva,y,c);
+      (void) new (home) Lq<Val,NoIntView,N>(home,nva,y,c);
     } else {
       (void) new (home) Lq<Val,P,N>(home,x,y,c);
     }
@@ -658,7 +658,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   lqtobin(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 2);
     return new (home) LqBin<Val,IntView,IntView>
       (home,p,x[0],x[1],c);
@@ -666,7 +666,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   lqtobin(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 2);
     return new (home) LqBin<Val,MinusView,MinusView>
       (home,p,MinusView(y[0]),MinusView(y[1]),c);
@@ -697,7 +697,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   lqtoter(Space& home, Propagator& p,
-          ViewArray<IntView>& x, ViewArray<NoView>&, Val c) {
+          ViewArray<IntView>& x, ViewArray<NoIntView>&, Val c) {
     assert(x.size() == 3);
     return new (home) LqTer<Val,IntView,IntView,IntView>
       (home,p,x[0],x[1],x[2],c);
@@ -705,7 +705,7 @@ namespace Gecode { namespace Int { namespace Linear {
   template<class Val>
   forceinline Actor*
   lqtoter(Space& home, Propagator& p,
-          ViewArray<NoView>&, ViewArray<IntView>& y, Val c) {
+          ViewArray<NoIntView>&, ViewArray<IntView>& y, Val c) {
     assert(y.size() == 3);
     return new (home) LqTer<Val,MinusView,MinusView,MinusView>
       (home,p,MinusView(y[0]),MinusView(y[1]),MinusView(y[2]),c);
@@ -827,11 +827,11 @@ namespace Gecode { namespace Int { namespace Linear {
   ExecStatus
   ReLq<Val,P,N,rm>::post(Home home,
                          ViewArray<P>& x, ViewArray<N>& y, Val c, BoolView b) {
-    ViewArray<NoView> nva;
+    ViewArray<NoIntView> nva;
     if (y.size() == 0) {
-      (void) new (home) ReLq<Val,P,NoView,rm>(home,x,nva,c,b);
+      (void) new (home) ReLq<Val,P,NoIntView,rm>(home,x,nva,c,b);
     } else if (x.size() == 0) {
-      (void) new (home) ReLq<Val,NoView,N,rm>(home,nva,y,c,b);
+      (void) new (home) ReLq<Val,NoIntView,N,rm>(home,nva,y,c,b);
     } else {
       (void) new (home) ReLq<Val,P,N,rm>(home,x,y,c,b);
     }

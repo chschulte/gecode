@@ -103,6 +103,10 @@ namespace Gecode { namespace Int { namespace BinPacking {
         ExecStatus es = load(home,ps);
         if (es != ES_OK)
           return es;
+        if (n == 0) {
+          assert(l.assigned());
+          return home.ES_SUBSUMED(*this);
+        }
       }
 
       {
@@ -197,7 +201,7 @@ namespace Gecode { namespace Int { namespace BinPacking {
 
 
   void CardPack::print(const char* s) {
-    if (true) {
+    if (trace) {
       std::cout << s << std::endl
                 << "\t bs = " << bs << std::endl
                 << "\t l = {";
@@ -255,10 +259,7 @@ namespace Gecode { namespace Int { namespace BinPacking {
         int k=0;
         for (int i=0; i<n; i++)
           if (bs[i].assigned()) {
-            int j = bs[i].bin().val();
-            l[j].offset(l[j].offset() - bs[i].size());
-            c[j].offset(c[j].offset() - 1);
-            t -= bs[i].size();
+            eliminate(i);
           } else {
             for (ViewValues<IntView> j(bs[i].bin()); j(); ++j) {
               ps[j.val()] += bs[i].size();
@@ -279,7 +280,7 @@ namespace Gecode { namespace Int { namespace BinPacking {
 
       print("After elimination:");
 
-      if (true) {
+      if (trace) {
         std::cout << "Possible size and cardinality" << std::endl;
         for (int j=0; j<m; j++) {
           std::cout << "\tps[" << j << "] = " << ps[j] << ", "
@@ -304,6 +305,12 @@ namespace Gecode { namespace Int { namespace BinPacking {
 
       print("After cardinality propagation:");
 
+
+      if (n == 0) {
+        assert(l.assigned() && c.assigned());
+        return home.ES_SUBSUMED(*this);
+      }
+
       {    
         int* minsum = region.alloc<int>(n+1);
         int* maxsum = region.alloc<int>(n+1);
@@ -315,15 +322,19 @@ namespace Gecode { namespace Int { namespace BinPacking {
           maxsum[i+1] = maxsum[i] + bs[i].size();
         }
       
-        if (true) {
+        if (trace) {
           std::cout << "\tminsum = {";
-          for (int i=0; i<n; i++)
-            std::cout << minsum[i] << ", ";
-          std::cout << std::endl;
+          for (int i=0; i<=n; i++) {
+            std::cout << minsum[i];
+            if (i < n) std::cout << ", ";
+          }
+          std::cout << "}" << std::endl;
           std::cout << "\tmaxsum = {";
-          for (int i=0; i<n; i++)
-            std::cout << maxsum[i] << ", ";
-          std::cout << std::endl;
+          for (int i=0; i<=n; i++) {
+            std::cout << maxsum[i];
+            if (i < n) std::cout << ", ";
+          }
+          std::cout << "}" << std::endl;
         }
       
         // Propagate load from cardinality
@@ -335,7 +346,6 @@ namespace Gecode { namespace Int { namespace BinPacking {
         print("After load from cardinality");
         
         // Propagate cardinality from load
-        if (0)
         for (int j=0; j<m; j++) {
           {
             // Find number of items which are needed at least
@@ -356,7 +366,7 @@ namespace Gecode { namespace Int { namespace BinPacking {
         print("After cardinality from load");
 
       
-        {
+        if (0) {
           int k = 0;
           for (int i=0; i<n; i++) {
             for (int j=0; j<m; j++) {
@@ -371,11 +381,8 @@ namespace Gecode { namespace Int { namespace BinPacking {
                 GECODE_ME_CHECK(bs[i].bin().nq(home,j));
             }
             // Eliminate assigned bin
-            if (false && bs[i].assigned()) {
-              int j = bs[i].bin().val();
-              l[j].offset(l[j].offset() - bs[i].size());
-              c[j].offset(c[j].offset() - 1);
-              t -= bs[i].size();
+            if (bs[i].assigned()) {
+              eliminate(i);
             } else {
               bs[k++] = bs[i];
             }
@@ -386,7 +393,7 @@ namespace Gecode { namespace Int { namespace BinPacking {
         print("After bin from cardinality & load");
 
 
-                if (true) {
+                if (false) {
           TellCache tc(region,m);
           
           int k=0;

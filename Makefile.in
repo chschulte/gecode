@@ -338,7 +338,7 @@ INTSRC0 = \
 
 INTHDR0 = \
 	limits.hpp support-values.hh support-values.hpp \
-	idx-view.hh idx-view.hpp div.hh div.hpp \
+	idx-view.hh idx-view.hpp div.hh div.hpp no-int-view.hpp \
 	exec.hh exec/when.hpp \
 	arithmetic/abs.hpp arithmetic/max.hpp arithmetic/argmax.hpp \
 	arithmetic/mult.hpp arithmetic/divmod.hpp \
@@ -368,8 +368,7 @@ INTHDR0 = \
 	element/int.hpp element/view.hpp element/pair.hpp \
 	gcc/bnd.hpp gcc/dom.hpp gcc/bnd-sup.hpp gcc/dom-sup.hpp \
 	gcc/val.hpp gcc/view.hpp gcc/post.hpp \
-	linear/post.hpp \
-	linear/int-noview.hpp linear/int-bin.hpp linear/int-ter.hpp \
+	linear/post.hpp linear/int-bin.hpp linear/int-ter.hpp \
 	linear/int-nary.hpp linear/int-dom.hpp \
 	linear/bool-int.hpp linear/bool-view.hpp linear/bool-scale.hpp \
 	extensional/dfa.hpp extensional/layered-graph.hpp \

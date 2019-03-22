@@ -230,6 +230,12 @@ namespace Gecode { namespace Int { namespace BinPacking {
              ViewArray<Item>& bs, int t);
     /// Constructor for cloning \a p
     CardPack(Space& home, CardPack& p);
+    /// Perform expensive part of propagation
+    ExecStatus expensive(Space& home, Region& r);
+    /// Eliminate item \a i
+    void eliminate(int i);
+    /// Whether to trace
+    static const bool trace = false;
   public:
     /// Post propagator for loads \a l, cardinality \a c, and items \a bs
     GECODE_INT_EXPORT

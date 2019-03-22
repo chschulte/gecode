@@ -117,7 +117,8 @@ namespace Gecode {
     GECODE_ES_FAIL(Int::BinPacking::CardPack::post(home,lv,cv,bs));
     }
 
-    count(home, b, c, ipl);
+    //    count(home, b, c, ipl);
+    linear(home, c, IRT_EQ, b.size());
   }
 
   IntSet
