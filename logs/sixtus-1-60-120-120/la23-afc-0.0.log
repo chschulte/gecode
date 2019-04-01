@@ -9,40 +9,29 @@
 			nodes:      61604
 			failures:   20024
 			peak depth: 979
-			runtime:    2.443 (2443.000 ms)
+			runtime:    2.442 (2442.000 ms)
 
 	Adjusting...
-		Bounds: [1032,1125]
-			nodes:      1332813
-			failures:   666111
-			restarts:   14
-			no-goods:   307
-			peak depth: 124
+		Bounds: [1031,1125]
+		la23 [makespan: 1078]
+		Bounds: [1031,1078]
+		la23 [makespan: 1054]
+		Bounds: [1031,1054]
+			nodes:      1326384
+			failures:   662602
+			restarts:   22
+			no-goods:   514
+			peak depth: 146
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		la23 [makespan: 1120]
-		la23 [makespan: 1114]
-		la23 [makespan: 1113]
-		la23 [makespan: 1112]
-		la23 [makespan: 1111]
-		la23 [makespan: 1110]
-		la23 [makespan: 1109]
-		la23 [makespan: 1107]
-		la23 [makespan: 1106]
-		la23 [makespan: 1105]
-		la23 [makespan: 1104]
-		la23 [makespan: 1103]
-		la23 [makespan: 1102]
-		la23 [makespan: 1101]
-		la23 [makespan: 1100]
-			nodes:      1410605
-			failures:   704259
+			nodes:      1308987
+			failures:   654147
 			restarts:   14
-			no-goods:   466
-			peak depth: 174
+			no-goods:   359
+			peak depth: 125
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 6.27% away from optimum.
+	Solution at most 2.28% away from optimum.

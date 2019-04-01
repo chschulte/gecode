@@ -5,21 +5,31 @@
 			nodes:      15348
 			failures:   5
 			peak depth: 689
-			runtime:    0.223 (223.000 ms)
+			runtime:    0.225 (225.000 ms)
 
 	Adjusting...
-		Bounds: [732,982]
+		Bounds: [731,982]
 		Bounds: [857,982]
-		Bounds: [919,982]
-		la16 [makespan: 947]
-		Bounds: [919,947]
-		Bounds: [933,947]
+		Bounds: [920,982]
+		la16 [makespan: 950]
+		Bounds: [920,950]
 		la16 [makespan: 934]
-			nodes:      75741
-			failures:   37752
-			restarts:   5
-			no-goods:   65
-			peak depth: 94
-			runtime:    3.836 (3836.000 ms)
+		Bounds: [920,934]
+		Bounds: [928,934]
+		Bounds: [932,934]
+			nodes:      55764
+			failures:   27770
+			restarts:   3
+			no-goods:   58
+			peak depth: 104
+			runtime:    3.066 (3066.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
+			restarts:   0
+			no-goods:   0
+			peak depth: 0
+			runtime:    0.000 (0.000 ms)
 
 	Found best solution and proved optimality.

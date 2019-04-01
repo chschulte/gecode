@@ -9,26 +9,28 @@
 			nodes:      98599
 			failures:   30040
 			peak depth: 1629
-			runtime:    3.625 (3625.000 ms)
+			runtime:    3.644 (3644.000 ms)
 
 	Adjusting...
-		Bounds: [563,825]
-			nodes:      561761
-			failures:   280581
+		Bounds: [562,825]
+			nodes:      563400
+			failures:   281379
 			restarts:   10
-			no-goods:   323
-			peak depth: 214
-			runtime:    2:00.002 (120002.000 ms)
+			no-goods:   324
+			peak depth: 170
+			runtime:    2:00.004 (120004.000 ms)
 				stopped due to time-out...
 
 	Solving...
 		abz9 [makespan: 824]
-			nodes:      681358
-			failures:   340053
-			restarts:   11
+		abz9 [makespan: 823]
+		abz9 [makespan: 822]
+			nodes:      819322
+			failures:   408686
+			restarts:   15
 			no-goods:   340
-			peak depth: 267
+			peak depth: 300
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 31.80% away from optimum.
+	Solution at most 31.75% away from optimum.

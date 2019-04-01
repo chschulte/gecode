@@ -5,18 +5,20 @@
 			nodes:      7855
 			failures:   2
 			peak depth: 346
-			runtime:    0.094 (94.000 ms)
+			runtime:    0.097 (97.000 ms)
 
 	Adjusting...
-		Bounds: [666,674]
+		Bounds: [665,674]
 		la01 [makespan: 669]
-		Bounds: [666,669]
+		Bounds: [665,669]
 		la01 [makespan: 667]
-			nodes:      133
-			failures:   20
+		Bounds: [665,667]
+		la01 [makespan: 666]
+			nodes:      860
+			failures:   358
 			restarts:   0
 			no-goods:   0
-			peak depth: 51
-			runtime:    0.004 (4.000 ms)
+			peak depth: 65
+			runtime:    0.024 (24.000 ms)
 
 	Found best solution and proved optimality.

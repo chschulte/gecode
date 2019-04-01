@@ -9,24 +9,33 @@
 			nodes:      14742
 			failures:   9
 			peak depth: 647
-			runtime:    0.222 (222.000 ms)
+			runtime:    0.226 (226.000 ms)
 
 	Adjusting...
-		Bounds: [671,972]
-		Bounds: [821,972]
-		orb02 [makespan: 895]
-		Bounds: [821,895]
-		Bounds: [858,895]
-		Bounds: [876,895]
-		Bounds: [885,895]
-		orb02 [makespan: 890]
-		Bounds: [885,890]
+		Bounds: [670,972]
+		Bounds: [822,972]
+		orb02 [makespan: 897]
+		Bounds: [822,897]
+		Bounds: [860,897]
+		Bounds: [879,897]
+		orb02 [makespan: 887]
+		Bounds: [879,887]
+		Bounds: [884,887]
+			nodes:      2012224
+			failures:   1005593
+			restarts:   41
+			no-goods:   843
+			peak depth: 108
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
 		orb02 [makespan: 886]
-			nodes:      611497
-			failures:   305434
-			restarts:   22
-			no-goods:   431
-			peak depth: 106
-			runtime:    35.809 (35809.000 ms)
+			nodes:      846391
+			failures:   423033
+			restarts:   13
+			no-goods:   292
+			peak depth: 91
+			runtime:    50.511 (50511.000 ms)
 
 	Found best solution and proved optimality.

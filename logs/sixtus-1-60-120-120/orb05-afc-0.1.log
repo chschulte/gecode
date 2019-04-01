@@ -7,29 +7,37 @@
 			nodes:      54275
 			failures:   20019
 			peak depth: 649
-			runtime:    0.938 (938.000 ms)
+			runtime:    0.925 (925.000 ms)
 
 	Adjusting...
-		Bounds: [630,1000]
+		Bounds: [629,1000]
 		Bounds: [815,1000]
-		orb05 [makespan: 902]
-		Bounds: [815,902]
-			nodes:      2189230
-			failures:   1094214
-			restarts:   24
-			no-goods:   400
-			peak depth: 115
+		orb05 [makespan: 905]
+		Bounds: [815,905]
+		Bounds: [861,905]
+			nodes:      1943365
+			failures:   971436
+			restarts:   23
+			no-goods:   415
+			peak depth: 90
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		orb05 [makespan: 899]
-			nodes:      2145682
-			failures:   1072594
-			restarts:   15
-			no-goods:   269
-			peak depth: 107
+		orb05 [makespan: 902]
+		orb05 [makespan: 901]
+		orb05 [makespan: 897]
+		orb05 [makespan: 895]
+		orb05 [makespan: 893]
+		orb05 [makespan: 892]
+		orb05 [makespan: 889]
+		orb05 [makespan: 888]
+			nodes:      1943394
+			failures:   971186
+			restarts:   22
+			no-goods:   368
+			peak depth: 125
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 9.45% away from optimum.
+	Solution at most 3.15% away from optimum.

@@ -7,23 +7,31 @@
 			nodes:      7767
 			failures:   22
 			peak depth: 348
-			runtime:    0.093 (93.000 ms)
+			runtime:    0.092 (92.000 ms)
 
 	Adjusting...
-		Bounds: [588,680]
+		Bounds: [587,680]
 		la03 [makespan: 633]
-		Bounds: [588,633]
-		Bounds: [610,633]
-		la03 [makespan: 621]
-		Bounds: [610,621]
-		Bounds: [615,621]
-		Bounds: [618,621]
+		Bounds: [587,633]
+		Bounds: [611,633]
+		la03 [makespan: 622]
+		Bounds: [611,622]
+		Bounds: [617,622]
 		la03 [makespan: 619]
-			nodes:      1794
-			failures:   848
+		Bounds: [617,619]
+			nodes:      17698
+			failures:   8774
+			restarts:   1
+			no-goods:   16
+			peak depth: 65
+			runtime:    0.626 (626.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
 			restarts:   0
 			no-goods:   0
-			peak depth: 49
-			runtime:    0.064 (64.000 ms)
+			peak depth: 0
+			runtime:    0.000 (0.000 ms)
 
 	Found best solution and proved optimality.

@@ -6,27 +6,29 @@
 			nodes:      71409
 			failures:   20021
 			peak depth: 1370
-			runtime:    2.815 (2815.000 ms)
+			runtime:    2.872 (2872.000 ms)
 
 	Adjusting...
-		Bounds: [890,1383]
-		Bounds: [1136,1383]
-			nodes:      912485
-			failures:   455904
-			restarts:   16
-			no-goods:   457
-			peak depth: 146
-			runtime:    2:00.001 (120001.000 ms)
+		Bounds: [889,1383]
+		Bounds: [1137,1383]
+			nodes:      900004
+			failures:   449661
+			restarts:   18
+			no-goods:   537
+			peak depth: 173
+			runtime:    2:00.002 (120002.000 ms)
 				stopped due to time-out...
 
 	Solving...
 		tai-15-15-5 [makespan: 1381]
-			nodes:      1082262
-			failures:   540720
-			restarts:   13
-			no-goods:   356
-			peak depth: 174
+		tai-15-15-5 [makespan: 1380]
+		tai-15-15-5 [makespan: 1379]
+			nodes:      1257928
+			failures:   628316
+			restarts:   16
+			no-goods:   400
+			peak depth: 213
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 17.81% away from optimum.
+	Solution at most 17.62% away from optimum.

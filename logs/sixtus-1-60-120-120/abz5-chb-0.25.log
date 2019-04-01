@@ -6,25 +6,32 @@
 			nodes:      15804
 			failures:   7
 			peak depth: 700
-			runtime:    0.221 (221.000 ms)
+			runtime:    0.225 (225.000 ms)
 
 	Adjusting...
-		Bounds: [868,1341]
-		Bounds: [1104,1341]
-		abz5 [makespan: 1219]
-		Bounds: [1104,1219]
-		Bounds: [1161,1219]
-		Bounds: [1190,1219]
-		Bounds: [1204,1219]
-		Bounds: [1211,1219]
-		abz5 [makespan: 1213]
-		Bounds: [1211,1213]
+		Bounds: [867,1341]
+		Bounds: [1105,1341]
+		abz5 [makespan: 1223]
+		Bounds: [1105,1223]
+		Bounds: [1165,1223]
+		Bounds: [1195,1223]
+		Bounds: [1210,1223]
 		abz5 [makespan: 1212]
-			nodes:      1669915
-			failures:   834386
-			restarts:   45
-			no-goods:   906
-			peak depth: 102
-			runtime:    1:37.525 (97525.000 ms)
+		Bounds: [1210,1212]
+			nodes:      2110000
+			failures:   1054450
+			restarts:   44
+			no-goods:   870
+			peak depth: 114
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      683277
+			failures:   341543
+			restarts:   11
+			no-goods:   164
+			peak depth: 124
+			runtime:    38.631 (38631.000 ms)
 
 	Found best solution and proved optimality.
