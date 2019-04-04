@@ -286,15 +286,12 @@ public:
     // Endtimes for each job
     IntVarArgs end(*this, n, 0, spec.upper());
 
-    // Precedence constraints
+    // Precedence constraints and makespan
     for (int i=0; i<n; i++) {
       for (int j=1; j<m; j++)
         rel(*this, start[i*m+j-1] + spec.duration(i,j) <= start[i*m+j]);
-      rel(*this, start[i*m+m-1] + spec.duration(i,m-1) == end[i]);
+      rel(*this, start[i*m+m-1] + spec.duration(i,m-1) <= makespan);
     }
-
-    // Makespan
-    max(*this, end, makespan);
   }
   /// Do not overload machines
   void nooverload(void) {
@@ -396,6 +393,7 @@ public:
         Gecode::branch(*this, start, INT_VAR_RND(r), INT_VAL_SPLIT_MIN());
       break;
     }
+    assign(*this, makespan, INT_ASSIGN_MIN());
   }
   /// Constructor for cloning \a s
   JobShopProbe(JobShopProbe& s)
@@ -561,6 +559,7 @@ public:
       break;
     }
     assign(*this, start, INT_VAR_MIN_MIN(), INT_ASSIGN_MIN());
+    assign(*this, makespan, INT_ASSIGN_MIN());
   }
   /// Constructor for cloning \a s
   JobShopSolve(JobShopSolve& s)
