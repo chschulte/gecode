@@ -4,10 +4,10 @@
 		la13 [makespan: 1318]
 		la13 [makespan: 1226]
 		la13 [makespan: 1166]
-			nodes:      94462
+			nodes:      94508
 			failures:   40014
-			peak depth: 638
-			runtime:    2.177 (2177.000 ms)
+			peak depth: 639
+			runtime:    2.116 (2116.000 ms)
 
 	Adjusting...
 		Bounds: [1149,1166]
@@ -15,21 +15,12 @@
 		Bounds: [1149,1155]
 		la13 [makespan: 1152]
 		Bounds: [1149,1152]
-			nodes:      1460060
-			failures:   728852
-			restarts:   22
-			no-goods:   489
-			peak depth: 197
-			runtime:    2:00.001 (120001.000 ms)
-				stopped due to time-out...
+		la13 [makespan: 1150]
+			nodes:      86314
+			failures:   42717
+			restarts:   6
+			no-goods:   136
+			peak depth: 161
+			runtime:    7.215 (7215.000 ms)
 
-	Solving...
-			nodes:      1497837
-			failures:   748152
-			restarts:   14
-			no-goods:   347
-			peak depth: 224
-			runtime:    2:00.001 (120001.000 ms)
-				stopped due to time-out...
-
-	Solution at most 0.35% away from optimum.
+	Found best solution and proved optimality.

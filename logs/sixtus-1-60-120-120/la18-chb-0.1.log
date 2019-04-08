@@ -3,10 +3,10 @@
 		la18 [makespan: 1116]
 		la18 [makespan: 938]
 		la18 [makespan: 921]
-			nodes:      34882
+			nodes:      34931
 			failures:   10020
-			peak depth: 673
-			runtime:    0.808 (808.000 ms)
+			peak depth: 674
+			runtime:    0.785 (785.000 ms)
 
 	Adjusting...
 		Bounds: [662,921]
@@ -17,20 +17,21 @@
 		Bounds: [840,855]
 		la18 [makespan: 845]
 		Bounds: [840,845]
-			nodes:      2181686
-			failures:   1090291
-			restarts:   40
-			no-goods:   936
-			peak depth: 110
+		Bounds: [843,845]
+			nodes:      2170103
+			failures:   1084411
+			restarts:   49
+			no-goods:   1018
+			peak depth: 116
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      962514
-			failures:   481095
+			nodes:      932292
+			failures:   466014
 			restarts:   12
-			no-goods:   260
-			peak depth: 102
-			runtime:    54.453 (54453.000 ms)
+			no-goods:   268
+			peak depth: 98
+			runtime:    51.801 (51801.000 ms)
 
 	Found best solution and proved optimality.

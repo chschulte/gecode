@@ -2,35 +2,36 @@
 		orb08 [makespan: 1169]
 		orb08 [makespan: 1075]
 		orb08 [makespan: 998]
-			nodes:      72893
+			nodes:      72940
 			failures:   30018
-			peak depth: 579
-			runtime:    1.315 (1315.000 ms)
+			peak depth: 580
+			runtime:    1.280 (1280.000 ms)
 
 	Adjusting...
 		Bounds: [584,998]
 		Bounds: [792,998]
-		orb08 [makespan: 893]
-		Bounds: [792,893]
-		Bounds: [843,893]
-		Bounds: [869,893]
-		orb08 [makespan: 881]
-		Bounds: [869,881]
-			nodes:      1961303
-			failures:   980166
-			restarts:   31
-			no-goods:   860
-			peak depth: 147
+		orb08 [makespan: 895]
+		Bounds: [792,895]
+		Bounds: [844,895]
+		Bounds: [870,895]
+		orb08 [makespan: 882]
+		Bounds: [870,882]
+			nodes:      2056817
+			failures:   1027825
+			restarts:   39
+			no-goods:   987
+			peak depth: 131
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      1883381
-			failures:   941467
-			restarts:   15
-			no-goods:   419
-			peak depth: 137
+		orb08 [makespan: 881]
+			nodes:      2096399
+			failures:   1047931
+			restarts:   16
+			no-goods:   507
+			peak depth: 150
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 1.48% away from optimum.
+	Solution at most 1.36% away from optimum.

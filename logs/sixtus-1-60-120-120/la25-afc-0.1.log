@@ -2,31 +2,32 @@
 		la25 [makespan: 1496]
 		la25 [makespan: 1170]
 		la25 [makespan: 1129]
-			nodes:      62096
+			nodes:      62144
 			failures:   20010
-			peak depth: 973
-			runtime:    1.853 (1853.000 ms)
+			peak depth: 974
+			runtime:    1.884 (1884.000 ms)
 
 	Adjusting...
 		Bounds: [863,1129]
-		la25 [makespan: 993]
-		Bounds: [863,993]
-		Bounds: [929,993]
-			nodes:      1114938
-			failures:   556889
-			restarts:   22
-			no-goods:   471
-			peak depth: 157
+		la25 [makespan: 995]
+		Bounds: [863,995]
+		Bounds: [930,995]
+			nodes:      1076831
+			failures:   537933
+			restarts:   18
+			no-goods:   406
+			peak depth: 148
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      1136534
-			failures:   567952
-			restarts:   13
-			no-goods:   299
-			peak depth: 120
+		la25 [makespan: 993]
+			nodes:      1071395
+			failures:   535290
+			restarts:   14
+			no-goods:   272
+			peak depth: 163
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 6.55% away from optimum.
+	Solution at most 6.45% away from optimum.

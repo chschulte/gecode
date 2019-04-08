@@ -2,28 +2,29 @@
 		tai-15-15-8 [makespan: 1801]
 		tai-15-15-8 [makespan: 1504]
 		tai-15-15-8 [makespan: 1487]
-			nodes:      90272
+			nodes:      90319
 			failures:   30024
-			peak depth: 1392
-			runtime:    3.764 (3764.000 ms)
+			peak depth: 1393
+			runtime:    3.787 (3787.000 ms)
 
 	Adjusting...
 		Bounds: [1049,1487]
-			nodes:      847993
-			failures:   423746
+			nodes:      890097
+			failures:   444808
 			restarts:   12
-			no-goods:   329
-			peak depth: 120
-			runtime:    2:00.002 (120002.000 ms)
-				stopped due to time-out...
-
-	Solving...
-			nodes:      1128239
-			failures:   563706
-			restarts:   13
-			no-goods:   392
-			peak depth: 150
+			no-goods:   326
+			peak depth: 140
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 29.52% away from optimum.
+	Solving...
+		tai-15-15-8 [makespan: 1486]
+			nodes:      1135917
+			failures:   567480
+			restarts:   14
+			no-goods:   330
+			peak depth: 173
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 29.48% away from optimum.

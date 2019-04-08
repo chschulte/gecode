@@ -2,10 +2,10 @@
 		orb08 [makespan: 1169]
 		orb08 [makespan: 1075]
 		orb08 [makespan: 998]
-			nodes:      72893
+			nodes:      72940
 			failures:   30018
-			peak depth: 579
-			runtime:    1.309 (1309.000 ms)
+			peak depth: 580
+			runtime:    1.283 (1283.000 ms)
 
 	Adjusting...
 		Bounds: [584,998]
@@ -14,16 +14,23 @@
 		Bounds: [792,895]
 		Bounds: [844,895]
 		Bounds: [870,895]
-		orb08 [makespan: 882]
-		Bounds: [870,882]
-		Bounds: [877,882]
-		Bounds: [880,882]
 		orb08 [makespan: 881]
-			nodes:      628778
-			failures:   313972
-			restarts:   25
-			no-goods:   627
-			peak depth: 114
-			runtime:    38.658 (38658.000 ms)
+		Bounds: [870,881]
+		Bounds: [876,881]
+		Bounds: [879,881]
+			nodes:      672987
+			failures:   336061
+			restarts:   28
+			no-goods:   724
+			peak depth: 126
+			runtime:    40.635 (40635.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
+			restarts:   0
+			no-goods:   0
+			peak depth: 0
+			runtime:    0.001 (1.000 ms)
 
 	Found best solution and proved optimality.

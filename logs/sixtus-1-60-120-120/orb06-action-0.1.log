@@ -4,10 +4,10 @@
 		orb06 [makespan: 1199]
 		orb06 [makespan: 1196]
 		orb06 [makespan: 1145]
-			nodes:      53677
+			nodes:      53725
 			failures:   20013
-			peak depth: 618
-			runtime:    1.180 (1180.000 ms)
+			peak depth: 619
+			runtime:    1.226 (1226.000 ms)
 
 	Adjusting...
 		Bounds: [764,1145]
@@ -15,17 +15,24 @@
 		orb06 [makespan: 1050]
 		Bounds: [955,1050]
 		Bounds: [1003,1050]
-		orb06 [makespan: 1022]
-		Bounds: [1003,1022]
-		orb06 [makespan: 1011]
-		Bounds: [1003,1011]
-		orb06 [makespan: 1007]
-		Bounds: [1003,1007]
-			nodes:      1026373
-			failures:   512739
-			restarts:   32
-			no-goods:   629
-			peak depth: 119
-			runtime:    1:04.741 (64741.000 ms)
+		orb06 [makespan: 1021]
+		Bounds: [1003,1021]
+			nodes:      1917778
+			failures:   958599
+			restarts:   19
+			no-goods:   383
+			peak depth: 113
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
 
-	Found best solution and proved optimality.
+	Solving...
+		orb06 [makespan: 1020]
+			nodes:      1948569
+			failures:   974103
+			restarts:   16
+			no-goods:   277
+			peak depth: 95
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 1.76% away from optimum.

@@ -4,28 +4,29 @@
 		la32 [makespan: 2019]
 		la32 [makespan: 2006]
 		la32 [makespan: 1970]
-			nodes:      121591
+			nodes:      121637
 			failures:   40040
-			peak depth: 1785
-			runtime:    7.029 (7029.000 ms)
+			peak depth: 1786
+			runtime:    7.008 (7008.000 ms)
 
 	Adjusting...
 		Bounds: [1849,1970]
-			nodes:      494535
-			failures:   246519
+			nodes:      518207
+			failures:   258351
 			restarts:   10
-			no-goods:   130
-			peak depth: 258
-			runtime:    2:00.003 (120003.000 ms)
+			no-goods:   120
+			peak depth: 239
+			runtime:    2:00.005 (120005.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      501422
-			failures:   249930
-			restarts:   10
-			no-goods:   103
-			peak depth: 258
+		la32 [makespan: 1969]
+			nodes:      580469
+			failures:   289311
+			restarts:   12
+			no-goods:   169
+			peak depth: 286
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 6.19% away from optimum.
+	Solution at most 6.15% away from optimum.

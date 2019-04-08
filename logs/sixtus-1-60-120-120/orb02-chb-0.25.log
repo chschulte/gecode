@@ -6,10 +6,10 @@
 		orb02 [makespan: 1006]
 		orb02 [makespan: 978]
 		orb02 [makespan: 972]
-			nodes:      14742
+			nodes:      14792
 			failures:   9
-			peak depth: 647
-			runtime:    0.227 (227.000 ms)
+			peak depth: 648
+			runtime:    0.219 (219.000 ms)
 
 	Adjusting...
 		Bounds: [670,972]
@@ -20,12 +20,22 @@
 		Bounds: [879,896]
 		orb02 [makespan: 887]
 		Bounds: [879,887]
-		Bounds: [884,887]
-			nodes:      1944149
-			failures:   971640
-			restarts:   35
-			no-goods:   736
-			peak depth: 106
-			runtime:    1:57.871 (117871.000 ms)
+			nodes:      2007121
+			failures:   1003099
+			restarts:   36
+			no-goods:   774
+			peak depth: 104
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
 
-	Found best solution and proved optimality.
+	Solving...
+		orb02 [makespan: 886]
+			nodes:      2035520
+			failures:   1017559
+			restarts:   16
+			no-goods:   351
+			peak depth: 112
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 0.90% away from optimum.

@@ -4,27 +4,34 @@
 		orb09 [makespan: 1171]
 		orb09 [makespan: 1075]
 		orb09 [makespan: 1005]
-			nodes:      14293
+			nodes:      14343
 			failures:   7
-			peak depth: 639
-			runtime:    0.225 (225.000 ms)
+			peak depth: 640
+			runtime:    0.219 (219.000 ms)
 
 	Adjusting...
 		Bounds: [662,1005]
 		Bounds: [834,1005]
-		orb09 [makespan: 918]
-		Bounds: [834,918]
-		Bounds: [877,918]
-		Bounds: [898,918]
-		orb09 [makespan: 906]
-		Bounds: [898,906]
+		orb09 [makespan: 916]
+		Bounds: [834,916]
+		Bounds: [876,916]
+		Bounds: [897,916]
 		orb09 [makespan: 902]
-		Bounds: [898,902]
-			nodes:      60192
-			failures:   29933
+		Bounds: [897,902]
+		Bounds: [900,902]
+			nodes:      86705
+			failures:   43219
 			restarts:   4
-			no-goods:   66
-			peak depth: 105
-			runtime:    3.509 (3509.000 ms)
+			no-goods:   69
+			peak depth: 107
+			runtime:    4.559 (4559.000 ms)
+
+	Solving...
+			nodes:      0
+			failures:   1
+			restarts:   0
+			no-goods:   0
+			peak depth: 0
+			runtime:    0.000 (0.000 ms)
 
 	Found best solution and proved optimality.

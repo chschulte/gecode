@@ -6,28 +6,32 @@
 		tai-20-20-5 [makespan: 2024]
 		tai-20-20-5 [makespan: 1994]
 		tai-20-20-5 [makespan: 1982]
-			nodes:      94581
+			nodes:      94629
 			failures:   20036
-			peak depth: 2428
-			runtime:    6.573 (6573.000 ms)
+			peak depth: 2429
+			runtime:    6.498 (6498.000 ms)
 
 	Adjusting...
 		Bounds: [1212,1982]
-			nodes:      459681
-			failures:   229611
+			nodes:      441441
+			failures:   220517
 			restarts:   10
-			no-goods:   230
-			peak depth: 118
-			runtime:    2:00.002 (120002.000 ms)
-				stopped due to time-out...
-
-	Solving...
-			nodes:      578533
-			failures:   288926
-			restarts:   11
-			no-goods:   268
-			peak depth: 117
+			no-goods:   256
+			peak depth: 130
 			runtime:    2:00.001 (120001.000 ms)
 				stopped due to time-out...
 
-	Solution at most 38.90% away from optimum.
+	Solving...
+		tai-20-20-5 [makespan: 1981]
+		tai-20-20-5 [makespan: 1980]
+		tai-20-20-5 [makespan: 1978]
+		tai-20-20-5 [makespan: 1977]
+			nodes:      764342
+			failures:   381033
+			restarts:   16
+			no-goods:   294
+			peak depth: 338
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 38.75% away from optimum.
