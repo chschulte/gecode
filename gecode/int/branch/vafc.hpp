@@ -34,28 +34,28 @@
 namespace Gecode {
 
   forceinline
-  IntAction::IntAction(void) {}
+  IntVAFC::IntVAFC(void) {}
 
   forceinline
-  IntAction::IntAction(const IntAction& a)
-    : Action(a) {}
+  IntVAFC::IntVAFC(const IntVAFC& a)
+    : VAFC(a) {}
 
-  forceinline IntAction&
-  IntAction::operator =(const IntAction& a) {
-    return static_cast<IntAction&>(Action::operator =(a));
+  forceinline IntVAFC&
+  IntVAFC::operator =(const IntVAFC& a) {
+    return static_cast<IntVAFC&>(VAFC::operator =(a));
   }
 
 
   forceinline
-  BoolAction::BoolAction(void) {}
+  BoolVAFC::BoolVAFC(void) {}
 
   forceinline
-  BoolAction::BoolAction(const BoolAction& a)
-    : Action(a) {}
+  BoolVAFC::BoolVAFC(const BoolVAFC& a)
+    : VAFC(a) {}
 
-  forceinline BoolAction&
-  BoolAction::operator =(const BoolAction& a) {
-    return static_cast<BoolAction&>(Action::operator =(a));
+  forceinline BoolVAFC&
+  BoolVAFC::operator =(const BoolVAFC& a) {
+    return static_cast<BoolVAFC&>(VAFC::operator =(a));
   }
 
 }

@@ -147,6 +147,29 @@ namespace Gecode {
   //@}
 
   /**
+   * \brief Merit class for variable AFC
+   */
+  template<class View>
+  class MeritVAFC : public MeritBase<View,double> {
+    using typename MeritBase<View,double>::Var;
+  protected:
+    /// Variable AFC information
+    VAFC vafc;
+  public:
+    /// Constructor for initialization
+    MeritVAFC(Space& home, const VarBranch<Var>& vb);
+    /// Constructor for cloning
+    MeritVAFC(Space& home, MeritVAFC& ma);
+    /// Return variable AFC as merit for view \a x at position \a i
+    double operator ()(const Space& home, View x, int i);
+    /// Whether dispose must always be called (that is, notice is needed)
+    bool notice(void) const;
+    /// Dispose view selection
+    void dispose(Space& home);
+  };
+  //@}
+
+  /**
    * \brief Merit class for CHB
    */
   template<class View>
@@ -160,7 +183,7 @@ namespace Gecode {
     MeritCHB(Space& home, const VarBranch<Var>& vb);
     /// Constructor for cloning
     MeritCHB(Space& home, MeritCHB& ma);
-    /// Return action as merit for view \a x at position \a i
+    /// Return CHB as merit for view \a x at position \a i
     double operator ()(const Space& home, View x, int i);
     /// Whether dispose must always be called (that is, notice is needed)
     bool notice(void) const;
@@ -288,6 +311,33 @@ namespace Gecode {
   forceinline void
   MeritAction<View>::dispose(Space&) {
     action.~Action();
+  }
+
+
+  // Variable AFC merit
+  template<class View>
+  forceinline
+  MeritVAFC<View>::MeritVAFC
+    (Space& home, const VarBranch<MeritVAFC<View>::Var>& vb)
+    : MeritBase<View,double>(home,vb), vafc(vb.vafc()) {}
+  template<class View>
+  forceinline
+  MeritVAFC<View>::MeritVAFC(Space& home, MeritVAFC& ma)
+    : MeritBase<View,double>(home,ma), vafc(ma.vafc) {}
+  template<class View>
+  forceinline double
+  MeritVAFC<View>::operator ()(const Space&, View, int i) {
+    return vafc[i];
+  }
+  template<class View>
+  forceinline bool
+  MeritVAFC<View>::notice(void) const {
+    return true;
+  }
+  template<class View>
+  forceinline void
+  MeritVAFC<View>::dispose(Space&) {
+    vafc.~VAFC();
   }
 
   // CHB merit

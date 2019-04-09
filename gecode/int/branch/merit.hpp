@@ -150,6 +150,32 @@ namespace Gecode { namespace Int { namespace Branch {
     action.~Action();
   }
 
+  // VAFC over size merit
+  template<class View>
+  forceinline
+  MeritVAFCSize<View>::MeritVAFCSize
+  (Space& home, const VarBranch<MeritVAFCSize<View>::Var>& vb)
+    : MeritBase<View,double>(home,vb), vafc(vb.vafc()) {}
+  template<class View>
+  forceinline
+  MeritVAFCSize<View>::MeritVAFCSize(Space& home, MeritVAFCSize& m)
+    : MeritBase<View,double>(home,m), vafc(m.vafc) {}
+  template<class View>
+  forceinline double
+  MeritVAFCSize<View>::operator ()(const Space&, View x, int i) {
+    return vafc[i] / static_cast<double>(x.size());
+  }
+  template<class View>
+  forceinline bool
+  MeritVAFCSize<View>::notice(void) const {
+    return true;
+  }
+  template<class View>
+  forceinline void
+  MeritVAFCSize<View>::dispose(Space&) {
+    vafc.~VAFC();
+  }
+
   // CHB over size merit
   template<class View>
   forceinline

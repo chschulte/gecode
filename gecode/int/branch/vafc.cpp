@@ -35,31 +35,31 @@
 
 namespace Gecode {
 
-  IntAction::IntAction(Home home, const IntVarArgs& x, double d,
-                       IntBranchMerit bm) {
+  IntVAFC::IntVAFC(Home home, const IntVarArgs& x, double d,
+                   IntBranchMerit bm) {
     ViewArray<Int::IntView> y(home,x);
-    Action::init(home,y,d,bm);
+    VAFC::init(home,y,d,bm);
   }
 
   void
-  IntAction::init(Home home, const IntVarArgs& x, double d,
-                  IntBranchMerit bm) {
+  IntVAFC::init(Home home, const IntVarArgs& x, double d,
+                IntBranchMerit bm) {
     ViewArray<Int::IntView> y(home,x);
-    Action::init(home,y,d,bm);
+    VAFC::init(home,y,d,bm);
   }
 
 
-  BoolAction::BoolAction(Home home, const BoolVarArgs& x, double d,
-                         BoolBranchMerit bm) {
+  BoolVAFC::BoolVAFC(Home home, const BoolVarArgs& x, double d,
+                     BoolBranchMerit bm) {
     ViewArray<Int::BoolView> y(home,x);
-    Action::init(home,y,d,bm);
+    VAFC::init(home,y,d,bm);
   }
 
   void
-  BoolAction::init(Home home, const BoolVarArgs& x, double d,
-                   BoolBranchMerit bm) {
+  BoolVAFC::init(Home home, const BoolVarArgs& x, double d,
+                 BoolBranchMerit bm) {
     ViewArray<Int::BoolView> y(home,x);
-    Action::init(home,y,d,bm);
+    VAFC::init(home,y,d,bm);
   }
 
 }

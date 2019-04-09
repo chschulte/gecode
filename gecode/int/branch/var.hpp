@@ -58,6 +58,10 @@ namespace Gecode {
     : VarBranch<IntVar>(a,t), s(s0) {}
 
   forceinline
+  IntVarBranch::IntVarBranch(Select s0, IntVAFC a, BranchTbl t)
+    : VarBranch<IntVar>(a,t), s(s0) {}
+
+  forceinline
   IntVarBranch::IntVarBranch(Select s0, IntCHB c, BranchTbl t)
     : VarBranch<IntVar>(c,t), s(s0) {}
 
@@ -82,6 +86,11 @@ namespace Gecode {
     case SEL_ACTION_SIZE_MIN: case SEL_ACTION_SIZE_MAX:
       if (!_act)
         _act = IntAction(home,x,decay());
+      break;
+    case SEL_VAFC_MIN: case SEL_VAFC_MAX:
+    case SEL_VAFC_SIZE_MIN: case SEL_VAFC_SIZE_MAX:
+      if (!_vafc)
+        _vafc = IntVAFC(home,x,decay());
       break;
     case SEL_CHB_MIN: case SEL_CHB_MAX:
     case SEL_CHB_SIZE_MIN: case SEL_CHB_SIZE_MAX:
@@ -160,6 +169,26 @@ namespace Gecode {
   inline IntVarBranch
   INT_VAR_ACTION_MAX(IntAction a, BranchTbl tbl) {
     return IntVarBranch(IntVarBranch::SEL_ACTION_MAX,a,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_MIN(double d, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_MIN,d,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_MIN(IntVAFC a, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_MIN,a,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_MAX(double d, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_MAX,d,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_MAX(IntVAFC a, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_MAX,a,tbl);
   }
 
   inline IntVarBranch
@@ -263,6 +292,26 @@ namespace Gecode {
   }
 
   inline IntVarBranch
+  INT_VAR_VFC_SIZE_MIN(double d, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_SIZE_MIN,d,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_SIZE_MIN(IntVAFC a, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_SIZE_MIN,a,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_SIZE_MAX(double d, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_SIZE_MAX,d,tbl);
+  }
+
+  inline IntVarBranch
+  INT_VAR_VAFC_SIZE_MAX(IntVAFC a, BranchTbl tbl) {
+    return IntVarBranch(IntVarBranch::SEL_VAFC_SIZE_MAX,a,tbl);
+  }
+
+  inline IntVarBranch
   INT_VAR_CHB_SIZE_MIN(IntCHB c, BranchTbl tbl) {
     return IntVarBranch(IntVarBranch::SEL_CHB_SIZE_MIN,c,tbl);
   }
@@ -329,6 +378,10 @@ namespace Gecode {
     : VarBranch<BoolVar>(a,t), s(s0) {}
 
   forceinline
+  BoolVarBranch::BoolVarBranch(Select s0, BoolVAFC a, BranchTbl t)
+    : VarBranch<BoolVar>(a,t), s(s0) {}
+
+  forceinline
   BoolVarBranch::BoolVarBranch(Select s0, BoolCHB c, BranchTbl t)
     : VarBranch<BoolVar>(c,t), s(s0) {}
 
@@ -351,6 +404,10 @@ namespace Gecode {
     case SEL_ACTION_MIN: case SEL_ACTION_MAX:
       if (!_act)
         _act = BoolAction(home,x,decay());
+      break;
+    case SEL_VAFC_MIN: case SEL_VAFC_MAX:
+      if (!_vafc)
+        _vafc = BoolVAFC(home,x,decay());
       break;
     case SEL_CHB_MIN: case SEL_CHB_MAX:
       if (!_chb)
@@ -428,6 +485,26 @@ namespace Gecode {
   inline BoolVarBranch
   BOOL_VAR_ACTION_MAX(BoolAction a, BranchTbl tbl) {
     return BoolVarBranch(BoolVarBranch::SEL_ACTION_MAX,a,tbl);
+  }
+
+  inline BoolVarBranch
+  BOOL_VAR_VAFC_MIN(double d, BranchTbl tbl) {
+    return BoolVarBranch(BoolVarBranch::SEL_VAFC_MIN,d,tbl);
+  }
+
+  inline BoolVarBranch
+  BOOL_VAR_VAFC_MIN(BoolVAFC a, BranchTbl tbl) {
+    return BoolVarBranch(BoolVarBranch::SEL_VAFC_MIN,a,tbl);
+  }
+
+  inline BoolVarBranch
+  BOOL_VAR_VAFC_MAX(double d, BranchTbl tbl) {
+    return BoolVarBranch(BoolVarBranch::SEL_VAFC_MAX,d,tbl);
+  }
+
+  inline BoolVarBranch
+  BOOL_VAR_VAFC_MAX(BoolVAFC a, BranchTbl tbl) {
+    return BoolVarBranch(BoolVarBranch::SEL_VAFC_MAX,a,tbl);
   }
 
   inline BoolVarBranch

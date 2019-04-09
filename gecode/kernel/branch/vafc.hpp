@@ -379,18 +379,18 @@ namespace Gecode {
 
   template<class View>
   ExecStatus
-  VAFC::Recorder<View>::advise(Space&, Advisor& a, const Delta&) {
-    Idx& i = static_cast<Idx&>(a);
+  VAFC::Recorder<View>::advise(Space& home, Advisor& _a, const Delta&) {
+    Idx& i = static_cast<Idx&>(_a);
     if (x[i.idx()].assigned())
-      return ES_FIX_DISPOSE(c,a);
+      return home.ES_FIX_DISPOSE(c,i);
     else
-      ES_FIX;
+      return ES_FIX;
   }
 
   template<class View>
   void
-  VAFC::Recorder<View>::advise(Space&, Advisor& a) {
-    Idx& i = static_cast<Idx&>(a);
+  VAFC::Recorder<View>::advise(Space&, Advisor& _a) {
+    Idx& i = static_cast<Idx&>(_a);
     a.acquire();
     a.update(i.idx());
     a.release();
