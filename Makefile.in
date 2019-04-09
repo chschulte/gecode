@@ -192,7 +192,7 @@ VARIMP = $(VARIMPHDR)
 KERNELSRC0 = \
 	archive core exception gpi \
 	data/rnd \
-	branch/action branch/afc branch/chb branch/function \
+	branch/action branch/afc branch/chb branch/vafc branch/function \
 	memory/manager memory/region \
 	trace/recorder trace/filter trace/tracer trace/general \
 	data/array
@@ -206,7 +206,7 @@ KERNELHDR0 = \
 	propagator/pattern propagator/advisor propagator/subscribed \
 	propagator/wait \
 	branch/var branch/val branch/tiebreak \
-	branch/traits branch/afc branch/action branch/chb \
+	branch/traits branch/afc branch/action branch/chb branch/vafc \
 	branch/view-sel branch/merit \
 	branch/val-sel branch/val-commit branch/view branch/view-val \
 	branch/val-sel-commit branch/print branch/filter \
@@ -328,7 +328,7 @@ INTSRC0 = \
 	order.cpp order/propagate.cpp \
 	unary.cpp cumulative.cpp cumulatives.cpp \
 	circuit.cpp no-overlap.cpp nvalues.cpp \
-	member.cpp branch/action.cpp branch/chb.cpp \
+	member.cpp branch/action.cpp branch/chb.cpp branch/vafc.cpp \
 	arithmetic/mult.cpp  \
 	branch/view-sel.cpp branch/val-sel-commit.cpp \
 	branch/view-values.cpp \
@@ -423,7 +423,7 @@ INTHDR0 = \
 	nvalues/int-lq.hpp nvalues/int-gq.hpp \
 	val-set.hh val-set.hpp \
 	member.hh member/prop.hpp member/re-prop.hpp \
-	branch/afc.hpp branch/action.hpp branch/chb.hpp \
+	branch/afc.hpp branch/action.hpp branch/chb.hpp branch/vafc.hpp \
 	ldsb.hh ldsb/brancher.hpp ldsb/sym-imp.hpp \
 	trace.hpp \
 	trace/bool-trace-view.hpp trace/int-trace-view.hpp \

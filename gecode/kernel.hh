@@ -226,6 +226,7 @@ namespace Gecode {
 
 #include <gecode/kernel/branch/traits.hpp>
 #include <gecode/kernel/branch/action.hpp>
+#include <gecode/kernel/branch/vafc.hpp>
 #include <gecode/kernel/branch/afc.hpp>
 #include <gecode/kernel/branch/chb.hpp>
 #include <gecode/kernel/branch/var.hpp>

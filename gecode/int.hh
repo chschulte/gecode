@@ -4451,6 +4451,102 @@ namespace Gecode {
 namespace Gecode {
 
   /**
+   * \brief Recording variable for integer variables
+   *
+   * \ingroup TaskModelIntBranch
+   */
+  class IntVAFC : public VAFC {
+  public:
+    /**
+     * \brief Construct as not yet initialized
+     *
+     * The only member functions that can be used on a constructed but not
+     * yet initialized action storage is init or the assignment operator.
+     *
+     */
+    IntVAFC(void);
+    /// Copy constructor
+    IntVAFC(const IntVAFC& a);
+    /// Assignment operator
+    IntVAFC& operator =(const IntVAFC& a);
+    /**
+     * \brief Initialize for integer variables \a x with decay factor \a d
+     *
+     * If the branch merit function \a bm is different from nullptr, the
+     * action for each variable is initialized with the merit returned
+     * by \a bm.
+     */
+    GECODE_INT_EXPORT
+    IntVAFC(Home home, const IntVarArgs& x, double d=1.0,
+              IntBranchMerit bm=nullptr);
+    /**
+     * \brief Initialize for integer variables \a x with decay factor \a d
+     *
+     * If the branch merit function \a bm is different from nullptr, the
+     * action for each variable is initialized with the merit returned
+     * by \a bm.
+     *
+     * This member function can only be used once and only if the
+     * action storage has been constructed with the default constructor.
+     *
+     */
+    GECODE_INT_EXPORT void
+    init(Home home, const IntVarArgs& x, double d=1.0,
+         IntBranchMerit bm=nullptr);
+  };
+
+  /**
+   * \brief Recording actions for Boolean variables
+   *
+   * \ingroup TaskModelIntBranch
+   */
+  class BoolVAFC : public VAFC {
+  public:
+    /**
+     * \brief Construct as not yet initialized
+     *
+     * The only member functions that can be used on a constructed but not
+     * yet initialized action storage is init or the assignment operator.
+     *
+     */
+    BoolVAFC(void);
+    /// Copy constructor
+    BoolVAFC(const BoolVAFC& a);
+    /// Assignment operator
+    BoolVAFC& operator =(const BoolVAFC& a);
+    /**
+     * \brief Initialize for Boolean variables \a x with decay factor \a d
+     *
+     * If the branch merit function \a bm is different from nullptr, the
+     * action for each variable is initialized with the merit returned
+     * by \a bm.
+     */
+    GECODE_INT_EXPORT
+    BoolVAFC(Home home, const BoolVarArgs& x, double d=1.0,
+               BoolBranchMerit bm=nullptr);
+    /**
+     * \brief Initialize for Boolean variables \a x with decay factor \a d
+     *
+     * If the branch merit function \a bm is different from nullptr, the
+     * action for each variable is initialized with the merit returned
+     * by \a bm.
+     *
+     * This member function can only be used once and only if the
+     * action storage has been constructed with the default constructor.
+     *
+     */
+    GECODE_INT_EXPORT void
+    init(Home home, const BoolVarArgs& x, double d=1.0,
+         BoolBranchMerit bm=nullptr);
+  };
+
+}
+
+#include <gecode/int/branch/vafc.hpp>
+
+namespace Gecode {
+
+  /**
    * \brief Recording CHB for integer variables
    *
    * \ingroup TaskModelIntBranch
@@ -4473,7 +4569,7 @@ namespace Gecode {
      * \brief Initialize for integer variables \a x
      *
      * If the branch merit function \a bm is different from nullptr, the
-     * action for each variable is initialized with the merit returned
+     * CHB for each variable is initialized with the merit returned
      * by \a bm.
      *
      */
@@ -4483,11 +4579,11 @@ namespace Gecode {
      * \brief Initialize for integer variables \a x
      *
      * If the branch merit function \a bm is different from nullptr, the
-     * action for each variable is initialized with the merit returned
+     * CHB for each variable is initialized with the merit returned
      * by \a bm.
      *
      * This member function can only be used once and only if the
-     * action storage has been constructed with the default constructor.
+     * CHB storage has been constructed with the default constructor.
      *
      */
     GECODE_INT_EXPORT void
@@ -4505,7 +4601,7 @@ namespace Gecode {
      * \brief Construct as not yet initialized
      *
      * The only member functions that can be used on a constructed but not
-     * yet initialized action storage is init or the assignment operator.
+     * yet initialized CHB storage is init or the assignment operator.
      *
      */
     BoolCHB(void);
@@ -4517,7 +4613,7 @@ namespace Gecode {
      * \brief Initialize for Boolean variables \a x
      *
      * If the branch merit function \a bm is different from nullptr, the
-     * action for each variable is initialized with the merit returned
+     * CHB for each variable is initialized with the merit returned
      * by \a bm.
      *
      */
@@ -4527,11 +4623,11 @@ namespace Gecode {
      * \brief Initialize for Boolean variables \a x
      *
      * If the branch merit function \a bm is different from nullptr, the
-     * action for each variable is initialized with the merit returned
+     * CHB for each variable is initialized with the merit returned
      * by \a bm.
      *
      * This member function can only be used once and only if the
-     * action storage has been constructed with the default constructor.
+     * CHB storage has been constructed with the default constructor.
      *
      */
     GECODE_INT_EXPORT void
@@ -4581,6 +4677,8 @@ namespace Gecode {
       SEL_AFC_MAX,         ///< With largest accumulated failure count
       SEL_ACTION_MIN,      ///< With lowest action
       SEL_ACTION_MAX,      ///< With highest action
+      SEL_VAFC_MIN,        ///< With lowest variable AFC
+      SEL_VAFC_MAX,        ///< With highest variable AFC
       SEL_CHB_MIN,         ///< With lowest CHB Q-score
       SEL_CHB_MAX,         ///< With highest CHB Q-score
       SEL_MIN_MIN,         ///< With smallest min
@@ -4595,6 +4693,8 @@ namespace Gecode {
       SEL_AFC_SIZE_MAX,    ///< With largest accumulated failure count divided by domain size
       SEL_ACTION_SIZE_MIN, ///< With smallest action divided by domain size
       SEL_ACTION_SIZE_MAX, ///< With largest action divided by domain size
+      SEL_VAFC_SIZE_MIN,   ///< With smallest variable AFC divided by domain size
+      SEL_VAFC_SIZE_MAX,   ///< With largest variable AFC divided by domain size
       SEL_CHB_SIZE_MIN,    ///< With smallest CHB Q-score divided by domain size
       SEL_CHB_SIZE_MAX,    ///< With largest CHB Q-score divided by domain size
       /** \brief With smallest min-regret
@@ -4638,13 +4738,15 @@ namespace Gecode {
     IntVarBranch(Select s, IntAFC a, BranchTbl t);
     /// Initialize with selection strategy \a s, action \a a, and tie-break limit function \a t
     IntVarBranch(Select s, IntAction a, BranchTbl t);
+    /// Initialize with selection strategy \a s, variable AFC \a a, and tie-break limit function \a t
+    IntVarBranch(Select s, IntVAFC a, BranchTbl t);
     /// Initialize with selection strategy \a s, CHB \a c, and tie-break limit function \a t
     IntVarBranch(Select s, IntCHB c, BranchTbl t);
     /// Initialize with selection strategy \a s, branch merit function \a mf, and tie-break limit function \a t
     IntVarBranch(Select s, IntBranchMerit mf, BranchTbl t);
     /// Return selection strategy
     Select select(void) const;
-    /// Expand AFC, action, and CHB
+    /// Expand AFC, action, variable AFC, and CHB
     void expand(Home home, const IntVarArgs& x);
   };
 
@@ -4667,6 +4769,8 @@ namespace Gecode {
       SEL_AFC_MAX,         ///< With largest accumulated failure count
       SEL_ACTION_MIN,      ///< With lowest action
       SEL_ACTION_MAX,      ///< With highest action
+      SEL_VAFC_MIN,        ///< With lowest variable AFC
+      SEL_VAFC_MAX,        ///< With highest variable AFC
       SEL_CHB_MIN,         ///< With lowest CHB
       SEL_CHB_MAX          ///< With highest CHB
     };
@@ -4686,6 +4790,8 @@ namespace Gecode {
     BoolVarBranch(Select s, BoolAFC a, BranchTbl t);
     /// Initialize with selection strategy \a s, action \a a, and tie-break limit function \a t
     BoolVarBranch(Select s, BoolAction a, BranchTbl t);
+    /// Initialize with selection strategy \a s, variable AFC \a a, and tie-break limit function \a t
+    BoolVarBranch(Select s, BoolVAFC a, BranchTbl t);
     /// Initialize with selection strategy \a s, CHB \a c, and tie-break limit function \a t
     BoolVarBranch(Select s, BoolCHB c, BranchTbl t);
     /// Initialize with selection strategy \a s, branch merit function \a mf, and tie-break limit function \a t
@@ -4729,6 +4835,14 @@ namespace Gecode {
   IntVarBranch INT_VAR_ACTION_MAX(double d=1.0, BranchTbl tbl=nullptr);
   /// Select variable with highest action
   IntVarBranch INT_VAR_ACTION_MAX(IntAction a, BranchTbl tbl=nullptr);
+  /// Select variable with lowest variable AFC with decay factor \a d
+  IntVarBranch INT_VAR_VAFC_MIN(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with lowest variable AFC
+  IntVarBranch INT_VAR_VAFC_MIN(IntVAFC a, BranchTbl tbl=nullptr);
+  /// Select variable with highest variable AFC with decay factor \a d
+  IntVarBranch INT_VAR_VAFC_MAX(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with highest variable AFC
+  IntVarBranch INT_VAR_VAFC_MAX(IntVAFC a, BranchTbl tbl=nullptr);
   /// Select variable with lowest CHB Q-score
   IntVarBranch INT_VAR_CHB_MIN(IntCHB c, BranchTbl tbl=nullptr);
   /// Select variable with lowest CHB Q-score
@@ -4769,6 +4883,16 @@ namespace Gecode {
   IntVarBranch INT_VAR_ACTION_SIZE_MAX(double d=1.0, BranchTbl tbl=nullptr);
   /// Select variable with largest action divided by domain size
   IntVarBranch INT_VAR_ACTION_SIZE_MAX(IntAction a, BranchTbl tbl=nullptr);
+
+  /// Select variable with smallest variable AFC divided by domain size with decay factor \a d
+  IntVarBranch INT_VAR_VAFC_SIZE_MIN(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with smallest variable AFC divided by domain size
+  IntVarBranch INT_VAR_VAFC_SIZE_MIN(IntVAFC a, BranchTbl tbl=nullptr);
+  /// Select variable with largest variable AFC divided by domain size with decay factor \a d
+  IntVarBranch INT_VAR_VAFC_SIZE_MAX(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with largest variable AFC divided by domain size
+  IntVarBranch INT_VAR_VAFC_SIZE_MAX(IntVAFC a, BranchTbl tbl=nullptr);
+
   /// Select variable with smallest CHB Q-score divided by domain size
   IntVarBranch INT_VAR_CHB_SIZE_MIN(IntCHB c, BranchTbl tbl=nullptr);
   /// Select variable with smallest CHB Q-score divided by domain size
@@ -4830,6 +4954,14 @@ namespace Gecode {
   BoolVarBranch BOOL_VAR_ACTION_MAX(double d=1.0, BranchTbl tbl=nullptr);
   /// Select variable with highest action
   BoolVarBranch BOOL_VAR_ACTION_MAX(BoolAction a, BranchTbl tbl=nullptr);
+  /// Select variable with lowest variable AFC with decay factor \a d
+  BoolVarBranch BOOL_VAR_VAFC_MIN(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with lowest variable AFC
+  BoolVarBranch BOOL_VAR_VAFC_MIN(BoolVAFC a, BranchTbl tbl=nullptr);
+  /// Select variable with highest variable AFC with decay factor \a d
+  BoolVarBranch BOOL_VAR_VAFC_MAX(double d=1.0, BranchTbl tbl=nullptr);
+  /// Select variable with highest variable AFC
+  BoolVarBranch BOOL_VAR_VAFC_MAX(BoolVAFC a, BranchTbl tbl=nullptr);
   /// Select variable with lowest CHB Q-score
   BoolVarBranch BOOL_VAR_CHB_MIN(BoolCHB c, BranchTbl tbl=nullptr);
   /// Select variable with lowest CHB Q-score
