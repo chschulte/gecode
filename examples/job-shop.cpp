@@ -647,6 +647,9 @@ solve(const JobShopOptions& opt) {
 
     std::cout << "\tProbing..." << std::endl;
     
+    std::cout << "\t\tBounds: [" << l << "," << u << "]"
+              << std::endl;
+    
     for (unsigned int p=0; p<opt.probes(); p++) {
       JobShopProbe* jsp = static_cast<JobShopProbe*>(master->clone());
       jsp->branch(p,rnd);
