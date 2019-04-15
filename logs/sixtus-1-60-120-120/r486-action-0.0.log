@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [296,2270]
+		r486 [makespan: 485]
+		r486 [makespan: 467]
+		r486 [makespan: 430]
+		r486 [makespan: 405]
+			nodes:      13366
+			failures:   1
+			peak depth: 563
+			runtime:    0.207 (207.000 ms)
+
+	Adjusting...
+		Bounds: [296,405]
+		Bounds: [351,405]
+		r486 [makespan: 378]
+		Bounds: [351,378]
+		Bounds: [365,378]
+		Bounds: [372,378]
+		r486 [makespan: 375]
+		Bounds: [372,375]
+			nodes:      366960
+			failures:   183288
+			restarts:   16
+			no-goods:   238
+			peak depth: 100
+			runtime:    22.575 (22575.000 ms)
+
+	Found best solution and proved optimality.

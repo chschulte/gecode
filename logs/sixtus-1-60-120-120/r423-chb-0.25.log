@@ -1,0 +1,27 @@
+	Probing...
+		Bounds: [391,2880]
+		r423 [makespan: 600]
+		r423 [makespan: 519]
+			nodes:      13920
+			failures:   6
+			peak depth: 609
+			runtime:    0.212 (212.000 ms)
+
+	Adjusting...
+		Bounds: [391,519]
+		Bounds: [456,519]
+		r423 [makespan: 486]
+		Bounds: [456,486]
+		Bounds: [472,486]
+		Bounds: [480,486]
+		r423 [makespan: 483]
+		Bounds: [480,483]
+		r423 [makespan: 481]
+			nodes:      61734
+			failures:   30708
+			restarts:   4
+			no-goods:   66
+			peak depth: 100
+			runtime:    3.555 (3555.000 ms)
+
+	Found best solution and proved optimality.

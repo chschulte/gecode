@@ -1,0 +1,41 @@
+	Probing...
+		Bounds: [316,2443]
+		r483 [makespan: 591]
+		r483 [makespan: 474]
+		r483 [makespan: 473]
+		r483 [makespan: 468]
+		r483 [makespan: 429]
+			nodes:      33225
+			failures:   10009
+			peak depth: 575
+			runtime:    0.662 (662.000 ms)
+
+	Adjusting...
+		Bounds: [316,429]
+		Bounds: [373,429]
+		r483 [makespan: 401]
+		Bounds: [373,401]
+		Bounds: [388,401]
+		Bounds: [395,401]
+		r483 [makespan: 398]
+		Bounds: [395,398]
+			nodes:      2156556
+			failures:   1077818
+			restarts:   36
+			no-goods:   778
+			peak depth: 110
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		r483 [makespan: 397]
+		r483 [makespan: 396]
+			nodes:      2100333
+			failures:   1049877
+			restarts:   17
+			no-goods:   408
+			peak depth: 101
+			runtime:    2:00.001 (120001.000 ms)
+				stopped due to time-out...
+
+	Solution at most 0.51% away from optimum.
