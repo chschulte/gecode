@@ -41,13 +41,6 @@ int rnd(int n) {
   return r / UINT_MAX;
 }
 
-void permute(int* p, int n) {
-  for (int i=0; i<n; i++)
-    p[i]=i;
-  for (int k=n*n; k--; )
-    std::swap(p[rnd(n)],p[rnd(n)]);
-}
-
 int factorial(int n) {
   int f = 1;
   for (int i=2; i<=n; i++)
@@ -66,28 +59,45 @@ void fill4(char f, int n) {
   std::cout << n;
 }
 
-  const int abz5[] = {
-    10, 10, // Number of jobs and machines
-    4, 88, 8, 68, 6, 94, 5, 99, 1, 67, 2, 89, 9, 77, 7, 99, 0, 86, 3, 92, 
-    5, 72, 3, 50, 6, 69, 4, 75, 2, 94, 8, 66, 0, 92, 1, 82, 7, 94, 9, 63, 
-    9, 83, 8, 61, 0, 83, 1, 65, 6, 64, 5, 85, 7, 78, 4, 85, 2, 55, 3, 77, 
-    7, 94, 2, 68, 1, 61, 4, 99, 3, 54, 6, 75, 5, 66, 0, 76, 9, 63, 8, 67, 
-    3, 69, 4, 88, 9, 82, 8, 95, 0, 99, 2, 67, 6, 95, 5, 68, 7, 67, 1, 86, 
-    1, 99, 4, 81, 5, 64, 6, 66, 8, 80, 2, 80, 7, 69, 9, 62, 3, 79, 0, 88, 
-    7, 50, 1, 86, 4, 97, 3, 96, 0, 95, 8, 97, 2, 66, 5, 99, 6, 52, 9, 71, 
-    4, 98, 6, 73, 3, 82, 2, 51, 1, 71, 5, 94, 7, 85, 0, 62, 8, 95, 9, 79, 
-    0, 94, 6, 71, 3, 81, 7, 85, 1, 66, 2, 90, 4, 76, 5, 58, 8, 93, 9, 97, 
-    3, 50, 0, 59, 1, 82, 8, 67, 7, 56, 9, 96, 6, 58, 4, 81, 5, 59, 2, 96
-  };
+class Permutation : public Space {
+public:
+  IntVarArray x;
+  Permutation(int n) : x(*this, n, 0,n-1) {
+    distinct(*this, x);
+    branch(*this, x, INT_VAR_NONE(), INT_VAL_MIN());
+  }
+  Permutation(Permutation& p) : Space(p) {
+    x.update(*this, p.x);
+  }
+  virtual Space* copy(void) {
+    return new Permutation(*this);
+  }
+};
 
 int
 main(int argc, char* argv[]) {
   int k = 1000; // Number of instances
   int m = 10; // Machines
   int n = 10; // Jobs
-  int d = 50; // Maximal duration
+  int d = 99; // Maximal duration
   
-  int* p = new int[m];
+  int fm = factorial(m);
+
+  int* p = new int[m * fm];
+
+  Rnd rnd(0);
+
+  {
+    Permutation* g = new Permutation(m);
+    DFS<Permutation> e(g);
+    delete g;
+    int q=0;
+    while (Permutation* s = e.next()) {
+      for (int j=0; j<m; j++)
+        p[q++] = s->x[j].val();
+      delete s;
+    }
+  }
 
   for (int r=0; r<k; r++) {
     std::cout << "  const int r";
@@ -97,10 +107,10 @@ main(int argc, char* argv[]) {
               << "// Number of jobs and machines"
               << std::endl;
     for (int j=0; j<n; j++) {
-      permute(p,m);
+      int q = rnd(fm);
       std::cout << "    ";
       for (int i=0; i<m; i++) {
-        std::cout << p[i] << ", ";
+        std::cout << p[m*q+i] << ", ";
         fill2(' ',rnd(d)+1);
         if ((i != n-1) || (j != m-1))
           std::cout << ", ";
@@ -112,6 +122,7 @@ main(int argc, char* argv[]) {
 
   std::cout << std::endl;
 
+  if (false) {
   int l=8;
   for (int r=0; r<k; r++) {
     if (l == 8) {
@@ -140,6 +151,7 @@ main(int argc, char* argv[]) {
 
   std::cout << std::endl;
   std::cout << std::endl;
+  }
 
   return 0;
 }
