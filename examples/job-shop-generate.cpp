@@ -55,7 +55,7 @@ void fill2(char f, int n) {
 void fill4(char f, int n) {
   if (n < 10) std::cout << f;
   if (n < 100) std::cout << f;
-  //  if (n < 1000) std::cout << f;
+  if (n < 1000) std::cout << f;
   std::cout << n;
 }
 
@@ -76,9 +76,9 @@ public:
 
 int
 main(int argc, char* argv[]) {
-  int k = 1000; // Number of instances
-  int m = 10; // Machines
-  int n = 10; // Jobs
+  int k = 10000; // Number of instances
+  int m = 9; // Machines
+  int n = 9; // Jobs
   int d = 99; // Maximal duration
   
   int fm = factorial(m);
@@ -100,7 +100,7 @@ main(int argc, char* argv[]) {
   }
 
   for (int r=0; r<k; r++) {
-    std::cout << "  const int r";
+    std::cout << "  const int q";
     fill4('0',r);
     std::cout << "[] = {" << std::endl;
     std::cout << "    " << n << ", " << m << ", "
@@ -122,7 +122,7 @@ main(int argc, char* argv[]) {
 
   std::cout << std::endl;
 
-  if (false) {
+  {
   int l=8;
   for (int r=0; r<k; r++) {
     if (l == 8) {
@@ -130,7 +130,7 @@ main(int argc, char* argv[]) {
       l=0;
     }
     l++;
-    std::cout << "&r";
+    std::cout << "&q";
     fill4('0',r);
     std::cout << "[0], ";
   }
@@ -144,7 +144,7 @@ main(int argc, char* argv[]) {
       l=0;
     }
     l++;
-    std::cout << "\"r";
+    std::cout << "\"q";
     fill4('0',r);
     std::cout << "\", ";
   }
