@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [616,3848]
+		q8485 [makespan: 835]
+		q8485 [makespan: 778]
+		q8485 [makespan: 726]
+		q8485 [makespan: 713]
+			nodes:      12028
+			failures:   6
+			peak depth: 536
+			runtime:    0.149 (149.000 ms)
+
+	Adjusting...
+		Bounds: [616,713]
+		q8485 [makespan: 664]
+		Bounds: [616,664]
+		Bounds: [641,664]
+		Bounds: [653,664]
+		q8485 [makespan: 658]
+		Bounds: [653,658]
+		Bounds: [656,658]
+		q8485 [makespan: 657]
+			nodes:      227
+			failures:   37
+			restarts:   0
+			no-goods:   0
+			peak depth: 62
+			runtime:    0.006 (6.000 ms)
+
+	Found best solution and proved optimality.

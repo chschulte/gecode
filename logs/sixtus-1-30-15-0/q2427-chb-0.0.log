@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [614,4208]
+		q2427 [makespan: 1021]
+		q2427 [makespan: 991]
+		q2427 [makespan: 975]
+		q2427 [makespan: 922]
+			nodes:      31860
+			failures:   10010
+			peak depth: 536
+			runtime:    0.567 (567.000 ms)
+
+	Adjusting...
+		Bounds: [614,922]
+		Bounds: [769,922]
+		q2427 [makespan: 832]
+		Bounds: [769,832]
+		Bounds: [801,832]
+		Bounds: [817,832]
+		Bounds: [825,832]
+		Bounds: [829,832]
+			nodes:      286338
+			failures:   142987
+			restarts:   13
+			no-goods:   235
+			peak depth: 93
+			runtime:    11.698 (11698.000 ms)
+
+	Found best solution and proved optimality.
