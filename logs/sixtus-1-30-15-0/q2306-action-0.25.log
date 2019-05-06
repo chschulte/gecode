@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [564,3662]
+		Bounds: [565,3662]
 		q2306 [makespan: 1023]
 		q2306 [makespan: 773]
 		q2306 [makespan: 683]
@@ -9,18 +9,19 @@
 			runtime:    0.151 (151.000 ms)
 
 	Adjusting...
-		Bounds: [564,683]
-		Bounds: [624,683]
-		q2306 [makespan: 652]
-		Bounds: [624,652]
-		Bounds: [639,652]
-		Bounds: [646,652]
-		q2306 [makespan: 647]
-			nodes:      19890
-			failures:   9871
-			restarts:   1
-			no-goods:   19
-			peak depth: 78
-			runtime:    0.851 (851.000 ms)
+		Bounds: [565,683]
+		Bounds: [625,683]
+		q2306 [makespan: 653]
+		Bounds: [625,653]
+		Bounds: [640,653]
+		q2306 [makespan: 646]
+		Bounds: [640,646]
+		Bounds: [644,646]
+			nodes:      30448
+			failures:   15174
+			restarts:   0
+			no-goods:   0
+			peak depth: 67
+			runtime:    1.273 (1273.000 ms)
 
 	Found best solution and proved optimality.

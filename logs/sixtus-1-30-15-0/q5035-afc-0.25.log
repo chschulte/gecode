@@ -1,36 +1,27 @@
 	Probing...
-		Bounds: [626,4260]
+		Bounds: [627,4260]
 		q5035 [makespan: 1011]
 		q5035 [makespan: 829]
 		q5035 [makespan: 783]
 			nodes:      12408
 			failures:   7
 			peak depth: 543
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.149 (149.000 ms)
 
 	Adjusting...
-		Bounds: [626,783]
-		Bounds: [705,783]
-		q5035 [makespan: 741]
-		Bounds: [705,741]
-		q5035 [makespan: 719]
-		Bounds: [705,719]
-		q5035 [makespan: 711]
-		Bounds: [705,711]
+		Bounds: [627,783]
 		q5035 [makespan: 705]
-			nodes:      6963
-			failures:   3343
+		Bounds: [627,705]
+		Bounds: [667,705]
+		Bounds: [687,705]
+		Bounds: [697,705]
+		Bounds: [702,705]
+		Bounds: [704,705]
+			nodes:      9644
+			failures:   4797
 			restarts:   0
 			no-goods:   0
-			peak depth: 84
-			runtime:    0.295 (295.000 ms)
-
-	Solving...
-			nodes:      0
-			failures:   1
-			restarts:   0
-			no-goods:   0
-			peak depth: 0
-			runtime:    0.001 (1.000 ms)
+			peak depth: 67
+			runtime:    0.406 (406.000 ms)
 
 	Found best solution and proved optimality.

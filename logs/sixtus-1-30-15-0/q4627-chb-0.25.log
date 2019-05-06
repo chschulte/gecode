@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [547,3853]
+		Bounds: [548,3853]
 		q4627 [makespan: 873]
 		q4627 [makespan: 862]
 		q4627 [makespan: 793]
@@ -9,13 +9,13 @@
 			runtime:    0.579 (579.000 ms)
 
 	Adjusting...
-		Bounds: [547,793]
+		Bounds: [548,793]
 		Bounds: [671,793]
 		Bounds: [733,793]
 		q4627 [makespan: 762]
 		Bounds: [733,762]
-			nodes:      365507
-			failures:   182607
+			nodes:      357838
+			failures:   178776
 			restarts:   12
 			no-goods:   212
 			peak depth: 91
@@ -24,14 +24,17 @@
 
 	Solving...
 		q4627 [makespan: 759]
+		q4627 [makespan: 758]
 		q4627 [makespan: 757]
 		q4627 [makespan: 756]
+		q4627 [makespan: 755]
+		q4627 [makespan: 753]
 		q4627 [makespan: 752]
-			nodes:      578370
-			failures:   288928
-			restarts:   14
-			no-goods:   238
-			peak depth: 90
-			runtime:    24.258 (24258.000 ms)
+			nodes:      1194953
+			failures:   597089
+			restarts:   20
+			no-goods:   344
+			peak depth: 96
+			runtime:    49.957 (49957.000 ms)
 
 	Found best solution and proved optimality.

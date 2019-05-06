@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [558,3701]
+		Bounds: [559,3701]
 		q5786 [makespan: 987]
 		q5786 [makespan: 834]
 		q5786 [makespan: 826]
@@ -11,21 +11,29 @@
 			runtime:    0.153 (153.000 ms)
 
 	Adjusting...
-		Bounds: [558,761]
-		Bounds: [660,761]
-		Bounds: [711,761]
-		q5786 [makespan: 735]
-		Bounds: [711,735]
-		Bounds: [724,735]
-		q5786 [makespan: 729]
-		Bounds: [724,729]
-		Bounds: [727,729]
+		Bounds: [559,761]
+		Bounds: [661,761]
+		Bounds: [712,761]
+		q5786 [makespan: 736]
+		Bounds: [712,736]
+		Bounds: [725,736]
 		q5786 [makespan: 728]
-			nodes:      265718
-			failures:   132631
-			restarts:   11
-			no-goods:   286
+		Bounds: [725,728]
+			nodes:      442072
+			failures:   220772
+			restarts:   15
+			no-goods:   419
+			peak depth: 98
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		q5786 [makespan: 727]
+			nodes:      219353
+			failures:   109580
+			restarts:   8
+			no-goods:   169
 			peak depth: 92
-			runtime:    9.256 (9256.000 ms)
+			runtime:    6.942 (6942.000 ms)
 
 	Found best solution and proved optimality.

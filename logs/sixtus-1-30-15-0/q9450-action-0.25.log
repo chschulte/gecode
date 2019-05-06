@@ -1,35 +1,36 @@
 	Probing...
-		Bounds: [732,4203]
+		Bounds: [733,4203]
 		q9450 [makespan: 910]
 		q9450 [makespan: 891]
 			nodes:      12306
 			failures:   7
 			peak depth: 534
-			runtime:    0.156 (156.000 ms)
+			runtime:    0.154 (154.000 ms)
 
 	Adjusting...
-		Bounds: [732,891]
-		Bounds: [812,891]
-		q9450 [makespan: 851]
-		Bounds: [812,851]
-		Bounds: [832,851]
-			nodes:      372264
-			failures:   185966
+		Bounds: [733,891]
+		Bounds: [813,891]
+		q9450 [makespan: 852]
+		Bounds: [813,852]
+		Bounds: [833,852]
+			nodes:      369412
+			failures:   184544
 			restarts:   12
-			no-goods:   228
-			peak depth: 83
+			no-goods:   193
+			peak depth: 80
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
+		q9450 [makespan: 851]
 		q9450 [makespan: 850]
 		q9450 [makespan: 849]
 		q9450 [makespan: 846]
-			nodes:      1362521
-			failures:   680976
-			restarts:   17
-			no-goods:   311
-			peak depth: 94
-			runtime:    52.697 (52697.000 ms)
+			nodes:      1630935
+			failures:   815137
+			restarts:   18
+			no-goods:   276
+			peak depth: 90
+			runtime:    1:04.025 (64025.000 ms)
 
 	Found best solution and proved optimality.

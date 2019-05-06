@@ -1,28 +1,47 @@
 	Probing...
-		Bounds: [648,4080]
+		Bounds: [649,4080]
 		q1842 [makespan: 1076]
 		q1842 [makespan: 907]
 		q1842 [makespan: 871]
 			nodes:      12622
 			failures:   4
 			peak depth: 542
-			runtime:    0.147 (147.000 ms)
+			runtime:    0.148 (148.000 ms)
 
 	Adjusting...
-		Bounds: [648,871]
-		Bounds: [760,871]
-		q1842 [makespan: 815]
-		Bounds: [760,815]
-		q1842 [makespan: 785]
-		Bounds: [760,785]
+		Bounds: [649,871]
+		Bounds: [761,871]
+		q1842 [makespan: 814]
+		Bounds: [761,814]
+			nodes:      332034
+			failures:   165866
+			restarts:   10
+			no-goods:   202
+			peak depth: 87
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		q1842 [makespan: 808]
+		q1842 [makespan: 807]
+		q1842 [makespan: 806]
+		q1842 [makespan: 802]
+		q1842 [makespan: 799]
+		q1842 [makespan: 798]
+		q1842 [makespan: 796]
+		q1842 [makespan: 792]
+		q1842 [makespan: 786]
+		q1842 [makespan: 784]
+		q1842 [makespan: 783]
+		q1842 [makespan: 781]
+		q1842 [makespan: 780]
+		q1842 [makespan: 778]
 		q1842 [makespan: 769]
-		Bounds: [760,769]
-		Bounds: [765,769]
-			nodes:      221363
-			failures:   110440
-			restarts:   13
-			no-goods:   246
-			peak depth: 103
-			runtime:    9.969 (9969.000 ms)
+			nodes:      1288497
+			failures:   643534
+			restarts:   27
+			no-goods:   445
+			peak depth: 114
+			runtime:    54.303 (54303.000 ms)
 
 	Found best solution and proved optimality.

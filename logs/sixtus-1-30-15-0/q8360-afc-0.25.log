@@ -1,36 +1,35 @@
 	Probing...
-		Bounds: [594,3948]
+		Bounds: [595,3948]
 		q8360 [makespan: 979]
 		q8360 [makespan: 948]
 		q8360 [makespan: 819]
 			nodes:      11938
 			failures:   9
 			peak depth: 517
-			runtime:    0.152 (152.000 ms)
+			runtime:    0.150 (150.000 ms)
 
 	Adjusting...
-		Bounds: [594,819]
-		Bounds: [707,819]
+		Bounds: [595,819]
+		Bounds: [708,819]
 		q8360 [makespan: 763]
-		Bounds: [707,763]
+		Bounds: [708,763]
 		Bounds: [736,763]
 		Bounds: [750,763]
-			nodes:      335229
-			failures:   167478
-			restarts:   12
-			no-goods:   231
-			peak depth: 80
+			nodes:      333921
+			failures:   166777
+			restarts:   15
+			no-goods:   312
+			peak depth: 89
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		q8360 [makespan: 762]
 		q8360 [makespan: 757]
-			nodes:      687857
-			failures:   343744
-			restarts:   13
-			no-goods:   278
-			peak depth: 93
-			runtime:    30.416 (30416.000 ms)
+			nodes:      511476
+			failures:   255614
+			restarts:   11
+			no-goods:   189
+			peak depth: 88
+			runtime:    22.041 (22041.000 ms)
 
 	Found best solution and proved optimality.

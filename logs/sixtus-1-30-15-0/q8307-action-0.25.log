@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [599,4129]
+		Bounds: [600,4129]
 		q8307 [makespan: 821]
 		q8307 [makespan: 789]
 			nodes:      12593
@@ -8,18 +8,20 @@
 			runtime:    0.150 (150.000 ms)
 
 	Adjusting...
-		Bounds: [599,789]
+		Bounds: [600,789]
 		Bounds: [695,789]
 		q8307 [makespan: 736]
 		Bounds: [695,736]
 		Bounds: [716,736]
 		Bounds: [727,736]
 		Bounds: [732,736]
-			nodes:      75
-			failures:   12
+		Bounds: [735,736]
+		q8307 [makespan: 735]
+			nodes:      141
+			failures:   17
 			restarts:   0
 			no-goods:   0
 			peak depth: 67
-			runtime:    0.003 (3.000 ms)
+			runtime:    0.005 (5.000 ms)
 
 	Found best solution and proved optimality.

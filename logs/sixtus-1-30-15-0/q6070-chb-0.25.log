@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [617,3660]
+		Bounds: [618,3660]
 		q6070 [makespan: 1113]
 		q6070 [makespan: 1004]
 		q6070 [makespan: 832]
@@ -8,30 +8,37 @@
 			nodes:      11693
 			failures:   4
 			peak depth: 517
-			runtime:    0.150 (150.000 ms)
+			runtime:    0.148 (148.000 ms)
 
 	Adjusting...
-		Bounds: [617,778]
-		Bounds: [698,778]
-		q6070 [makespan: 738]
-		Bounds: [698,738]
-		q6070 [makespan: 718]
-		Bounds: [698,718]
-		Bounds: [709,718]
-			nodes:      361051
-			failures:   180298
-			restarts:   17
-			no-goods:   363
-			peak depth: 101
+		Bounds: [618,778]
+		Bounds: [699,778]
+		q6070 [makespan: 737]
+		Bounds: [699,737]
+			nodes:      383938
+			failures:   191819
+			restarts:   12
+			no-goods:   264
+			peak depth: 102
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      335887
-			failures:   167855
-			restarts:   9
-			no-goods:   189
-			peak depth: 101
-			runtime:    13.364 (13364.000 ms)
+		q6070 [makespan: 736]
+		q6070 [makespan: 735]
+		q6070 [makespan: 733]
+		q6070 [makespan: 731]
+		q6070 [makespan: 730]
+		q6070 [makespan: 727]
+		q6070 [makespan: 726]
+		q6070 [makespan: 725]
+		q6070 [makespan: 724]
+		q6070 [makespan: 718]
+			nodes:      638478
+			failures:   318734
+			restarts:   21
+			no-goods:   399
+			peak depth: 102
+			runtime:    27.182 (27182.000 ms)
 
 	Found best solution and proved optimality.

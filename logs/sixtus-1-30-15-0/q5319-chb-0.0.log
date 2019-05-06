@@ -1,15 +1,15 @@
 	Probing...
-		Bounds: [671,3971]
+		Bounds: [672,3971]
 		q5319 [makespan: 915]
 		q5319 [makespan: 826]
 		q5319 [makespan: 823]
 			nodes:      12226
 			failures:   12
 			peak depth: 538
-			runtime:    0.153 (153.000 ms)
+			runtime:    0.154 (154.000 ms)
 
 	Adjusting...
-		Bounds: [671,823]
+		Bounds: [672,823]
 		Bounds: [748,823]
 		q5319 [makespan: 784]
 		Bounds: [748,784]
@@ -19,8 +19,10 @@
 		Bounds: [748,755]
 		Bounds: [752,755]
 		q5319 [makespan: 753]
-			nodes:      847
-			failures:   262
+		Bounds: [752,753]
+		q5319 [makespan: 752]
+			nodes:      901
+			failures:   263
 			restarts:   0
 			no-goods:   0
 			peak depth: 97

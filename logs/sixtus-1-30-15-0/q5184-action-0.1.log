@@ -1,28 +1,30 @@
 	Probing...
-		Bounds: [613,4239]
+		Bounds: [614,4239]
 		q5184 [makespan: 1041]
 		q5184 [makespan: 942]
 		q5184 [makespan: 868]
 			nodes:      31812
 			failures:   10002
 			peak depth: 560
-			runtime:    0.697 (697.000 ms)
+			runtime:    0.692 (692.000 ms)
 
 	Adjusting...
-		Bounds: [613,868]
-		Bounds: [741,868]
+		Bounds: [614,868]
+		Bounds: [742,868]
+		q5184 [makespan: 805]
+		Bounds: [742,805]
+		Bounds: [774,805]
+		Bounds: [790,805]
+		Bounds: [798,805]
+		Bounds: [802,805]
 		q5184 [makespan: 803]
-		Bounds: [741,803]
-		Bounds: [773,803]
-		Bounds: [789,803]
-		Bounds: [797,803]
-		Bounds: [801,803]
+		Bounds: [802,803]
 		q5184 [makespan: 802]
-			nodes:      129916
-			failures:   64842
-			restarts:   8
-			no-goods:   113
-			peak depth: 77
-			runtime:    5.977 (5977.000 ms)
+			nodes:      185142
+			failures:   92409
+			restarts:   11
+			no-goods:   182
+			peak depth: 70
+			runtime:    8.502 (8502.000 ms)
 
 	Found best solution and proved optimality.

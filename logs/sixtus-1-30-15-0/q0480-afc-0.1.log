@@ -1,34 +1,27 @@
 	Probing...
-		Bounds: [684,4438]
+		Bounds: [685,4438]
 		q0480 [makespan: 910]
 		q0480 [makespan: 816]
 		q0480 [makespan: 809]
 			nodes:      12430
 			failures:   8
 			peak depth: 529
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.154 (154.000 ms)
 
 	Adjusting...
-		Bounds: [684,809]
+		Bounds: [685,809]
+		q0480 [makespan: 747]
+		Bounds: [685,747]
+		Bounds: [717,747]
+		Bounds: [733,747]
+		Bounds: [741,747]
 		q0480 [makespan: 742]
-		Bounds: [684,742]
-		Bounds: [714,742]
-		Bounds: [729,742]
-		Bounds: [736,742]
-		Bounds: [740,742]
-			nodes:      154
+		Bounds: [741,742]
+			nodes:      210
 			failures:   53
 			restarts:   0
 			no-goods:   0
-			peak depth: 56
+			peak depth: 58
 			runtime:    0.007 (7.000 ms)
-
-	Solving...
-			nodes:      0
-			failures:   1
-			restarts:   0
-			no-goods:   0
-			peak depth: 0
-			runtime:    0.000 (0.000 ms)
 
 	Found best solution and proved optimality.

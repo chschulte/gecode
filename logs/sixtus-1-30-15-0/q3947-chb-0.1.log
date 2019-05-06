@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [505,3479]
+		Bounds: [506,3479]
 		q3947 [makespan: 865]
 		q3947 [makespan: 759]
 		q3947 [makespan: 676]
@@ -7,10 +7,10 @@
 			nodes:      11689
 			failures:   7
 			peak depth: 521
-			runtime:    0.149 (149.000 ms)
+			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [505,661]
+		Bounds: [506,661]
 		Bounds: [584,661]
 		q3947 [makespan: 621]
 		Bounds: [584,621]
@@ -18,11 +18,13 @@
 		Bounds: [613,621]
 		Bounds: [618,621]
 		q3947 [makespan: 619]
-			nodes:      306
-			failures:   95
+		Bounds: [618,619]
+		q3947 [makespan: 618]
+			nodes:      365
+			failures:   96
 			restarts:   0
 			no-goods:   0
 			peak depth: 68
-			runtime:    0.011 (11.000 ms)
+			runtime:    0.012 (12.000 ms)
 
 	Found best solution and proved optimality.

@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [597,3912]
+		Bounds: [598,3912]
 		q9066 [makespan: 899]
 		q9066 [makespan: 893]
 		q9066 [makespan: 834]
@@ -7,48 +7,30 @@
 			nodes:      71659
 			failures:   30004
 			peak depth: 527
-			runtime:    1.278 (1278.000 ms)
+			runtime:    1.257 (1257.000 ms)
 
 	Adjusting...
-		Bounds: [597,828]
-		Bounds: [713,828]
-			nodes:      433107
-			failures:   216409
-			restarts:   10
-			no-goods:   217
+		Bounds: [598,828]
+		Bounds: [714,828]
+		q9066 [makespan: 771]
+		Bounds: [714,771]
+		Bounds: [743,771]
+		Bounds: [758,771]
+		Bounds: [765,771]
+			nodes:      414302
+			failures:   206913
+			restarts:   16
+			no-goods:   327
 			peak depth: 84
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		q9066 [makespan: 827]
-		q9066 [makespan: 825]
-		q9066 [makespan: 817]
-		q9066 [makespan: 812]
-		q9066 [makespan: 811]
-		q9066 [makespan: 810]
-		q9066 [makespan: 809]
-		q9066 [makespan: 807]
-		q9066 [makespan: 804]
-		q9066 [makespan: 803]
-		q9066 [makespan: 796]
-		q9066 [makespan: 793]
-		q9066 [makespan: 790]
-		q9066 [makespan: 787]
-		q9066 [makespan: 783]
-		q9066 [makespan: 782]
-		q9066 [makespan: 781]
-		q9066 [makespan: 778]
-		q9066 [makespan: 777]
-		q9066 [makespan: 775]
-		q9066 [makespan: 773]
-		q9066 [makespan: 772]
-		q9066 [makespan: 771]
-			nodes:      2256610
-			failures:   1127195
-			restarts:   38
-			no-goods:   502
-			peak depth: 118
-			runtime:    1:15.427 (75427.000 ms)
+			nodes:      1071532
+			failures:   535573
+			restarts:   13
+			no-goods:   320
+			peak depth: 89
+			runtime:    34.868 (34868.000 ms)
 
 	Found best solution and proved optimality.

@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [603,4025]
+		Bounds: [604,4025]
 		q5406 [makespan: 994]
 		q5406 [makespan: 893]
 		q5406 [makespan: 891]
@@ -7,32 +7,36 @@
 			nodes:      12254
 			failures:   12
 			peak depth: 540
-			runtime:    0.154 (154.000 ms)
+			runtime:    0.153 (153.000 ms)
 
 	Adjusting...
-		Bounds: [603,890]
-		Bounds: [747,890]
-		q5406 [makespan: 814]
-		Bounds: [747,814]
-		q5406 [makespan: 777]
-		Bounds: [747,777]
-		Bounds: [763,777]
-		q5406 [makespan: 767]
-		Bounds: [763,767]
-			nodes:      344026
-			failures:   171758
-			restarts:   12
-			no-goods:   276
-			peak depth: 95
+		Bounds: [604,890]
+		Bounds: [748,890]
+		q5406 [makespan: 817]
+		Bounds: [748,817]
+		q5406 [makespan: 782]
+		Bounds: [748,782]
+			nodes:      356302
+			failures:   177966
+			restarts:   10
+			no-goods:   207
+			peak depth: 97
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-			nodes:      741249
-			failures:   370536
-			restarts:   11
-			no-goods:   186
-			peak depth: 101
-			runtime:    31.005 (31005.000 ms)
+		q5406 [makespan: 780]
+		q5406 [makespan: 779]
+		q5406 [makespan: 778]
+		q5406 [makespan: 776]
+		q5406 [makespan: 773]
+		q5406 [makespan: 771]
+		q5406 [makespan: 767]
+			nodes:      776215
+			failures:   387743
+			restarts:   18
+			no-goods:   346
+			peak depth: 96
+			runtime:    32.668 (32669.000 ms)
 
 	Found best solution and proved optimality.

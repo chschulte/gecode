@@ -1,34 +1,28 @@
 	Probing...
-		Bounds: [631,4238]
+		Bounds: [632,4238]
 		q7205 [makespan: 865]
 		q7205 [makespan: 864]
 			nodes:      51865
 			failures:   20004
 			peak depth: 538
-			runtime:    0.879 (879.000 ms)
+			runtime:    0.880 (880.000 ms)
 
 	Adjusting...
-		Bounds: [631,864]
-		Bounds: [748,864]
-		q7205 [makespan: 806]
-		Bounds: [748,806]
-		Bounds: [778,806]
-		Bounds: [793,806]
-		Bounds: [800,806]
+		Bounds: [632,864]
+		Bounds: [749,864]
+		q7205 [makespan: 801]
+		Bounds: [749,801]
+		Bounds: [776,801]
+		Bounds: [789,801]
+		Bounds: [796,801]
+		Bounds: [799,801]
 		q7205 [makespan: 800]
-			nodes:      231
-			failures:   43
+		Bounds: [799,800]
+			nodes:      424
+			failures:   149
 			restarts:   0
 			no-goods:   0
-			peak depth: 91
-			runtime:    0.007 (7.000 ms)
-
-	Solving...
-			nodes:      0
-			failures:   1
-			restarts:   0
-			no-goods:   0
-			peak depth: 0
-			runtime:    0.000 (0.000 ms)
+			peak depth: 84
+			runtime:    0.019 (19.000 ms)
 
 	Found best solution and proved optimality.

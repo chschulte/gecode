@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [561,3846]
+		Bounds: [562,3846]
 		q8410 [makespan: 776]
 		q8410 [makespan: 715]
 			nodes:      32264
@@ -8,7 +8,7 @@
 			runtime:    0.528 (528.000 ms)
 
 	Adjusting...
-		Bounds: [561,715]
+		Bounds: [562,715]
 		Bounds: [639,715]
 		Bounds: [678,715]
 		Bounds: [697,715]
@@ -16,11 +16,21 @@
 		Bounds: [697,706]
 		q8410 [makespan: 701]
 		Bounds: [697,701]
-			nodes:      257533
-			failures:   128597
-			restarts:   12
-			no-goods:   186
+		Bounds: [700,701]
+			nodes:      359097
+			failures:   179335
+			restarts:   17
+			no-goods:   278
 			peak depth: 81
-			runtime:    10.451 (10451.000 ms)
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      126120
+			failures:   63022
+			restarts:   5
+			no-goods:   104
+			peak depth: 69
+			runtime:    4.829 (4829.000 ms)
 
 	Found best solution and proved optimality.

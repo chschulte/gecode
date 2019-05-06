@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [579,4019]
+		Bounds: [580,4019]
 		q4023 [makespan: 1007]
 		q4023 [makespan: 1000]
 		q4023 [makespan: 942]
@@ -9,51 +9,35 @@
 			nodes:      12233
 			failures:   9
 			peak depth: 537
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [579,858]
-		Bounds: [719,858]
-		Bounds: [789,858]
-			nodes:      338715
-			failures:   169253
-			restarts:   9
-			no-goods:   139
-			peak depth: 80
+		Bounds: [580,858]
+		Bounds: [720,858]
+		Bounds: [790,858]
+		q4023 [makespan: 823]
+		Bounds: [790,823]
+		q4023 [makespan: 804]
+		Bounds: [790,804]
+			nodes:      344661
+			failures:   172099
+			restarts:   12
+			no-goods:   227
+			peak depth: 95
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		q4023 [makespan: 852]
-		q4023 [makespan: 851]
-		q4023 [makespan: 848]
-		q4023 [makespan: 844]
-		q4023 [makespan: 842]
-		q4023 [makespan: 841]
-		q4023 [makespan: 838]
-		q4023 [makespan: 837]
-		q4023 [makespan: 833]
-		q4023 [makespan: 832]
-		q4023 [makespan: 830]
-		q4023 [makespan: 829]
-		q4023 [makespan: 826]
-		q4023 [makespan: 824]
-		q4023 [makespan: 822]
-		q4023 [makespan: 821]
-		q4023 [makespan: 820]
-		q4023 [makespan: 816]
-		q4023 [makespan: 815]
-		q4023 [makespan: 813]
-		q4023 [makespan: 807]
+		q4023 [makespan: 803]
 		q4023 [makespan: 801]
 		q4023 [makespan: 800]
 		q4023 [makespan: 795]
 		q4023 [makespan: 794]
-			nodes:      3594331
-			failures:   1795974
-			restarts:   41
-			no-goods:   543
-			peak depth: 114
-			runtime:    2:33.284 (153284.000 ms)
+			nodes:      243685
+			failures:   121558
+			restarts:   12
+			no-goods:   167
+			peak depth: 97
+			runtime:    10.408 (10408.000 ms)
 
 	Found best solution and proved optimality.

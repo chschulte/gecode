@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [654,4416]
+		Bounds: [655,4416]
 		q7536 [makespan: 1095]
 		q7536 [makespan: 1016]
 		q7536 [makespan: 958]
@@ -12,7 +12,7 @@
 			runtime:    1.078 (1078.000 ms)
 
 	Adjusting...
-		Bounds: [654,876]
+		Bounds: [655,876]
 		Bounds: [766,876]
 		Bounds: [822,876]
 		q7536 [makespan: 849]
@@ -21,11 +21,21 @@
 		Bounds: [822,832]
 		Bounds: [828,832]
 		q7536 [makespan: 829]
-			nodes:      306671
-			failures:   153117
-			restarts:   12
-			no-goods:   193
+		Bounds: [828,829]
+			nodes:      359713
+			failures:   179588
+			restarts:   15
+			no-goods:   250
 			peak depth: 76
-			runtime:    13.434 (13434.000 ms)
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      154725
+			failures:   77296
+			restarts:   6
+			no-goods:   110
+			peak depth: 66
+			runtime:    6.257 (6257.000 ms)
 
 	Found best solution and proved optimality.

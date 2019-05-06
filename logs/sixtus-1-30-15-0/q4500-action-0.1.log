@@ -1,35 +1,28 @@
 	Probing...
-		Bounds: [584,3858]
+		Bounds: [585,3858]
 		q4500 [makespan: 782]
 		q4500 [makespan: 749]
 			nodes:      12300
 			failures:   5
 			peak depth: 538
-			runtime:    0.150 (150.000 ms)
+			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [584,749]
+		Bounds: [585,749]
+		q4500 [makespan: 667]
+		Bounds: [585,667]
+		Bounds: [627,667]
+		Bounds: [648,667]
+		Bounds: [658,667]
+		Bounds: [663,667]
 		q4500 [makespan: 665]
-		Bounds: [584,665]
-		Bounds: [625,665]
-		Bounds: [646,665]
-		Bounds: [656,665]
-		Bounds: [661,665]
+		Bounds: [663,665]
 		q4500 [makespan: 663]
-		Bounds: [661,663]
-			nodes:      618
-			failures:   246
+			nodes:      767
+			failures:   300
 			restarts:   0
 			no-goods:   0
-			peak depth: 83
-			runtime:    0.028 (28.000 ms)
-
-	Solving...
-			nodes:      0
-			failures:   1
-			restarts:   0
-			no-goods:   0
-			peak depth: 0
-			runtime:    0.000 (0.000 ms)
+			peak depth: 77
+			runtime:    0.034 (34.000 ms)
 
 	Found best solution and proved optimality.

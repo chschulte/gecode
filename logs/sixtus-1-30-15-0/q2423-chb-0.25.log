@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [639,4381]
+		Bounds: [640,4381]
 		q2423 [makespan: 808]
 			nodes:      12441
 			failures:   1
@@ -7,18 +7,20 @@
 			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [639,808]
-		Bounds: [724,808]
+		Bounds: [640,808]
+		Bounds: [725,808]
 		q2423 [makespan: 764]
-		Bounds: [724,764]
+		Bounds: [725,764]
 		Bounds: [745,764]
 		Bounds: [755,764]
 		Bounds: [760,764]
-			nodes:      871
-			failures:   407
+		Bounds: [763,764]
+		q2423 [makespan: 763]
+			nodes:      686
+			failures:   289
 			restarts:   0
 			no-goods:   0
-			peak depth: 65
-			runtime:    0.029 (29.000 ms)
+			peak depth: 66
+			runtime:    0.023 (23.000 ms)
 
 	Found best solution and proved optimality.

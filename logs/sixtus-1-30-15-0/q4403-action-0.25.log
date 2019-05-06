@@ -1,15 +1,15 @@
 	Probing...
-		Bounds: [564,3885]
+		Bounds: [565,3885]
 		q4403 [makespan: 866]
 		q4403 [makespan: 803]
 		q4403 [makespan: 792]
 			nodes:      12309
 			failures:   6
 			peak depth: 536
-			runtime:    0.152 (152.000 ms)
+			runtime:    0.150 (150.000 ms)
 
 	Adjusting...
-		Bounds: [564,792]
+		Bounds: [565,792]
 		Bounds: [679,792]
 		q4403 [makespan: 735]
 		Bounds: [679,735]
@@ -19,11 +19,12 @@
 		q4403 [makespan: 732]
 		Bounds: [729,732]
 		q4403 [makespan: 730]
-			nodes:      38706
-			failures:   19242
-			restarts:   3
-			no-goods:   61
+		Bounds: [729,730]
+			nodes:      64024
+			failures:   31881
+			restarts:   5
+			no-goods:   100
 			peak depth: 73
-			runtime:    1.132 (1132.000 ms)
+			runtime:    1.945 (1945.000 ms)
 
 	Found best solution and proved optimality.

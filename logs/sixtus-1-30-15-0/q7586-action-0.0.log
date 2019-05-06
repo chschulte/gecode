@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [664,4344]
+		Bounds: [665,4344]
 		q7586 [makespan: 982]
 		q7586 [makespan: 868]
 			nodes:      12506
@@ -8,7 +8,7 @@
 			runtime:    0.148 (148.000 ms)
 
 	Adjusting...
-		Bounds: [664,868]
+		Bounds: [665,868]
 		Bounds: [767,868]
 		q7586 [makespan: 815]
 		Bounds: [767,815]
@@ -18,8 +18,10 @@
 		Bounds: [804,809]
 		Bounds: [807,809]
 		q7586 [makespan: 808]
-			nodes:      203
-			failures:   17
+		Bounds: [807,808]
+		q7586 [makespan: 807]
+			nodes:      255
+			failures:   18
 			restarts:   0
 			no-goods:   0
 			peak depth: 68

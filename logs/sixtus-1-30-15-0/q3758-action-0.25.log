@@ -1,22 +1,22 @@
 	Probing...
-		Bounds: [623,3769]
+		Bounds: [624,3769]
 		q3758 [makespan: 930]
 		q3758 [makespan: 803]
 			nodes:      12340
 			failures:   6
 			peak depth: 537
-			runtime:    0.150 (150.000 ms)
+			runtime:    0.154 (154.000 ms)
 
 	Adjusting...
-		Bounds: [623,803]
+		Bounds: [624,803]
 		Bounds: [714,803]
 		Bounds: [759,803]
 		q3758 [makespan: 781]
 		Bounds: [759,781]
 		q3758 [makespan: 770]
 		Bounds: [759,770]
-			nodes:      427339
-			failures:   213461
+			nodes:      425821
+			failures:   212702
 			restarts:   14
 			no-goods:   305
 			peak depth: 93
@@ -25,12 +25,13 @@
 
 	Solving...
 		q3758 [makespan: 769]
+		q3758 [makespan: 768]
 		q3758 [makespan: 766]
-			nodes:      984935
-			failures:   492246
-			restarts:   14
-			no-goods:   316
-			peak depth: 102
-			runtime:    33.611 (33611.000 ms)
+			nodes:      1025668
+			failures:   512586
+			restarts:   15
+			no-goods:   291
+			peak depth: 93
+			runtime:    35.074 (35074.000 ms)
 
 	Found best solution and proved optimality.

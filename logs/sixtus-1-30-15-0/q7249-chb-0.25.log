@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [551,3674]
+		Bounds: [552,3674]
 		q7249 [makespan: 1003]
 		q7249 [makespan: 888]
 		q7249 [makespan: 871]
@@ -9,13 +9,13 @@
 			nodes:      12139
 			failures:   4
 			peak depth: 538
-			runtime:    0.149 (149.000 ms)
+			runtime:    0.148 (148.000 ms)
 
 	Adjusting...
-		Bounds: [551,827]
+		Bounds: [552,827]
 		Bounds: [690,827]
-			nodes:      369632
-			failures:   184687
+			nodes:      358952
+			failures:   179351
 			restarts:   9
 			no-goods:   202
 			peak depth: 94
@@ -23,40 +23,44 @@
 				stopped due to time-out...
 
 	Solving...
+		q7249 [makespan: 826]
 		q7249 [makespan: 825]
 		q7249 [makespan: 823]
-		q7249 [makespan: 822]
+		q7249 [makespan: 820]
+		q7249 [makespan: 818]
 		q7249 [makespan: 817]
-		q7249 [makespan: 813]
+		q7249 [makespan: 816]
+		q7249 [makespan: 815]
 		q7249 [makespan: 812]
-		q7249 [makespan: 810]
+		q7249 [makespan: 809]
 		q7249 [makespan: 808]
-		q7249 [makespan: 806]
+		q7249 [makespan: 807]
+		q7249 [makespan: 804]
 		q7249 [makespan: 803]
-		q7249 [makespan: 801]
-		q7249 [makespan: 800]
+		q7249 [makespan: 799]
 		q7249 [makespan: 798]
 		q7249 [makespan: 797]
 		q7249 [makespan: 796]
-		q7249 [makespan: 793]
 		q7249 [makespan: 792]
 		q7249 [makespan: 791]
-		q7249 [makespan: 789]
+		q7249 [makespan: 787]
 		q7249 [makespan: 786]
 		q7249 [makespan: 783]
 		q7249 [makespan: 782]
-		q7249 [makespan: 773]
+		q7249 [makespan: 780]
+		q7249 [makespan: 776]
+		q7249 [makespan: 775]
 		q7249 [makespan: 772]
-		q7249 [makespan: 770]
 		q7249 [makespan: 768]
 		q7249 [makespan: 766]
+		q7249 [makespan: 764]
 		q7249 [makespan: 762]
 		q7249 [makespan: 761]
-			nodes:      1649633
-			failures:   823536
-			restarts:   43
-			no-goods:   587
-			peak depth: 121
-			runtime:    1:08.989 (68989.000 ms)
+			nodes:      1877555
+			failures:   937358
+			restarts:   47
+			no-goods:   615
+			peak depth: 122
+			runtime:    1:18.211 (78211.000 ms)
 
 	Found best solution and proved optimality.

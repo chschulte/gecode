@@ -1,21 +1,21 @@
 	Probing...
-		Bounds: [641,4065]
+		Bounds: [642,4065]
 		q0472 [makespan: 943]
 		q0472 [makespan: 934]
 		q0472 [makespan: 933]
 			nodes:      12228
 			failures:   2
 			peak depth: 523
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [641,933]
+		Bounds: [642,933]
 		Bounds: [788,933]
 		q0472 [makespan: 859]
 		Bounds: [788,859]
 		Bounds: [824,859]
-			nodes:      339592
-			failures:   169642
+			nodes:      346698
+			failures:   173192
 			restarts:   10
 			no-goods:   188
 			peak depth: 83
@@ -23,23 +23,25 @@
 				stopped due to time-out...
 
 	Solving...
+		q0472 [makespan: 857]
 		q0472 [makespan: 856]
-		q0472 [makespan: 855]
-		q0472 [makespan: 853]
-		q0472 [makespan: 852]
+		q0472 [makespan: 854]
+		q0472 [makespan: 850]
+		q0472 [makespan: 848]
 		q0472 [makespan: 847]
 		q0472 [makespan: 846]
 		q0472 [makespan: 844]
-		q0472 [makespan: 842]
-		q0472 [makespan: 841]
-		q0472 [makespan: 839]
+		q0472 [makespan: 843]
+		q0472 [makespan: 840]
+		q0472 [makespan: 837]
 		q0472 [makespan: 836]
+		q0472 [makespan: 834]
 		q0472 [makespan: 832]
-			nodes:      655539
-			failures:   327244
-			restarts:   22
-			no-goods:   295
-			peak depth: 109
-			runtime:    28.999 (28999.000 ms)
+			nodes:      878921
+			failures:   438796
+			restarts:   25
+			no-goods:   422
+			peak depth: 107
+			runtime:    38.123 (38123.000 ms)
 
 	Found best solution and proved optimality.

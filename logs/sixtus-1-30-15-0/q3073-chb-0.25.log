@@ -1,15 +1,15 @@
 	Probing...
-		Bounds: [609,3769]
+		Bounds: [610,3769]
 		q3073 [makespan: 1092]
 		q3073 [makespan: 812]
 		q3073 [makespan: 783]
 			nodes:      31891
 			failures:   10007
 			peak depth: 543
-			runtime:    0.646 (646.000 ms)
+			runtime:    0.649 (649.000 ms)
 
 	Adjusting...
-		Bounds: [609,783]
+		Bounds: [610,783]
 		Bounds: [697,783]
 		q3073 [makespan: 740]
 		Bounds: [697,740]
@@ -18,8 +18,10 @@
 		Bounds: [708,717]
 		Bounds: [713,717]
 		q3073 [makespan: 714]
-			nodes:      1578
-			failures:   695
+		Bounds: [713,714]
+		q3073 [makespan: 713]
+			nodes:      1642
+			failures:   696
 			restarts:   0
 			no-goods:   0
 			peak depth: 75

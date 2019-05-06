@@ -1,24 +1,25 @@
 	Probing...
-		Bounds: [630,3794]
+		Bounds: [631,3794]
 		q4516 [makespan: 886]
 		q4516 [makespan: 728]
 			nodes:      11940
 			failures:   6
 			peak depth: 534
-			runtime:    0.150 (150.000 ms)
+			runtime:    0.153 (153.000 ms)
 
 	Adjusting...
-		Bounds: [630,728]
+		Bounds: [631,728]
 		Bounds: [680,728]
 		q4516 [makespan: 702]
 		Bounds: [680,702]
 		Bounds: [692,702]
 		q4516 [makespan: 693]
-			nodes:      12066
-			failures:   5953
-			restarts:   1
-			no-goods:   11
+		Bounds: [692,693]
+			nodes:      33940
+			failures:   16882
+			restarts:   2
+			no-goods:   28
 			peak depth: 92
-			runtime:    0.592 (592.000 ms)
+			runtime:    1.634 (1634.000 ms)
 
 	Found best solution and proved optimality.

@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [636,4251]
+		Bounds: [637,4251]
 		q8643 [makespan: 1230]
 		q8643 [makespan: 1066]
 		q8643 [makespan: 981]
@@ -10,53 +10,37 @@
 			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [636,975]
-		Bounds: [806,975]
-			nodes:      377901
-			failures:   188790
-			restarts:   9
-			no-goods:   217
-			peak depth: 90
+		Bounds: [637,975]
+		Bounds: [807,975]
+		Bounds: [892,975]
+		q8643 [makespan: 933]
+		Bounds: [892,933]
+			nodes:      379781
+			failures:   189681
+			restarts:   13
+			no-goods:   269
+			peak depth: 92
 			runtime:    15.001 (15001.000 ms)
 				stopped due to time-out...
 
 	Solving...
-		q8643 [makespan: 970]
-		q8643 [makespan: 969]
-		q8643 [makespan: 966]
-		q8643 [makespan: 963]
-		q8643 [makespan: 955]
-		q8643 [makespan: 952]
-		q8643 [makespan: 948]
-		q8643 [makespan: 946]
-		q8643 [makespan: 934]
-		q8643 [makespan: 933]
-		q8643 [makespan: 932]
 		q8643 [makespan: 931]
-		q8643 [makespan: 930]
-		q8643 [makespan: 929]
-		q8643 [makespan: 928]
-		q8643 [makespan: 927]
-		q8643 [makespan: 926]
-		q8643 [makespan: 922]
-		q8643 [makespan: 921]
-		q8643 [makespan: 919]
-		q8643 [makespan: 916]
+		q8643 [makespan: 925]
+		q8643 [makespan: 923]
+		q8643 [makespan: 920]
+		q8643 [makespan: 917]
 		q8643 [makespan: 915]
-		q8643 [makespan: 914]
 		q8643 [makespan: 913]
-		q8643 [makespan: 911]
-		q8643 [makespan: 909]
-		q8643 [makespan: 906]
-		q8643 [makespan: 900]
+		q8643 [makespan: 908]
+		q8643 [makespan: 905]
 		q8643 [makespan: 897]
 		q8643 [makespan: 895]
 		q8643 [makespan: 894]
-			nodes:      3460911
-			failures:   1728952
-			restarts:   46
-			no-goods:   588
-			peak depth: 117
-			runtime:    2:15.680 (135680.000 ms)
+			nodes:      1357364
+			failures:   678008
+			restarts:   25
+			no-goods:   388
+			peak depth: 114
+			runtime:    54.405 (54405.000 ms)
 
 	Found best solution and proved optimality.

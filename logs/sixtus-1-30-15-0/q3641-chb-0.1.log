@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [587,3853]
+		Bounds: [588,3853]
 		q3641 [makespan: 1031]
 		q3641 [makespan: 904]
 		q3641 [makespan: 892]
@@ -7,15 +7,15 @@
 			nodes:      12149
 			failures:   4
 			peak depth: 534
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.154 (154.000 ms)
 
 	Adjusting...
-		Bounds: [587,889]
+		Bounds: [588,889]
 		Bounds: [739,889]
 		q3641 [makespan: 811]
 		Bounds: [739,811]
-			nodes:      374915
-			failures:   187278
+			nodes:      364857
+			failures:   182250
 			restarts:   11
 			no-goods:   188
 			peak depth: 85
@@ -23,24 +23,27 @@
 				stopped due to time-out...
 
 	Solving...
-		q3641 [makespan: 802]
+		q3641 [makespan: 809]
+		q3641 [makespan: 806]
+		q3641 [makespan: 805]
+		q3641 [makespan: 804]
+		q3641 [makespan: 803]
+		q3641 [makespan: 801]
+		q3641 [makespan: 799]
 		q3641 [makespan: 798]
 		q3641 [makespan: 797]
-		q3641 [makespan: 796]
-		q3641 [makespan: 795]
 		q3641 [makespan: 794]
-		q3641 [makespan: 793]
 		q3641 [makespan: 792]
+		q3641 [makespan: 791]
 		q3641 [makespan: 790]
-		q3641 [makespan: 788]
 		q3641 [makespan: 786]
 		q3641 [makespan: 781]
 		q3641 [makespan: 777]
-			nodes:      3664164
-			failures:   1831403
-			restarts:   30
-			no-goods:   368
-			peak depth: 88
-			runtime:    2:10.276 (130276.000 ms)
+			nodes:      3184158
+			failures:   1591266
+			restarts:   33
+			no-goods:   465
+			peak depth: 113
+			runtime:    1:58.336 (118336.000 ms)
 
 	Found best solution and proved optimality.

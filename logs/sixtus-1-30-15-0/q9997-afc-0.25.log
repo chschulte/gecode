@@ -1,5 +1,5 @@
 	Probing...
-		Bounds: [602,3843]
+		Bounds: [603,3843]
 		q9997 [makespan: 929]
 		q9997 [makespan: 899]
 		q9997 [makespan: 869]
@@ -9,32 +9,39 @@
 			nodes:      12332
 			failures:   6
 			peak depth: 545
-			runtime:    0.151 (151.000 ms)
+			runtime:    0.152 (152.000 ms)
 
 	Adjusting...
-		Bounds: [602,791]
-		Bounds: [697,791]
-		q9997 [makespan: 744]
-		Bounds: [697,744]
-		q9997 [makespan: 720]
-		Bounds: [697,720]
-		Bounds: [709,720]
-		q9997 [makespan: 714]
-		Bounds: [709,714]
-		Bounds: [712,714]
-			nodes:      22310
-			failures:   11062
-			restarts:   0
-			no-goods:   0
-			peak depth: 81
-			runtime:    1.134 (1134.000 ms)
+		Bounds: [603,791]
+		Bounds: [698,791]
+		q9997 [makespan: 743]
+		Bounds: [698,743]
+			nodes:      359584
+			failures:   179620
+			restarts:   10
+			no-goods:   276
+			peak depth: 91
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
 
 	Solving...
-			nodes:      0
-			failures:   1
-			restarts:   0
-			no-goods:   0
-			peak depth: 0
-			runtime:    0.000 (0.000 ms)
+		q9997 [makespan: 741]
+		q9997 [makespan: 740]
+		q9997 [makespan: 738]
+		q9997 [makespan: 734]
+		q9997 [makespan: 733]
+		q9997 [makespan: 728]
+		q9997 [makespan: 726]
+		q9997 [makespan: 723]
+		q9997 [makespan: 720]
+		q9997 [makespan: 719]
+		q9997 [makespan: 716]
+		q9997 [makespan: 714]
+			nodes:      540588
+			failures:   269770
+			restarts:   21
+			no-goods:   330
+			peak depth: 123
+			runtime:    22.010 (22010.000 ms)
 
 	Found best solution and proved optimality.

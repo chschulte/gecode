@@ -1,14 +1,14 @@
 	Probing...
-		Bounds: [668,4031]
+		Bounds: [669,4031]
 		q9408 [makespan: 920]
 		q9408 [makespan: 794]
 			nodes:      31808
 			failures:   10006
 			peak depth: 552
-			runtime:    0.602 (602.000 ms)
+			runtime:    0.590 (590.000 ms)
 
 	Adjusting...
-		Bounds: [668,794]
+		Bounds: [669,794]
 		Bounds: [732,794]
 		q9408 [makespan: 763]
 		Bounds: [732,763]
@@ -16,8 +16,10 @@
 		Bounds: [732,746]
 		q9408 [makespan: 735]
 		Bounds: [732,735]
-			nodes:      2286
-			failures:   1034
+		Bounds: [734,735]
+		q9408 [makespan: 734]
+			nodes:      2355
+			failures:   1041
 			restarts:   0
 			no-goods:   0
 			peak depth: 84
