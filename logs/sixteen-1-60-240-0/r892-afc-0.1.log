@@ -1,0 +1,31 @@
+	Probing...
+		Bounds: [643,4913]
+		r892 [makespan: 1063]
+		r892 [makespan: 1049]
+		r892 [makespan: 1023]
+		r892 [makespan: 928]
+		r892 [makespan: 900]
+			nodes:      14699
+			failures:   7
+			peak depth: 652
+			runtime:    0.345 (345.000 ms)
+
+	Adjusting...
+		Bounds: [643,900]
+		Bounds: [772,900]
+		r892 [makespan: 832]
+		Bounds: [772,832]
+		r892 [makespan: 801]
+		Bounds: [772,801]
+		Bounds: [787,801]
+		Bounds: [795,801]
+		r892 [makespan: 797]
+		Bounds: [795,797]
+			nodes:      2284405
+			failures:   1141621
+			restarts:   41
+			no-goods:   734
+			peak depth: 107
+			runtime:    3:23.389 (203389.000 ms)
+
+	Found best solution and proved optimality.

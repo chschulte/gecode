@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [603,3864]
+		q7070 [makespan: 938]
+		q7070 [makespan: 875]
+		q7070 [makespan: 861]
+		q7070 [makespan: 840]
+		q7070 [makespan: 830]
+			nodes:      11941
+			failures:   2
+			peak depth: 535
+			runtime:    0.237 (237.000 ms)
+
+	Adjusting...
+		Bounds: [603,830]
+		q7070 [makespan: 714]
+		Bounds: [603,714]
+		Bounds: [659,714]
+		Bounds: [687,714]
+		Bounds: [701,714]
+		Bounds: [708,714]
+		Bounds: [712,714]
+			nodes:      13633
+			failures:   6779
+			restarts:   0
+			no-goods:   0
+			peak depth: 101
+			runtime:    1.037 (1037.000 ms)
+
+	Found best solution and proved optimality.

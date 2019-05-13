@@ -1,0 +1,35 @@
+	Probing...
+		Bounds: [600,3961]
+		q8002 [makespan: 1089]
+		q8002 [makespan: 812]
+			nodes:      12126
+			failures:   6
+			peak depth: 551
+			runtime:    0.220 (220.000 ms)
+
+	Adjusting...
+		Bounds: [600,812]
+		Bounds: [707,812]
+		Bounds: [760,812]
+		q8002 [makespan: 782]
+		Bounds: [760,782]
+		q8002 [makespan: 768]
+		Bounds: [760,768]
+		Bounds: [765,768]
+			nodes:      245859
+			failures:   122725
+			restarts:   12
+			no-goods:   225
+			peak depth: 104
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+			nodes:      145703
+			failures:   72793
+			restarts:   6
+			no-goods:   117
+			peak depth: 81
+			runtime:    8.937 (8937.000 ms)
+
+	Found best solution and proved optimality.

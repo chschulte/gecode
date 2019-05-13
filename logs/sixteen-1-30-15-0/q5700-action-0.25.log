@@ -1,0 +1,40 @@
+	Probing...
+		Bounds: [640,4450]
+		q5700 [makespan: 1128]
+		q5700 [makespan: 1020]
+		q5700 [makespan: 1019]
+		q5700 [makespan: 958]
+			nodes:      11921
+			failures:   8
+			peak depth: 535
+			runtime:    0.220 (220.000 ms)
+
+	Adjusting...
+		Bounds: [640,958]
+		Bounds: [800,958]
+		q5700 [makespan: 877]
+		Bounds: [800,877]
+		Bounds: [839,877]
+			nodes:      211033
+			failures:   105383
+			restarts:   8
+			no-goods:   151
+			peak depth: 116
+			runtime:    15.001 (15001.000 ms)
+				stopped due to time-out...
+
+	Solving...
+		q5700 [makespan: 873]
+		q5700 [makespan: 872]
+		q5700 [makespan: 870]
+		q5700 [makespan: 869]
+		q5700 [makespan: 861]
+		q5700 [makespan: 860]
+			nodes:      1307988
+			failures:   653623
+			restarts:   19
+			no-goods:   362
+			peak depth: 110
+			runtime:    1:34.755 (94755.000 ms)
+
+	Found best solution and proved optimality.

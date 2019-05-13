@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [745,4269]
+		q6073 [makespan: 1121]
+		q6073 [makespan: 879]
+		q6073 [makespan: 878]
+			nodes:      12140
+			failures:   4
+			peak depth: 542
+			runtime:    0.229 (229.000 ms)
+
+	Adjusting...
+		Bounds: [745,878]
+		q6073 [makespan: 811]
+		Bounds: [745,811]
+		Bounds: [779,811]
+		q6073 [makespan: 791]
+		Bounds: [779,791]
+		q6073 [makespan: 785]
+		Bounds: [779,785]
+		Bounds: [783,785]
+			nodes:      200
+			failures:   5
+			restarts:   0
+			no-goods:   0
+			peak depth: 69
+			runtime:    0.009 (9.000 ms)
+
+	Found best solution and proved optimality.
