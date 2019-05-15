@@ -78,7 +78,7 @@ int
 main(int argc, char* argv[]) {
   int k = 10000; // Number of instances
   int m_min = 3, m_max = 9; // Machines
-  int n_min = 5, n_max = 20; // Jobs
+  int n_min = 3, n_max = 9; // Jobs
   int d = 99; // Maximal duration
   
   int* fms = new int[m_max+1];
@@ -127,7 +127,7 @@ main(int argc, char* argv[]) {
 
   std::cout << std::endl;
 
-  {
+  if (0) {
   int l=8;
   for (int r=0; r<k; r++) {
     if (l == 8) {
