@@ -77,8 +77,8 @@ public:
 int
 main(int argc, char* argv[]) {
   int k = 10000; // Number of instances
-  int m_min = 3, m_max = 9; // Machines
-  int n_min = 3, n_max = 9; // Jobs
+  int m_min = 5, m_max = 9; // Machines
+  int n_min = 5, n_max = 9; // Jobs
   int d = 99; // Maximal duration
   
   int* fms = new int[m_max+1];
