@@ -77,17 +77,20 @@ public:
 int
 main(int argc, char* argv[]) {
   int k = 10000; // Number of instances
-  int m = 9; // Machines
-  int n = 9; // Jobs
+  int m_min = 3, m_max = 9; // Machines
+  int n_min = 5, n_max = 20; // Jobs
   int d = 99; // Maximal duration
   
-  int fm = factorial(m);
-
-  int* p = new int[m * fm];
+  int* fms = new int[m_max+1];
+  int** ps = new int*[m_max+1];
 
   Rnd rnd(0);
 
-  {
+  for (int m=m_min; m<=m_max; m++) {
+    int fm = factorial(m);
+    int* p = new int[m * fm];
+    fms[m] = fm;
+    ps[m] = p;
     Permutation* g = new Permutation(m);
     DFS<Permutation> e(g);
     delete g;
@@ -100,17 +103,19 @@ main(int argc, char* argv[]) {
   }
 
   for (int r=0; r<k; r++) {
-    std::cout << "  const int q";
+    int n = n_min + rnd(n_max - n_min+1);
+    int m = m_min + rnd(m_max - m_min+1);
+    std::cout << "  const int p";
     fill4('0',r);
     std::cout << "[] = {" << std::endl;
     std::cout << "    " << n << ", " << m << ", "
               << "// Number of jobs and machines"
               << std::endl;
     for (int j=0; j<n; j++) {
-      int q = rnd(fm);
+      int q = rnd(fms[m]);
       std::cout << "    ";
       for (int i=0; i<m; i++) {
-        std::cout << p[m*q+i] << ", ";
+        std::cout << ps[m][m*q+i] << ", ";
         fill2(' ',rnd(d)+1);
         if ((i != n-1) || (j != m-1))
           std::cout << ", ";
@@ -130,7 +135,7 @@ main(int argc, char* argv[]) {
       l=0;
     }
     l++;
-    std::cout << "&q";
+    std::cout << "&p";
     fill4('0',r);
     std::cout << "[0], ";
   }
@@ -144,7 +149,7 @@ main(int argc, char* argv[]) {
       l=0;
     }
     l++;
-    std::cout << "\"q";
+    std::cout << "\"p";
     fill4('0',r);
     std::cout << "\", ";
   }
