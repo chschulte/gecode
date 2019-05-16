@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [556,2732]
+		p0805 [makespan: 685]
+		p0805 [makespan: 661]
+		p0805 [makespan: 633]
+		p0805 [makespan: 622]
+			nodes:      8385
+			failures:   8
+			peak depth: 372
+			runtime:    0.094 (94.000 ms)
+
+	Adjusting...
+		Bounds: [556,622]
+		p0805 [makespan: 588]
+		Bounds: [556,588]
+		p0805 [makespan: 572]
+		Bounds: [556,572]
+		Bounds: [565,572]
+		Bounds: [569,572]
+		p0805 [makespan: 569]
+			nodes:      149
+			failures:   12
+			restarts:   0
+			no-goods:   0
+			peak depth: 50
+			runtime:    0.004 (4.000 ms)
+
+	Found best solution and proved optimality.

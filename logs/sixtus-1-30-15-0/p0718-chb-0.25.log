@@ -1,0 +1,25 @@
+	Probing...
+		Bounds: [513,2270]
+		p0718 [makespan: 742]
+		p0718 [makespan: 599]
+			nodes:      7020
+			failures:   2
+			peak depth: 303
+			runtime:    0.071 (71.000 ms)
+
+	Adjusting...
+		Bounds: [513,599]
+		p0718 [makespan: 554]
+		Bounds: [513,554]
+		Bounds: [534,554]
+		Bounds: [545,554]
+		Bounds: [550,554]
+		Bounds: [553,554]
+			nodes:      57
+			failures:   14
+			restarts:   0
+			no-goods:   0
+			peak depth: 41
+			runtime:    0.002 (2.000 ms)
+
+	Found best solution and proved optimality.

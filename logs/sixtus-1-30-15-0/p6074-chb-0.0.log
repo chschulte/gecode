@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [543,2207]
+		p6074 [makespan: 677]
+		p6074 [makespan: 675]
+		p6074 [makespan: 642]
+		p6074 [makespan: 634]
+		p6074 [makespan: 616]
+		p6074 [makespan: 593]
+			nodes:      6910
+			failures:   2
+			peak depth: 310
+			runtime:    0.074 (74.000 ms)
+
+	Adjusting...
+		Bounds: [543,593]
+		p6074 [makespan: 568]
+		Bounds: [543,568]
+		Bounds: [556,568]
+		Bounds: [563,568]
+		Bounds: [566,568]
+			nodes:      64
+			failures:   19
+			restarts:   0
+			no-goods:   0
+			peak depth: 40
+			runtime:    0.002 (2.000 ms)
+
+	Found best solution and proved optimality.

@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [614,3856]
+		p6204 [makespan: 1075]
+		p6204 [makespan: 944]
+		p6204 [makespan: 918]
+		p6204 [makespan: 825]
+			nodes:      50682
+			failures:   20008
+			peak depth: 481
+			runtime:    0.873 (873.000 ms)
+
+	Adjusting...
+		Bounds: [614,825]
+		Bounds: [720,825]
+		p6204 [makespan: 769]
+		Bounds: [720,769]
+		Bounds: [745,769]
+		Bounds: [758,769]
+		Bounds: [764,769]
+		Bounds: [767,769]
+			nodes:      148310
+			failures:   74065
+			restarts:   9
+			no-goods:   166
+			peak depth: 91
+			runtime:    6.382 (6382.000 ms)
+
+	Found best solution and proved optimality.

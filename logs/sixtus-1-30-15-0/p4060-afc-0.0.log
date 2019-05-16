@@ -1,0 +1,27 @@
+	Probing...
+		Bounds: [441,1790]
+		p4060 [makespan: 679]
+		p4060 [makespan: 586]
+		p4060 [makespan: 555]
+			nodes:      4628
+			failures:   1
+			peak depth: 206
+			runtime:    0.027 (27.000 ms)
+
+	Adjusting...
+		Bounds: [441,555]
+		Bounds: [499,555]
+		Bounds: [528,555]
+		p4060 [makespan: 539]
+		Bounds: [528,539]
+		Bounds: [534,539]
+		p4060 [makespan: 535]
+		Bounds: [534,535]
+			nodes:      60
+			failures:   9
+			restarts:   0
+			no-goods:   0
+			peak depth: 28
+			runtime:    0.001 (1.000 ms)
+
+	Found best solution and proved optimality.

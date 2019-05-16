@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [499,3519]
+		p0629 [makespan: 817]
+		p0629 [makespan: 771]
+		p0629 [makespan: 735]
+			nodes:      10778
+			failures:   8
+			peak depth: 477
+			runtime:    0.133 (133.000 ms)
+
+	Adjusting...
+		Bounds: [499,735]
+		Bounds: [618,735]
+		p0629 [makespan: 676]
+		Bounds: [618,676]
+		Bounds: [648,676]
+		p0629 [makespan: 662]
+		Bounds: [648,662]
+		Bounds: [656,662]
+		p0629 [makespan: 658]
+		Bounds: [656,658]
+			nodes:      79786
+			failures:   39783
+			restarts:   5
+			no-goods:   90
+			peak depth: 74
+			runtime:    3.887 (3887.000 ms)
+
+	Found best solution and proved optimality.

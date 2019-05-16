@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [600,3552]
+		p3090 [makespan: 1012]
+		p3090 [makespan: 822]
+		p3090 [makespan: 775]
+		p3090 [makespan: 767]
+			nodes:      11127
+			failures:   8
+			peak depth: 479
+			runtime:    0.129 (129.000 ms)
+
+	Adjusting...
+		Bounds: [600,767]
+		Bounds: [684,767]
+		p3090 [makespan: 724]
+		Bounds: [684,724]
+		p3090 [makespan: 700]
+		Bounds: [684,700]
+		Bounds: [693,700]
+		Bounds: [697,700]
+		Bounds: [699,700]
+			nodes:      4157
+			failures:   2017
+			restarts:   0
+			no-goods:   0
+			peak depth: 84
+			runtime:    0.166 (166.000 ms)
+
+	Found best solution and proved optimality.

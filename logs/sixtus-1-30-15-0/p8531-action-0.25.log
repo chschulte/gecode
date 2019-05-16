@@ -1,0 +1,30 @@
+	Probing...
+		Bounds: [528,2962]
+		p8531 [makespan: 877]
+		p8531 [makespan: 761]
+		p8531 [makespan: 743]
+		p8531 [makespan: 667]
+		p8531 [makespan: 656]
+		p8531 [makespan: 646]
+			nodes:      9493
+			failures:   3
+			peak depth: 424
+			runtime:    0.109 (109.000 ms)
+
+	Adjusting...
+		Bounds: [528,646]
+		Bounds: [588,646]
+		p8531 [makespan: 615]
+		Bounds: [588,615]
+		p8531 [makespan: 601]
+		Bounds: [588,601]
+		Bounds: [595,601]
+		Bounds: [599,601]
+			nodes:      21841
+			failures:   10860
+			restarts:   1
+			no-goods:   11
+			peak depth: 62
+			runtime:    0.891 (891.000 ms)
+
+	Found best solution and proved optimality.

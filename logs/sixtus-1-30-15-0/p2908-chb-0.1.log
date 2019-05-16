@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [456,2188]
+		p2908 [makespan: 529]
+		p2908 [makespan: 527]
+		p2908 [makespan: 519]
+			nodes:      7379
+			failures:   2
+			peak depth: 319
+			runtime:    0.068 (68.000 ms)
+
+	Adjusting...
+		Bounds: [456,519]
+		p2908 [makespan: 487]
+		Bounds: [456,487]
+		Bounds: [472,487]
+		p2908 [makespan: 479]
+		Bounds: [472,479]
+		Bounds: [476,479]
+		p2908 [makespan: 477]
+		Bounds: [476,477]
+			nodes:      120
+			failures:   14
+			restarts:   0
+			no-goods:   0
+			peak depth: 37
+			runtime:    0.003 (3.000 ms)
+
+	Found best solution and proved optimality.

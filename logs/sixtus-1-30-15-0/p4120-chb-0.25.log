@@ -1,0 +1,30 @@
+	Probing...
+		Bounds: [588,3354]
+		p4120 [makespan: 944]
+		p4120 [makespan: 779]
+		p4120 [makespan: 748]
+		p4120 [makespan: 742]
+			nodes:      11122
+			failures:   4
+			peak depth: 489
+			runtime:    0.131 (131.000 ms)
+
+	Adjusting...
+		Bounds: [588,742]
+		Bounds: [666,742]
+		p4120 [makespan: 703]
+		Bounds: [666,703]
+		Bounds: [685,703]
+		Bounds: [695,703]
+		p4120 [makespan: 699]
+		Bounds: [695,699]
+		p4120 [makespan: 696]
+		Bounds: [695,696]
+			nodes:      47720
+			failures:   23757
+			restarts:   3
+			no-goods:   46
+			peak depth: 73
+			runtime:    1.759 (1759.000 ms)
+
+	Found best solution and proved optimality.

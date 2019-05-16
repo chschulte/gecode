@@ -1,0 +1,30 @@
+	Probing...
+		Bounds: [502,2514]
+		p7940 [makespan: 737]
+		p7940 [makespan: 692]
+		p7940 [makespan: 672]
+		p7940 [makespan: 667]
+		p7940 [makespan: 627]
+		p7940 [makespan: 590]
+			nodes:      8072
+			failures:   1
+			peak depth: 363
+			runtime:    0.093 (93.000 ms)
+
+	Adjusting...
+		Bounds: [502,590]
+		p7940 [makespan: 545]
+		Bounds: [502,545]
+		Bounds: [524,545]
+		Bounds: [535,545]
+		p7940 [makespan: 540]
+		Bounds: [535,540]
+		Bounds: [538,540]
+			nodes:      1813
+			failures:   874
+			restarts:   0
+			no-goods:   0
+			peak depth: 44
+			runtime:    0.072 (72.000 ms)
+
+	Found best solution and proved optimality.

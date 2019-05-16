@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [462,1897]
+		p4660 [makespan: 654]
+		p4660 [makespan: 534]
+		p4660 [makespan: 523]
+			nodes:      6086
+			failures:   1
+			peak depth: 272
+			runtime:    0.054 (54.000 ms)
+
+	Adjusting...
+		Bounds: [462,523]
+		p4660 [makespan: 489]
+		Bounds: [462,489]
+		p4660 [makespan: 475]
+		Bounds: [462,475]
+		Bounds: [469,475]
+		p4660 [makespan: 472]
+		Bounds: [469,472]
+		Bounds: [471,472]
+		p4660 [makespan: 471]
+			nodes:      104
+			failures:   6
+			restarts:   0
+			no-goods:   0
+			peak depth: 37
+			runtime:    0.003 (3.000 ms)
+
+	Found best solution and proved optimality.

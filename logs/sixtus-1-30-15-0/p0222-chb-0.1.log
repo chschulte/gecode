@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [434,2017]
+		p0222 [makespan: 717]
+		p0222 [makespan: 528]
+		p0222 [makespan: 512]
+			nodes:      6762
+			failures:   1
+			peak depth: 338
+			runtime:    0.072 (72.000 ms)
+
+	Adjusting...
+		Bounds: [434,512]
+		Bounds: [474,512]
+		Bounds: [494,512]
+		p0222 [makespan: 502]
+		Bounds: [494,502]
+		p0222 [makespan: 497]
+		Bounds: [494,497]
+		Bounds: [496,497]
+		p0222 [makespan: 496]
+			nodes:      837
+			failures:   366
+			restarts:   0
+			no-goods:   0
+			peak depth: 60
+			runtime:    0.029 (29.000 ms)
+
+	Found best solution and proved optimality.

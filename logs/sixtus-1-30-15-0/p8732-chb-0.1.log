@@ -1,0 +1,31 @@
+	Probing...
+		Bounds: [522,2685]
+		p8732 [makespan: 713]
+		p8732 [makespan: 697]
+		p8732 [makespan: 655]
+		p8732 [makespan: 646]
+		p8732 [makespan: 619]
+		p8732 [makespan: 607]
+			nodes:      8332
+			failures:   3
+			peak depth: 364
+			runtime:    0.092 (92.000 ms)
+
+	Adjusting...
+		Bounds: [522,607]
+		p8732 [makespan: 564]
+		Bounds: [522,564]
+		Bounds: [544,564]
+		p8732 [makespan: 551]
+		Bounds: [544,551]
+		Bounds: [548,551]
+		Bounds: [550,551]
+		p8732 [makespan: 550]
+			nodes:      1533
+			failures:   714
+			restarts:   0
+			no-goods:   0
+			peak depth: 57
+			runtime:    0.057 (57.000 ms)
+
+	Found best solution and proved optimality.

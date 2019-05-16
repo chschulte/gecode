@@ -1,0 +1,27 @@
+	Probing...
+		Bounds: [591,2845]
+		p3082 [makespan: 774]
+		p3082 [makespan: 692]
+		p3082 [makespan: 675]
+		p3082 [makespan: 658]
+			nodes:      8892
+			failures:   0
+			peak depth: 391
+			runtime:    0.081 (81.000 ms)
+
+	Adjusting...
+		Bounds: [591,658]
+		p3082 [makespan: 622]
+		Bounds: [591,622]
+		p3082 [makespan: 605]
+		Bounds: [591,605]
+		Bounds: [599,605]
+		Bounds: [603,605]
+			nodes:      214
+			failures:   66
+			restarts:   0
+			no-goods:   0
+			peak depth: 53
+			runtime:    0.006 (6.000 ms)
+
+	Found best solution and proved optimality.

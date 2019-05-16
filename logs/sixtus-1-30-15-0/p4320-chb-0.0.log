@@ -1,0 +1,30 @@
+	Probing...
+		Bounds: [405,1692]
+		p4320 [makespan: 745]
+		p4320 [makespan: 538]
+		p4320 [makespan: 516]
+		p4320 [makespan: 504]
+		p4320 [makespan: 501]
+			nodes:      5318
+			failures:   1
+			peak depth: 254
+			runtime:    0.039 (39.000 ms)
+
+	Adjusting...
+		Bounds: [405,501]
+		Bounds: [454,501]
+		Bounds: [478,501]
+		p4320 [makespan: 489]
+		Bounds: [478,489]
+		p4320 [makespan: 483]
+		Bounds: [478,483]
+		Bounds: [481,483]
+		p4320 [makespan: 481]
+			nodes:      107
+			failures:   10
+			restarts:   0
+			no-goods:   0
+			peak depth: 34
+			runtime:    0.002 (2.000 ms)
+
+	Found best solution and proved optimality.

@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [538,2186]
+		p9781 [makespan: 808]
+		p9781 [makespan: 673]
+		p9781 [makespan: 655]
+		p9781 [makespan: 642]
+		p9781 [makespan: 590]
+			nodes:      6881
+			failures:   3
+			peak depth: 309
+			runtime:    0.072 (72.000 ms)
+
+	Adjusting...
+		Bounds: [538,590]
+		p9781 [makespan: 560]
+		Bounds: [538,560]
+		Bounds: [550,560]
+		p9781 [makespan: 554]
+		Bounds: [550,554]
+		p9781 [makespan: 550]
+			nodes:      15049
+			failures:   7454
+			restarts:   1
+			no-goods:   16
+			peak depth: 64
+			runtime:    0.493 (493.000 ms)
+
+	Found best solution and proved optimality.

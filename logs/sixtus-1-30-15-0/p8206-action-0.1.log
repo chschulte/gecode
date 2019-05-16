@@ -1,0 +1,32 @@
+	Probing...
+		Bounds: [548,2939]
+		p8206 [makespan: 883]
+		p8206 [makespan: 863]
+		p8206 [makespan: 789]
+		p8206 [makespan: 779]
+		p8206 [makespan: 758]
+		p8206 [makespan: 726]
+			nodes:      9529
+			failures:   0
+			peak depth: 426
+			runtime:    0.109 (109.000 ms)
+
+	Adjusting...
+		Bounds: [548,726]
+		Bounds: [638,726]
+		Bounds: [683,726]
+		p8206 [makespan: 701]
+		Bounds: [683,701]
+		Bounds: [693,701]
+		p8206 [makespan: 697]
+		Bounds: [693,697]
+		p8206 [makespan: 694]
+		Bounds: [693,694]
+			nodes:      2382
+			failures:   1113
+			restarts:   0
+			no-goods:   0
+			peak depth: 80
+			runtime:    0.081 (81.000 ms)
+
+	Found best solution and proved optimality.

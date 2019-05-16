@@ -1,0 +1,27 @@
+	Probing...
+		Bounds: [546,3030]
+		p7840 [makespan: 838]
+		p7840 [makespan: 730]
+		p7840 [makespan: 674]
+			nodes:      10522
+			failures:   1
+			peak depth: 488
+			runtime:    0.110 (110.000 ms)
+
+	Adjusting...
+		Bounds: [546,674]
+		p7840 [makespan: 608]
+		Bounds: [546,608]
+		Bounds: [578,608]
+		Bounds: [594,608]
+		p7840 [makespan: 599]
+		Bounds: [594,599]
+		Bounds: [597,599]
+			nodes:      99
+			failures:   6
+			restarts:   0
+			no-goods:   0
+			peak depth: 48
+			runtime:    0.002 (2.000 ms)
+
+	Found best solution and proved optimality.

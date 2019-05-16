@@ -1,0 +1,29 @@
+	Probing...
+		Bounds: [550,2649]
+		p9144 [makespan: 817]
+		p9144 [makespan: 704]
+		p9144 [makespan: 699]
+		p9144 [makespan: 683]
+		p9144 [makespan: 674]
+			nodes:      7803
+			failures:   1
+			peak depth: 349
+			runtime:    0.070 (70.000 ms)
+
+	Adjusting...
+		Bounds: [550,674]
+		p9144 [makespan: 612]
+		Bounds: [550,612]
+		Bounds: [582,612]
+		p9144 [makespan: 590]
+		Bounds: [582,590]
+		Bounds: [587,590]
+		Bounds: [589,590]
+			nodes:      605
+			failures:   268
+			restarts:   0
+			no-goods:   0
+			peak depth: 46
+			runtime:    0.021 (21.000 ms)
+
+	Found best solution and proved optimality.

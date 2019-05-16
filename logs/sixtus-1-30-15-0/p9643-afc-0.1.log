@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [579,3181]
+		p9643 [makespan: 697]
+		p9643 [makespan: 660]
+		p9643 [makespan: 645]
+			nodes:      9662
+			failures:   1
+			peak depth: 425
+			runtime:    0.112 (112.000 ms)
+
+	Adjusting...
+		Bounds: [579,645]
+		p9643 [makespan: 610]
+		Bounds: [579,610]
+		Bounds: [595,610]
+		p9643 [makespan: 601]
+		Bounds: [595,601]
+		Bounds: [599,601]
+		p9643 [makespan: 600]
+		Bounds: [599,600]
+			nodes:      156
+			failures:   11
+			restarts:   0
+			no-goods:   0
+			peak depth: 54
+			runtime:    0.003 (3.000 ms)
+
+	Found best solution and proved optimality.

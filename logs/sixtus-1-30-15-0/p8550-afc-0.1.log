@@ -1,0 +1,27 @@
+	Probing...
+		Bounds: [499,3101]
+		p8550 [makespan: 827]
+		p8550 [makespan: 728]
+		p8550 [makespan: 706]
+			nodes:      9738
+			failures:   7
+			peak depth: 430
+			runtime:    0.097 (97.000 ms)
+
+	Adjusting...
+		Bounds: [499,706]
+		Bounds: [603,706]
+		p8550 [makespan: 650]
+		Bounds: [603,650]
+		Bounds: [627,650]
+		Bounds: [639,650]
+		Bounds: [645,650]
+		Bounds: [648,650]
+			nodes:      562
+			failures:   258
+			restarts:   0
+			no-goods:   0
+			peak depth: 62
+			runtime:    0.023 (23.000 ms)
+
+	Found best solution and proved optimality.

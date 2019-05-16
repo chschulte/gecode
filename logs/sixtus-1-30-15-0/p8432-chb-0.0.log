@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [561,2787]
+		p8432 [makespan: 737]
+		p8432 [makespan: 713]
+		p8432 [makespan: 688]
+		p8432 [makespan: 681]
+			nodes:      7771
+			failures:   4
+			peak depth: 354
+			runtime:    0.061 (61.000 ms)
+
+	Adjusting...
+		Bounds: [561,681]
+		p8432 [makespan: 616]
+		Bounds: [561,616]
+		Bounds: [589,616]
+		Bounds: [603,616]
+		p8432 [makespan: 606]
+		Bounds: [603,606]
+		Bounds: [605,606]
+			nodes:      80
+			failures:   4
+			restarts:   0
+			no-goods:   0
+			peak depth: 41
+			runtime:    0.002 (2.000 ms)
+
+	Found best solution and proved optimality.

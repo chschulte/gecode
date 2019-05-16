@@ -1,0 +1,28 @@
+	Probing...
+		Bounds: [525,1993]
+		p0843 [makespan: 654]
+		p0843 [makespan: 631]
+		p0843 [makespan: 622]
+			nodes:      6449
+			failures:   1
+			peak depth: 290
+			runtime:    0.051 (51.000 ms)
+
+	Adjusting...
+		Bounds: [525,622]
+		Bounds: [574,622]
+		p0843 [makespan: 598]
+		Bounds: [574,598]
+		Bounds: [587,598]
+		p0843 [makespan: 592]
+		Bounds: [587,592]
+		p0843 [makespan: 588]
+		Bounds: [587,588]
+			nodes:      598
+			failures:   246
+			restarts:   0
+			no-goods:   0
+			peak depth: 39
+			runtime:    0.010 (10.000 ms)
+
+	Found best solution and proved optimality.
