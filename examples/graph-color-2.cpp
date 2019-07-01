@@ -200,7 +200,7 @@ main(int argc, char* argv[]) {
   InstanceOptions opt("GraphColor");
   opt.solutions(0);
 
-  opt.instance("flat300-20-0");
+  opt.instance("small1");
 
   opt.branching(GraphColor::BRANCH_AFC_SIZE);
   opt.branching(GraphColor::BRANCH_DEGREE,      "degree");
